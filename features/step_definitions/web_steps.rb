@@ -10,6 +10,9 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
+Given /^(?:|I )am logged in as \"([A-Za-z0-9]+)\"/ do |user|
+  assert_equal true, false
+end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
@@ -32,6 +35,10 @@ When /^(?:|I )follow "([^\"]*)" within "([^\"]*)"$/ do |link, parent|
 end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
+When /^(?:|I )have filled in "([^\"]*)" with "([^\"]*)"/ do |field, value|
   fill_in(field, :with => value)
 end
 
