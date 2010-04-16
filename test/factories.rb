@@ -7,9 +7,15 @@ Factory.define :database do |f|
   f.association :user
 end
 
-Factory.define :table do |t|
-  t.name "Table"
-  t.association :database
+Factory.define :table do |f|
+  f.name "Table"
+  f.association :database
+end
+
+Factory.define :column do |f|
+  f.name "Column Name"
+  f.type "string"
+  f.null "null"
 end
 
 Factory.define :user do |f|
