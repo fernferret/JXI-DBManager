@@ -4,6 +4,8 @@
 
 table1:
   name: My First Table
+  user_id: 1
 
 table2:
   name: My Second Table
+  user_id: 2

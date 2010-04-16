@@ -1,5 +1,11 @@
 # Make sure we test DAVE
+
+# Includes the functions that allow Unit Testing
 require 'test_helper'
+
+# Includes the functions that allow Mocking
+require 'mocha'
+
 class TableTest < ActiveSupport::TestCase
   def test_add_all_criteria
     table = Table.new
@@ -44,5 +50,18 @@ class TableTest < ActiveSupport::TestCase
     my_id = 2
     table = Table.find(:first, :conditions => {:title => 'My First Table', :user_id => my_id})
     assert !table.destroy, 'I destroyed someone else\'s table!'
+  end
+
+  def test_edit_own_table
+    if not table.exists_with_title('My First Table')
+      table = Table.new
+      table.title = 'My First Table'
+      table.user_id = 1
+      table.save
+    end
+    my_id = 1
+    table = Table.find(:first, :conditions => {:title => 'My First Table', :user_id => my_id})
+    table.title = 'Newer Table'
+    assert table.update_attributes, 'Could not update table'
   end
 end
