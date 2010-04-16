@@ -10,7 +10,7 @@ require 'mocha'
 
 class DatabaseTest < ActiveSupport::TestCase
   def test_add_all_criteria
-    database = Database.new
+    database = Factory.create(:database, :name => 'Test')
     database.title = 'My new database'
     database.user_id = 1
     assert database.save, 'Could not save a new Database!'
