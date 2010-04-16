@@ -1,0 +1,9 @@
+# Test Fixture for JXI Database Tables
+# Author: Eric Stokes
+# Date:   4/16/10
+
+table1:
+  name: My First Table
+
+table2:
+  name: My Second Table
