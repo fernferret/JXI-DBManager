@@ -9,6 +9,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100419161707) do
+
+  create_table "columns", :force => true do |t|
+    t.string  "name"
+    t.integer "table_id"
+    t.string  "column_type"
+    t.boolean "null"
+  end
+
+  create_table "databases", :force => true do |t|
+    t.integer "user_id"
+    t.string  "name"
+  end
+
+  create_table "tables", :force => true do |t|
+    t.integer "database_id"
+    t.string  "name"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string "username"
+    t.string "name"
+    t.string "password"
+  end
 
 end

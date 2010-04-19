@@ -200,3 +200,565 @@
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (92.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140607')[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140635')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("databases")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+Migrating to DatabaseModel (20100419140635)
+Migrating to TableModel (20100419161656)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161656')[0m
+Migrating to ColumnModel (20100419161707)
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100419161707')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (72.0ms)[0m   [0;1mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (84.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (85.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (88.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (115.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100419161707')[0m
+  [4;35;1mSQL (76.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100419140607')[0m
+  [4;36;1mSQL (75.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100419140635')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100419161656')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (199.0ms)[0m   [0;1mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (168.0ms)[0m   [0;1mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (108.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (196.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100419161707')[0m
+  [4;35;1mSQL (237.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100419140607')[0m
+  [4;36;1mSQL (155.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100419140635')[0m
+  [4;35;1mSQL (154.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100419161656')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+Migrating to DatabaseModel (20100419140635)
+Migrating to TableModel (20100419161656)
+Migrating to ColumnModel (20100419161707)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("databases")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ColumnModel (20100419161707)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: columns: DROP TABLE "columns"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ColumnModel (20100419161707)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100419161707'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to TableModel (20100419161656)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "tables"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419161656'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("databases")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "databases"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140635'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140607'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140607')[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140635')[0m
+Migrating to TableModel (20100419161656)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161656')[0m
+Migrating to ColumnModel (20100419161707)
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE "columns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "table_id" integer, "type" varchar(255), "null" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161707')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ColumnModel (20100419161707)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "columns"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419161707'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("databases")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tables")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to TableModel (20100419161656)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "tables"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419161656'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("databases")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "databases"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140635'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140607'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255), "password" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140607')[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140635')[0m
+Migrating to TableModel (20100419161656)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161656')[0m
+Migrating to ColumnModel (20100419161707)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "columns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "table_id" integer, "type" varchar(255), "null" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161707')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES(NULL, 'Username', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('My Name', 'Username', 'Password')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ColumnModel (20100419161707)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "columns"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419161707'[0m
+Migrating to TableModel (20100419161656)
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "tables"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419161656'[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "databases"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140635'[0m
+Migrating to UserModel (20100419140607)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100419140607'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "name" varchar(255), "password" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140607')[0m
+Migrating to DatabaseModel (20100419140635)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "databases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419140635')[0m
+Migrating to TableModel (20100419161656)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "tables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "database_id" integer, "name" varchar(255)) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161656')[0m
+Migrating to ColumnModel (20100419161707)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "columns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "table_id" integer, "column_type" varchar(255), "null" boolean) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100419161707')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', 1)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Destroy (10.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (3.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Destroy (25.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', NULL)[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', NULL)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', NULL)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', NULL)[0m
+  [4;36;1mDatabase Create (61.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', NULL)[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, NULL)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (1.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (1.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m

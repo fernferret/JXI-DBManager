@@ -3,6 +3,7 @@ class UserModel < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :name
+      t.string :password
     end
   end
 
