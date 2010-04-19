@@ -53,3 +53,4 @@ Feature: Manage databases
       |My Super New Database 2|administrator|
       |New Second Database|stokesej|
       |New Third Database|rhodeska|
+
