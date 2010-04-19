@@ -1,9 +1,7 @@
 # Watch Railscast #158 for more details on Factory Girl
 # http://railscasts.com/episodes/158-factories-not-fixtures
-
-Factory.define :database do |f|
+Factory.define :db do |f|
   f.sequence(:name) { |n| "My DB#{n}" }
-  f.user_id {|u| u.id}
   f.association :user
 end
 
@@ -14,10 +12,12 @@ end
 
 Factory.define :column do |f|
   f.name "Column Name"
-  f.type "string"
+  f.column_type "string"
   f.null "null"
 end
 
 Factory.define :user do |f|
-  f.name "User"
+  f.sequence(:username) { |n| "User#{n}" }
+  f.sequence(:name) { |n| "User#{n}" }
+  f.password "Password"
 end
