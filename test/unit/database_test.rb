@@ -9,6 +9,10 @@ require 'test_helper'
 require 'mocha'
 
 class DatabaseTest < ActiveSupport::TestCase
+  def setup
+    @userA = Factory.create(:user)
+    @userB = Factory.create(:user)
+  end
   def test_add_all_criteria
 #    Sample use of the factory
     database = Factory.create(:database)
@@ -16,24 +20,26 @@ class DatabaseTest < ActiveSupport::TestCase
   end
 
   def test_should_not_save_with_no_title
-    database = Factory.create(:database, :name => nil)
-    # database = Database.new
-    assert !database.save, 'Saved a new Database with no title!'    
+    database = Factory.build(:database, :name => nil)
+    assert !database.valid?, 'Saved a new Database with no title!'    
   end
 
   def test_should_not_save_with_no_user
-    database = Database.new
-    database.name = 'My new database'
-    assert !database.save, 'Saved a new Database with no user!'
+    database = Factory.build(:database, :user => nil)
+    assert !database.valid?, 'Saved a new Database with no user!'
   end
 
-  def test_should_not_save_database_with_same_name
-    database = Factory.create(:database, :name => 'My First Database')
-    assert database.exists_with_title('My First Database'), 'Test Table does not exist, cannot proceed'
-    database = Database.new
-    database.title = 'My First Database'
-    database.user_id = 1
-    assert !database.save, 'Saved a database with a duplicate name!'
+  def test_user_can_create_multiple_databases_with_unique_names
+    databaseA = Factory.create(:database, :user => @userA)
+    databaseB = Factory.build(:database, :user => @userA)
+    assert databaseB.valid?, 'Could not add another database for user!'
+  end
+
+  def test_should_not_save_database_with_same_name_per_user
+    flunk('Will be implemented when Auth is decided upon')
+    database_old = Factory.create(:database, :name => 'My First Database', :user => @userA)
+    database_new = Factory.build(:database, :name => 'My First Database', :user => @userA)
+    assert !database_new.valid?, 'Saved a database with a duplicate name!'
   end
 
   def test_user_must_be_logged_in_to_create_database
@@ -46,21 +52,15 @@ class DatabaseTest < ActiveSupport::TestCase
   end
 
   def test_delete_someone_elses_database
-    userA = Factory.create(:user)
-    userB = Factory.create(:user)
-    database = Factory.create(:database, :name => 'My First Database', :user => userA)
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
     assert database.exists_with_title('My First Database'), 'Test Table does not exist, cannot proceed'
     my_id = 2
     assert !database.destroy, 'I destroyed someone else\'s database!'
   end
 
   def test_edit_own_database
-    userA = Factory.create(:user)
-    userB = Factory.create(:user)
-    database = Factory.create(:database, :name => 'My First Database', :user => userA)
-    assert database.exists_with_title('My First Database'), 'Test Table does not exist, cannot proceed'
-    database.title = 'Newer Database'
-    assert userA == userA, 'Users are not the same'
-    assert database.update_attributes, 'Could not update database'
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+    database.name = 'Newer Database'
+    assert database.update_attributes(:name => 'Test'), 'Could not update database'
   end
 end

@@ -762,3 +762,699 @@ Migrating to ColumnModel (20100419161707)
   [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
   [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
   [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (3.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My new database') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."user" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (5.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES(NULL, 1)[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My new database', NULL)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;36;1mDatabase Create (2.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My new database', NULL)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My new database', NULL)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My new database') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."user" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user = 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user = 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user = 1) LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user = 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL AND "databases".user = 1) LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My new database' AND "databases".user IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My new database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My new database', NULL)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 1)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (4.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 1)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (5.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (3.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (1.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (3.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;35;1mDatabase Update (0.0ms)[0m   [0mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (4.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (3.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (1.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database') LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mUser Create (3.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user = 3) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user = 3) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user = 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user = 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL AND "databases".user = 3) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: databases.user: SELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 3 AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".user_id = 1 AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (0.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user_id IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User1', 'User1', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User2', 'User2', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User3', 'User3', 'Password')[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 3 AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User4', 'User4', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User5', 'User5', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User6', 'User6', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 3)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User7', 'User7', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User8', 'User8', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;36;1mDatabase Destroy (0.0ms)[0m   [0;1mDELETE FROM "databases" WHERE "id" = 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User9', 'User9', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User10', 'User10', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 1)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Test' AND "databases".user_id = 1 AND "databases".id <> 1) LIMIT 1[0m
+  [4;36;1mDatabase Update (1.0ms)[0m   [0;1mUPDATE "databases" SET "name" = 'Test' WHERE "id" = 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User11', 'User11', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User12', 'User12', 'Password')[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User13', 'User13', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User14', 'User14', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User15', 'User15', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" IS NULL AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User16', 'User16', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User17', 'User17', 'Password')[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user_id IS NULL) LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User18', 'User18', 'Password')[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User19', 'User19', 'Password')[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 1)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User20', 'User20', 'Password')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User21', 'User21', 'Password')[0m
