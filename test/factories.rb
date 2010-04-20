@@ -20,4 +20,5 @@ Factory.define :user, :class => User do |f|
   f.sequence(:username) { |n| "User#{n}" }
   f.sequence(:name) { |n| "User#{n}" }
   f.password "Password"
+  f.password_confirmation { |u| u.password }
 end

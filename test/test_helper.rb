@@ -3,6 +3,10 @@ require File.expand_path(File.dirname(__FILE__) + "/factories")
 
 require 'test_help'
 
+# Includes the functions that allow Mocking
+# Reference: http://blog.floehopper.org/articles/2006/09/01/mocha-quickstart#fn1
+require 'mocha'
+
 class ActiveSupport::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
   # in a transaction that's rolled back on completion.  This ensures that the
@@ -36,4 +40,21 @@ class ActiveSupport::TestCase
   # fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def current_user(stubs = {})
+    @current_user = mock()
+    @current_user.stubs = stubs
+
+  end
+
+  def user_session(stubs = {}, user_stubs = {})
+    @current_user_session ||= mock(UserSession, {:user => current_user(user_stubs)}.merge(stubs))
+  end
+
+  def login (session_stubs = {}, user_stubs = {})
+    UserSession.stub!(:find).and_return(user_session(session_stubs, user_stubs))
+  end
+
+  def logout
+    @user_session = nil
+  end
 end

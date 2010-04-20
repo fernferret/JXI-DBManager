@@ -40,6 +40,7 @@ Rails::Initializer.run do |config|
   config.gem "factory_girl", :version => '1.2.4'
   config.gem "authlogic"
   config.gem "haml", :version => '2.2.23'
+  config.gem "mocha"
 end
 
 Haml::Template.options[:format] = :html5

@@ -4,24 +4,29 @@
 # Reference: http://guides.rubyonrails.org/testing.html
 require 'test_helper'
 
-# Includes the functions that allow Mocking
-# Reference: http://blog.floehopper.org/articles/2006/09/01/mocha-quickstart#fn1
-require 'mocha'
-
 class DatabaseTest < ActiveSupport::TestCase
   def setup
+    
     @userA = Factory.create(:user)
     @userB = Factory.create(:user)
   end
   def test_add_all_criteria
 #    Sample use of the factory
-    database = Factory.create(:database)
+    database = Factory.create(:database, :name => "test")
     assert database.save, 'Could not save a new Database!'
   end
 
   def test_should_not_save_with_no_title
-    database = Factory.build(:database, :name => nil)
-    assert !database.valid?, 'Saved a new Database with no title!'    
+    # Create a new database with no name
+    database = Factory.create(:database)
+    # Grab the ID from that database and increment it by one
+    prev_db_id = Integer(database.name.match(/\d+/)[0])
+    prev_db_id += 1
+    # Add another new database without name (testing to see)
+    # if the first one and this one were both successfylly added
+    # with no names
+    new_db = Factory.build(:database)
+    assert_equal new_db.name, 'My DB'+prev_db_id.to_s, 'Saved a new Database with no title!'    
   end
 
   def test_should_not_save_with_no_user
