@@ -39,4 +39,7 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
   config.gem "factory_girl", :version => '1.2.4'
   config.gem "authlogic"
+  config.gem "haml", :version => '2.2.23'
 end
+
+Haml::Template.options[:format] = :html5
