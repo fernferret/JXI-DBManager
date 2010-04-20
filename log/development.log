@@ -1458,3 +1458,31 @@ Migrating to ColumnModel (20100419161707)
   [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 1) LIMIT 1[0m
   [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "username", "password") VALUES('User20', 'User20', 'Password')[0m
   [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "username", "password") VALUES('User21', 'User21', 'Password')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+Migrating to DatabaseModel (20100419140635)
+Migrating to TableModel (20100419161656)
+Migrating to ColumnModel (20100419161707)
+Migrating to AddUserAuth (20100420011546)
+  [4;36;1mSQL (9.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mALTER TABLE "users" ADD "crypted_password" varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "users" ADD "password_salt" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "users" ADD "persistence_token" varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420011546')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
