@@ -3196,3 +3196,20 @@ Rendering rescues/layout (not_found)
   [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
   [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8b67185e2dc05f31ff8a2abc4dc8660baf97d1728c8af41e55e3262a9d83045754d857f864e9cb769b4b4ef75438f0e8cc03f2a0f03e6d906390f599114f904f') LIMIT 1[0m
   [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', 'adeaa2f64551bce3af84b46556417ae1a4125f69078374a25a46864b8172691def4825d3848c281b4a4252f35dd8811c0e89d7baea2a04cedb56b3e297257e20', 'User22', 'aqclE4jcMoocd2WnqHpB', '8b67185e2dc05f31ff8a2abc4dc8660baf97d1728c8af41e55e3262a9d83045754d857f864e9cb769b4b4ef75438f0e8cc03f2a0f03e6d906390f599114f904f', NULL)[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 12:41:29) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
