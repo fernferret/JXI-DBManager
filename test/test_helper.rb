@@ -41,7 +41,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   def current_user(stubs = {})
-    @current_user = mock()
+    @current_user = User.new
+    @current_user.stubs(:stubs)
     @current_user.stubs = stubs
 
   end
