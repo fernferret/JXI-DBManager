@@ -7,12 +7,14 @@ class DatabasesController < ApplicationController
       format.html
     end
   end
+
   def show
     @database = Database.find(params[:id])
     respond_to do |format|
       format.html
     end
   end
+
   def new
     @database = Database.new
     respond_to do |format|
@@ -31,3 +33,4 @@ class DatabasesController < ApplicationController
       end
     end
   end
+end
