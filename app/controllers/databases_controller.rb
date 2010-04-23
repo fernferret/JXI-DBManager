@@ -18,6 +18,10 @@ class DatabasesController < ApplicationController
     end
   end
 
+	def edit
+		@database = Database.find(params[:id])
+	end
+
   def new
     @database = Database.new
     respond_to do |format|
