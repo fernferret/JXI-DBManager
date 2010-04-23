@@ -42,6 +42,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id.:format'
   map.resources :user_sessions
   map.resources :users
+  map.resources :databases
+  map.root :controller => 'databases'
   map.login "login", :controller => "user_sessions", :action => "new"
   map.login "logout", :controller => "user_sessions", :action => "destroy"
 end

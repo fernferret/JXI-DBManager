@@ -37,10 +37,10 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
-  config.gem "factory_girl", :version => '1.2.4'
-  config.gem "authlogic"
-  config.gem "haml", :version => '2.2.23'
-  config.gem "mocha"
+  config.gem 'factory_girl', :version => '1.2.4'
+  config.gem 'haml', :version => '2.2.23'
+  config.gem 'authlogic'
+  # config.gem 'mocha'
 end
 
 Haml::Template.options[:format] = :html5

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :databases
-  validates_presence_of :username, :name, :password
+  attr_accessible :username, :email, :password, :password_confirmation
   acts_as_authentic
+  validates_presence_of :username, :name, :password
+  has_many :databases
 end

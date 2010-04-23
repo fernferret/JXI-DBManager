@@ -1,8 +1,11 @@
 class DatabasesController < ApplicationController
   # Make sure the user is authenticated once we have an auth controller
-  # before_filter :auth
+  before_filter :auth, :except => [:index]
   def index
     @databases = Database.all
+    current_user = UserSession.find
+    user_id = current_user && current_user.record.id
+    @mydatabases = Database.find(:all, :conditions => {:user_id => user_id})
     respond_to do |format|
       format.html
     end
@@ -34,13 +37,11 @@ class DatabasesController < ApplicationController
     end
   end
 
-	def destroy
-		@database = Database.find(params[:id])
-		@database.destroy
-
-		respond_to do |format|
-			format.html { redirect_to(databases_url) }
-			format.xml { head :ok }
-		end
-	end
+  def destroy
+    @database = Database.find(params[:id])
+    @database.destroy
+    respond_to do |format|
+      format.html { redirect_to(databases_url) }
+    end
+  end
 end

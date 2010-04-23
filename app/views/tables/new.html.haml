@@ -1,0 +1,9 @@
+%h1= 'New Table'
+  - form_for(@database) do |f|
+    = f.error_messages
+    %p
+      = f.label :name
+      %br= f.text_field :name
+    %p= submit_tag('Add New Table')
+
+
