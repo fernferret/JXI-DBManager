@@ -1,0 +1,13 @@
+%h1= "Database: #{@database.name}"
+=link_to('Add a Table', :controller => 'tables', :action => 'add/'+@database.id.to_s)
+%table
+  %tr
+    %th= 'Name'
+    %th= 'View'
+    %th= 'Edit'
+  - @database.tables.each do |table|
+    %tr
+      %td= table.name
+      %td= link_to('View',:controller => 'tables', :action => 'show/'+table.id)
+      %td= link_to('Edit',:controller => 'tables', :action => 'edit/'+table.id)
+

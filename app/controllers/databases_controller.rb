@@ -27,8 +27,7 @@ class DatabasesController < ApplicationController
 
   def create
     @database = Database.new(params[:database])
-    @database.user_id = 1 
-    puts(@database.user)
+    @database.user = current_user 
     respond_to do |format|
       if @database.save
         flash[:notice] = 'Created new Database successfully'
@@ -45,11 +44,5 @@ class DatabasesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(databases_url) }
     end
-  end
-  private
-  def getuser
-    current_user = UserSession.find
-    user_id = current_user && current_user.record.id
-    return User.find(:conditions => {:user_id => user_id})
   end
 end
