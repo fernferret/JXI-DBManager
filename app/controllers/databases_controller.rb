@@ -33,4 +33,14 @@ class DatabasesController < ApplicationController
       end
     end
   end
+
+	def destroy
+		@database = Database.find(params[:id])
+		@database.destroy
+
+		respond_to do |format|
+			format.html { redirect_to(databases_url) }
+			format.xml { head :ok }
+		end
+	end
 end
