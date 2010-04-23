@@ -1,6 +1,7 @@
 %h1= 'All user Databases'
 - if current_user
   %h1= 'My Databases'
+  %p= link_to('Add Database', new_database_path())
   %table
     %tr
       %th= 'Name'

@@ -16455,3 +16455,606 @@ Rendering rescues/layout (not_found)
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b79090be4fed4f18c0d377e372f609bf65d9feef7d6fa2620dc1d7073bb1b89dda84e8a230250e8c8bd9cb331d717b41e05d50c4dc9a874b562aed389e7571e1') LIMIT 1[0m
   [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', 'e3b2dde905927c0c15e8665f8aee7a44fca8a48ff66f30214e59935d95e9a2e2f429203845dd88a18697589528d465cde5e9fce3058abe76f599c13287a27e80', 'User22', '0ve6BTiP_fWDleW89_WH', 'b79090be4fed4f18c0d377e372f609bf65d9feef7d6fa2620dc1d7073bb1b89dda84e8a230250e8c8bd9cb331d717b41e05d50c4dc9a874b562aed389e7571e1', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c2f5587a239272b2783050729fdd70291c671b5f7467093643e5bbb2093810ada9a87b86d47699d7c1d581cab2bb19862b7a9a57f0ac23db577bc34ae16274ff') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', 'e9aad1320c2c96582f4e0d285057528f1d2aed59f67a6d44266f25be1d2c22ac5846374d5866f9ee7ceca736e764ae5d986887f64342a0b56d38a8cc1c9b03b5', 'User1', 'EEgP-mnw7P8DayaXnJ_q', 'c2f5587a239272b2783050729fdd70291c671b5f7467093643e5bbb2093810ada9a87b86d47699d7c1d581cab2bb19862b7a9a57f0ac23db577bc34ae16274ff', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2b824846e74b26866d0b67d17743d22b147844f6b1acd4f9cb10a63b65bc92432080301661449b25e8db48d86b59948916956e1f73dc6b42ecb5630104d8a10d') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', '65b05cf3eb78e352e8a76d20bbc1f3886fd71b0d3c41c33f6cb03bfba017bae4698667e91d70f878b76fc3e598487cf41e346763bc4827ac1f49b9023d406338', 'User2', 'fl9Sw8oP9CEvcIemg1cW', '2b824846e74b26866d0b67d17743d22b147844f6b1acd4f9cb10a63b65bc92432080301661449b25e8db48d86b59948916956e1f73dc6b42ecb5630104d8a10d', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9e1b02b487a058a72ff4e6e6d91a9b2c7d2a3ef9365a0b3c307a248e6cd59bbda0824d5cf10f4b7be1f36ad95c92732bf0ed773aad664aacd1619f1c11eb8af2') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', 'e3fe6b07a18a679430554c39b58089d046b316e31683390d1df17bd7e8ed3a43f547a7cb1cb60e9f0a157a83c7b9444951cdd7df8c4061d56f80863f3675265f', 'User3', 'PO9mmPACDvoIjvBRzdse', '9e1b02b487a058a72ff4e6e6d91a9b2c7d2a3ef9365a0b3c307a248e6cd59bbda0824d5cf10f4b7be1f36ad95c92732bf0ed773aad664aacd1619f1c11eb8af2', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('test', 5)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5 AND "databases".id <> 6) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '37610646a922c6c50502f4f1fffa40d89a8b34c8826894152b149aa34f81115939616cabf28238bdbc885cfdc8b535c3293b71063fbbf9fb7c8b452078f20561') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', 'd6c35529f1d52c909db77dc5a64d33c11f2372c2968f6b37c95803cd65384f9b1a3ea515b9144b9f27ce20a39cc48bb1ea613a7741f4ea020ee185168c09fe03', 'User4', 'Z_l00hL_JbUP-kmTJXg_', '37610646a922c6c50502f4f1fffa40d89a8b34c8826894152b149aa34f81115939616cabf28238bdbc885cfdc8b535c3293b71063fbbf9fb7c8b452078f20561', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1db7f997d738a2a200b287bd544c8f68c0e55905ff830f22df5439b4a6fed668afd21f2d8cafbea0450fa0ac24b46a89e600b8694b0d3669f1f2e16ba81fdbf2') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', '515f1c33a8844221b2f9790bf73fe6f1b5e247f4829fdbaa0bc6d58c526da175ead576c056c0325ca13d97d026a94e6dc21a62ce002e2c9a12f30901275ddcf6', 'User5', 'xaq_7eSJ0LMMfWZArB60', '1db7f997d738a2a200b287bd544c8f68c0e55905ff830f22df5439b4a6fed668afd21f2d8cafbea0450fa0ac24b46a89e600b8694b0d3669f1f2e16ba81fdbf2', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e5e01532704285d67276868e280f060e62e26e71a5c34609cc46ffc7b0d8ca142b4ddb831175c1e2dd70e2d17cf677373438afedcc2fc26ff18c1f13db41a705') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', 'd9be466e8ea00bc4cab834dfa3021fcd86c03bf89c6410ac66b1fff7b0cecc0e0ecbe19a5f14074f2acec15e6061a8c23514bf19e68b834e951f257392b5157e', 'User6', 'rDf9xVfCcKpAeTftmbnU', 'e5e01532704285d67276868e280f060e62e26e71a5c34609cc46ffc7b0d8ca142b4ddb831175c1e2dd70e2d17cf677373438afedcc2fc26ff18c1f13db41a705', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 5)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e6820fc965c4eb7b98045ac7ef4c913588c441ef6f553c3f570d515ad83f978eca1a6dd0c2c504bd69465ecf74a7901aa3667d1b3f8fd2b39526b14eb6b196f2') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', '659cf509eb6547ce592b897699eee743b30fdfd233a7aa302f4febc2bb3f0fda17f70abe00795b5e28874cc6c325f6d7cfdc91bde6dc2dbb059cdfb03520222c', 'User7', 'pxKYAgbLHLBZAQlSkRBh', 'e6820fc965c4eb7b98045ac7ef4c913588c441ef6f553c3f570d515ad83f978eca1a6dd0c2c504bd69465ecf74a7901aa3667d1b3f8fd2b39526b14eb6b196f2', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user8') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f1896ba5c925d434c99d6daae71779f40b5095effbe1099e5aa0d188f1b35cd2e1ed65138c5ec27c2267db844b7d590aecbe857549f41a01a172331040e5638a') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User8', '9e29ac7a8662d47dda17d7495ccb3845d2766e1044eabe93cf9ce258c8596fb64325596242a58ac249b923c328cbe75d181cccff8f55d9fde8d7230ddb0ec6b7', 'User8', 'r19mUwgayrPmiqzNPqm1', 'f1896ba5c925d434c99d6daae71779f40b5095effbe1099e5aa0d188f1b35cd2e1ed65138c5ec27c2267db844b7d590aecbe857549f41a01a172331040e5638a', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user9') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7a96de700cf19ffa552db797220a015c469e73788fe620630b39d7136e828c544b6d0d37099803311bc5643731732c74be7d244587a35f6b8ba18f75ee29e871') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User9', '6385c6bbb37ed7ef2ad5435afed930f53fb1532b9c76a2dcb7c37e28f6a31b5ca85112bb91eca90fc04aeac864b5e24a6ff0c5990b9b424c5a82044b14b6ea69', 'User9', 'zFEM0XWzjiu59pCJeAda', '7a96de700cf19ffa552db797220a015c469e73788fe620630b39d7136e828c544b6d0d37099803311bc5643731732c74be7d244587a35f6b8ba18f75ee29e871', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user10') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e112e545485f66ecc80e27cb5c1d54673c71e96ca2b3b88bf8639ab613342198caa60682fc8821d0f59ce77e460d953b8618e3b920c6242d4ff3aa52544989a6') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User10', '6df134e39ff76c141d052aca20ca239d9a9ddc31cd8746a7618e765e76af26838bde279b8af285151fb7e143081e2b97154daea4f1d7937e3f5526a749f197e0', 'User10', 'Ri61FZUT_fSS6igWVwe8', 'e112e545485f66ecc80e27cb5c1d54673c71e96ca2b3b88bf8639ab613342198caa60682fc8821d0f59ce77e460d953b8618e3b920c6242d4ff3aa52544989a6', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 3)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user11') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b7baed9fdcf623e63bb0b0548388113839f86254dab6e7bb761f03cbfb40df8b0ac58dcb2f24e0cb97c01566d914d534a68524b1cf83553386c474932aeb47c7') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User11', '24709c274de385e5d4e9f34ee456df1709b502ba897a17a9a90cdcd66adc352b62fe5f9b056fcd32080b218d56b7587357db97a466a5239df381b728079e654f', 'User11', '822oYuxD8LCe2BqyR3jc', 'b7baed9fdcf623e63bb0b0548388113839f86254dab6e7bb761f03cbfb40df8b0ac58dcb2f24e0cb97c01566d914d534a68524b1cf83553386c474932aeb47c7', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user12') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '12f5edeec94f9a6014c2daf40a57c705d85380c41349cb2aa3c6e54a179aee615075df8f70ca9588e2b3786de0ae91b1abc8ad6c05ee3f079f8fcc61b1f75e21') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User12', 'adc60e7ec60a1709b4ba1a446f32354918a2a689f7ba0a6537e60b0f4cbe1c45d5d2deb095e865c652333af1d43f9e59820ecb1159e08ca850556bf966bfb76a', 'User12', 'VnP_5WOF4R_4kgSbPBgL', '12f5edeec94f9a6014c2daf40a57c705d85380c41349cb2aa3c6e54a179aee615075df8f70ca9588e2b3786de0ae91b1abc8ad6c05ee3f079f8fcc61b1f75e21', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user13') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6681b61fd04c4f9b415e8822886327f6b22eee201a5f7ab7b2ca548dabd83b02a39e762bc9c0a47db19f773ec5a73e49fe543b4fd8179b0e78b4ee0720efa9fc') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User13', 'cc4fb25bd34f1cf9d56145d0144763b3f6a6d90f0242463a356d73439f73aa3bcc456d9fc45bbbd49c5b9fa491efd416b00b7badc047bc7912654427813504d7', 'User13', 'x8Yu6FthrDoMiufnHB_t', '6681b61fd04c4f9b415e8822886327f6b22eee201a5f7ab7b2ca548dabd83b02a39e762bc9c0a47db19f773ec5a73e49fe543b4fd8179b0e78b4ee0720efa9fc', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user14') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ed869131c3a1697d11794d23be66316113c4cd228e89df0a58726beb7f1481dc3916401fa2f90145becb0a2ce37cbea47cf300e5acd36ef57bdeded1226590ad') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User14', 'b3f0c466cea8a6119c6cb063c2e6b9cf5c4df93d95108d97be67f5669e1d00cdca85ca319279d0307a97c0b31d30d2ff152e3e16d839ad585117fc26d02a390f', 'User14', 'Rfwpc4lRM9a1XV68kEfb', 'ed869131c3a1697d11794d23be66316113c4cd228e89df0a58726beb7f1481dc3916401fa2f90145becb0a2ce37cbea47cf300e5acd36ef57bdeded1226590ad', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user15') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'de8d6673224fdd213c4c65890a359da15be6b4278c6a05ac2ed65a1a9e73ce57bda744e64268661c50c93e0767b80bbc86a39689122044cf75a19d7a44b8eb29') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User15', '77608dfcd9f04f8ea8af0ccba3d372a3ec83d6fc1be9375c89e8a20750ee5f492f37e8f445741f3bf0fa1c654741e09572d7150f30b8e0ec2018edcc472bd40c', 'User15', 'c_6pEBWc-l7wI8IiSoKp', 'de8d6673224fdd213c4c65890a359da15be6b4278c6a05ac2ed65a1a9e73ce57bda744e64268661c50c93e0767b80bbc86a39689122044cf75a19d7a44b8eb29', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 5)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user16') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '03e0d95cd5e3467cf57d04fe64eba5a2bf9d449cb5fa4ede9b7f144f767bf5a7af14d331fcb49e93c9a9219a81c7ab3f90c1b83b87b555c24362022a8f7da4a0') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User16', 'cbf12bb69f2887987595d371d9bb5350a16e85744bae398eca52e9dc89daf94c660dfcdc72f0361670cd20f93b5367a3c17f95f2d2e2a8ef4f1aa47f5343fe4c', 'User16', '_wCOxaalUFPlTWUKahEH', '03e0d95cd5e3467cf57d04fe64eba5a2bf9d449cb5fa4ede9b7f144f767bf5a7af14d331fcb49e93c9a9219a81c7ab3f90c1b83b87b555c24362022a8f7da4a0', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user17') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6c2fa5d62a2f089b7bfd41b754fb4dd0e809586c6ff5bb99535e0f158cbfac874529b3a87e80c371bc49ffd597c37fb721bd81c307554f4c55a53af92c92e36d') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User17', '9eb11a2f00931d26a0832b37590d00f3f8ffb65d9edb62825b61ec39324b899ce380d3ad1ba35c76515061a36fb6ca0784ed9ca4f6e81a79f22d58a28c770924', 'User17', 'gFAZj2gJ_AFYbPKv7AfD', '6c2fa5d62a2f089b7bfd41b754fb4dd0e809586c6ff5bb99535e0f158cbfac874529b3a87e80c371bc49ffd597c37fb721bd81c307554f4c55a53af92c92e36d', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user18') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '41c0bd159d39cf9906b073487a2436cabe6edbf40d371b693c58fe2606a2b25d4678af4125c0a2e2334687a01b57f37e2eeab5d2855b2b985105c2d279ea7c32') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User18', '76bb962ffa004f10fe9ef0d45c7d974c1df6e5bc96f3d43fa9626aed3aacf34bb3bae0243121830d3ab248619c83c339f0db40ab4976285b9a6695f7291177f2', 'User18', 'H-fXYLDopviwy4mJk_SY', '41c0bd159d39cf9906b073487a2436cabe6edbf40d371b693c58fe2606a2b25d4678af4125c0a2e2334687a01b57f37e2eeab5d2855b2b985105c2d279ea7c32', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user19') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '19f8e8a2d8951a45fdc24de0770548c6582f17fe45adc614065c78f5c756b1453de34b2a716aa51fa52fbde94c709160ca4de1021e8bc9db34fca7304bdbd911') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User19', 'dc21072b556e744c4249a1e8350a476838e5304c43298ec74f37899c6bafc8f009768ef78b0c2956ff591e0d1f1affaf063d8e40a9da70dd17f4c4c56b6ebdfd', 'User19', '8IHJb6MoXLTYEK42nhNn', '19f8e8a2d8951a45fdc24de0770548c6582f17fe45adc614065c78f5c756b1453de34b2a716aa51fa52fbde94c709160ca4de1021e8bc9db34fca7304bdbd911', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user20') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5b8be6e04f9563cf080999edb02e80b2d7c5de55aebbdbde7ebfe174c3924f16739a298b012c4007b3f866aa920ecc2b6254b3b0d61e37a35759c582fee3d875') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User20', '0cce4530ec0c7de274cbecf490c34eba08ea988c28610e39fb3435eae25ae7c2b2efe6542e6665f08cf88f1f186bf11f5262c07669716470e66753dd5a9a54d9', 'User20', '3Vy1klmhEQw3p0Olztzh', '5b8be6e04f9563cf080999edb02e80b2d7c5de55aebbdbde7ebfe174c3924f16739a298b012c4007b3f866aa920ecc2b6254b3b0d61e37a35759c582fee3d875', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 3)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user21') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '05958168782589ef825952c8d3d0d604defe1ec010f92661d3a7845e8048817398ccbf5b6adbd0b6469775b2feae2d0b4c6bfe2b2fe69a1bc5bc15be6e38ff5c') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User21', 'fb1084fa53e6935d9e3a098d2ff70849be454d95b45062a7f262e84d2d6cdd91cda04186c408925f2f4fcd93256122470dd6e7c95bddb1eafbaf41a02f52228e', 'User21', 'UEQQU_NtF9GNSo7AzoyL', '05958168782589ef825952c8d3d0d604defe1ec010f92661d3a7845e8048817398ccbf5b6adbd0b6469775b2feae2d0b4c6bfe2b2fe69a1bc5bc15be6e38ff5c', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6ff748f3ff095939f21788ef457cfa820887b61ada25ddeac12a621700d781d73c55ad1a81e99feb4cae262ebc54dff1ea83d01140bc0047bb264d48a0f1cc91') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', '3d7770539c90aa3b9f2b693c84fcdf99e0845e1ef49d922d0680468fe3b75f1766ab55d55088f5684686055f5fe77f3e0c36d0c12dfc4e1bd1926c4734dd5ed8', 'User22', 'UsJallwTluX042y_c5Z9', '6ff748f3ff095939f21788ef457cfa820887b61ada25ddeac12a621700d781d73c55ad1a81e99feb4cae262ebc54dff1ea83d01140bc0047bb264d48a0f1cc91', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '192eb34b5c2d92a71bb99803df18b87ffac157bfce2709830993e18bdae308b988bb8dd5851bc4da21972a0b3f4743e4ad6d1290d6280f0cadd2be2e4236870c') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', '4e37af085c6266ef68385d9ac051d51d2bff0d158674c155dfc0f0c92e6c6544ae43a69846c4311d16d8b12099e15afa33d32a9b928f8b10683700da096f1bbf', 'User1', 'jTGK068DHYWKNFdiN-Ul', '192eb34b5c2d92a71bb99803df18b87ffac157bfce2709830993e18bdae308b988bb8dd5851bc4da21972a0b3f4743e4ad6d1290d6280f0cadd2be2e4236870c', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '08637835d4b8ee704a6f0e6d8fd1ea4ce5b8e203e209a145c3e95f147b011f9a7c28338867fa50b5a8f27595ba79c4d5198ede029c8eb27b6f057507e7ddd9b7') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', '8f92d7addea8373f19f66b21cd88c4733091a24833a1e6c8f45e88cec1c9d9e6bbc6dfa884b7908a582033cc6df60b93fc01be72d15ed41ec25bea9b6348dbd6', 'User2', 'kgfoYIT0SAULan28EfDL', '08637835d4b8ee704a6f0e6d8fd1ea4ce5b8e203e209a145c3e95f147b011f9a7c28338867fa50b5a8f27595ba79c4d5198ede029c8eb27b6f057507e7ddd9b7', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '35c582aa546bc7e55c20cd22f961bae5c356fe5e7aac76668a1547b41083f4b12ac61b5951622114edb4ef071db79ebe2c39d109c141bc2bf32adef3b9371b6d') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', '21e7e5d5ee5bc25745f85b43a3c30831087fa4965d5711a7c3369c2d34d3893317ac7584994a67b69cf63479988965160aa3e798a44f4919bd94263c69ce2af7', 'User3', '0rGcQRD6bFNbeSMk8bBX', '35c582aa546bc7e55c20cd22f961bae5c356fe5e7aac76668a1547b41083f4b12ac61b5951622114edb4ef071db79ebe2c39d109c141bc2bf32adef3b9371b6d', NULL)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('test', 5)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5 AND "databases".id <> 6) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '76fac31ddb9570104d567ad9f352a218c2e68a1f49e6f9d9977ee49e7af981bb2b909235372d33683f2ba9a85e57d4a2949b717ea7fe4061ca0de4f744026ffb') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', 'd21f94b7354d8e3e4c8e3aab9ad7ca4bfecdd8962efa12fd124881691b3790f10fa3bcf824d0de7f4a31b4ed37e0652c71ce836d039cd644758ef97ee613ea0c', 'User4', 'XTps6uzssc9f2NlnE6WZ', '76fac31ddb9570104d567ad9f352a218c2e68a1f49e6f9d9977ee49e7af981bb2b909235372d33683f2ba9a85e57d4a2949b717ea7fe4061ca0de4f744026ffb', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9b2ad78a57a8f313b2fde73401924259377e6ac89a098dd1a2595654bb05e3d1464fdca3a02b35398492477d8ba561dfbc1cde8431819ebc1da5b42a1c0ef1bc') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', '168f9849d4f675c7ea9d1eb396e952c66b82b232a378773cc4dec97d109cc1cd7f4712a3e301096960cd0e24799377f27ff867ca6685439d4f3e5b1b7042b908', 'User5', '5Gn0dJ5v3waxb3OuqLbv', '9b2ad78a57a8f313b2fde73401924259377e6ac89a098dd1a2595654bb05e3d1464fdca3a02b35398492477d8ba561dfbc1cde8431819ebc1da5b42a1c0ef1bc', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '56af35b71ea08b085f36d0987a61c4e047debf768f22e05dd596991f58416f3c5f568e230e8c459c8256899ff00fa308b97fe5e3acdc2e4fd339266ed115727b') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', 'e3678ebd3ef07c4016e816729d7c4c278b1b89a27ac93ac53041ef7b813147408d2871d5f51070272b1cf508773a3e534ec77152e0a8f3cae42424a75084551b', 'User6', 'Ej8L81LaqIahGMijyXHN', '56af35b71ea08b085f36d0987a61c4e047debf768f22e05dd596991f58416f3c5f568e230e8c459c8256899ff00fa308b97fe5e3acdc2e4fd339266ed115727b', NULL)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (1.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 5)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b9cb48e923a5bc815946fe659d569e849de9c8937bf188232bea7e7b2f7d1ed60178dbcbc0f6aa423adbb965b86651932f3e43705d853256402d7234f19fc8e4') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', '3eee9cea949439cc510cf96c03950a78cf1b0743a62b584dc981d80a0c65f46953b77dfd44e9a50ceaf27a346623bbf1bb9dcada42aec42c172e48b4b6312cb6', 'User7', '3zOxq6SY_6QwqLB71a0M', 'b9cb48e923a5bc815946fe659d569e849de9c8937bf188232bea7e7b2f7d1ed60178dbcbc0f6aa423adbb965b86651932f3e43705d853256402d7234f19fc8e4', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user8') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd50379aefe9933823a4e34a4dfb423e77c746f01ad3f95be08046e20136d7a272fbbb901a60dfce57da3a248e7b4072a5475e4cbf725dda1bd2d039d374e9ff6') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User8', '53094f5fe24ee59b01a886404b97865d5a78a3d7ca86084fbf0ac9adffffaceae065f655f9427dd79c278e6f6d0f9191c42ce87dc146164f87e6e720a01b0a71', 'User8', 'SgwV1GXInGUgsfb2Xccv', 'd50379aefe9933823a4e34a4dfb423e77c746f01ad3f95be08046e20136d7a272fbbb901a60dfce57da3a248e7b4072a5475e4cbf725dda1bd2d039d374e9ff6', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user9') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '43904d161708dd1ee2cd97d91c51c10dc529a12384e888785096a7741c90a6ec44ea83b6e70a4532acbeef3be62e044b96c97803ab3f0ec09b7f685636a657e8') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User9', '835cf805c983a8e9ffb6c509ca8145f3fc29aca934013bc232d1a8338c49f93e971ccc94773bab17d6fc8322d031b97a164fbcd34b4c57ed6e2723522acd3d19', 'User9', 'mQL-qmXa6qkhDU-HNScH', '43904d161708dd1ee2cd97d91c51c10dc529a12384e888785096a7741c90a6ec44ea83b6e70a4532acbeef3be62e044b96c97803ab3f0ec09b7f685636a657e8', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user10') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '58d5a6224098ccbc51c7a5bd2e5bc6ccfb36f0b60999414b057df96a937cbbcb7a4bdf39ebe5f27f8c840d9cc8ceffc27c3827967c57bd284fa8a8734ed4d980') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User10', '25cfedc8c4930dd73882112e0355e44ab2cddcd022065948daa21e720844cf3601595e1efda72a0361d37e72f65dc3fb5b8a5d610879cbd02c970bce883a95e2', 'User10', 'yhPyT12RK5gwtA_ugOxl', '58d5a6224098ccbc51c7a5bd2e5bc6ccfb36f0b60999414b057df96a937cbbcb7a4bdf39ebe5f27f8c840d9cc8ceffc27c3827967c57bd284fa8a8734ed4d980', NULL)[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (1.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 3)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Newer Database' AND "databases".user_id = 3 AND "databases".id <> 6) LIMIT 1[0m
+  [4;35;1mDatabase Update (0.0ms)[0m   [0mUPDATE "databases" SET "name" = 'Newer Database' WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user11') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3663925f7685088ca4a3845e2280e97c10d0b5b42fa3572060938985b43c1da2fc3d65dd217214d431773ffe8441e960b7202a7cbdd29ce9e016df18a75d9b3d') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User11', 'd9017dbff1396a40cbc2064c76ba61af1d0a36516f29b79e8b994e4acfb63470024150a956429b96cf75fd0a8ad7f9c826b8619ed3aafb1ca86e561d267e59dd', 'User11', 'cJDgtmjLKqTuNNSwOfEc', '3663925f7685088ca4a3845e2280e97c10d0b5b42fa3572060938985b43c1da2fc3d65dd217214d431773ffe8441e960b7202a7cbdd29ce9e016df18a75d9b3d', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user12') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ef06f87e55ef659254c677a9e80afe0a6479da9ba6cc643d7f297129e8adfcbe5d064ad694d1ed4caebc21b0c22729d0b5e04ea8b6ee857aea6aecc57b889b6d') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User12', '60f96927e0335f5005a02716030dd62c622874954c2e6162aa88104e5e5134e1f349155ec812d4357102ffa521acef8557a8fab4355df4d1789e5d7c5123013e', 'User12', 'jIeuozs8me_VdFVca0nz', 'ef06f87e55ef659254c677a9e80afe0a6479da9ba6cc643d7f297129e8adfcbe5d064ad694d1ed4caebc21b0c22729d0b5e04ea8b6ee857aea6aecc57b889b6d', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user13') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '095eebdbbbea515a8ce8b6358bf73091bea3668998253cee9149c1eee4d796d19aa2568aa458e2d5df017257bbcc179c98c7114dd8916b922ee30ca0ae699462') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User13', '8b5df1407487e8ae19f8c6109fdabdc741c8c63a62304c2d57ae754d38af990b565ce5360aa55eed493838278f8d812f8b454305340f0688b5413a1e9b80aa43', 'User13', 'eEnZQ2Ohwe6Aw506Ov4N', '095eebdbbbea515a8ce8b6358bf73091bea3668998253cee9149c1eee4d796d19aa2568aa458e2d5df017257bbcc179c98c7114dd8916b922ee30ca0ae699462', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user14') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3c4abc9cc4e9992b79ae5ad3ab4bac293b2ec32600f75bbf88ed2e5b7ff66d6c5db8ce903c20b04cefe9c1bbc397878daa70df45e844877a52942056ced6dbb7') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User14', 'e71127f475829f2d675449b8748aa742bdb6652d3989c11ae12640d62d98eb6545395b5b83ae990b3c3a32722b560ac253377eeda879b17ddf9b2f4d8ed88f8a', 'User14', 'KlSVgnD0V_Gpt8aJLCRy', '3c4abc9cc4e9992b79ae5ad3ab4bac293b2ec32600f75bbf88ed2e5b7ff66d6c5db8ce903c20b04cefe9c1bbc397878daa70df45e844877a52942056ced6dbb7', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user15') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'eb24afaf4027ffc0afe249642f4f4821debcaf70f5e2a256a2c9e18cd089a466048358aa4d68986a470dc8e960a1f28f0ca3fc23a1afd6e8358150d1ce204add') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User15', '74d139f122dcd44fb452a4b8535d0da93cc02f8f2f2fc0c1d9dae911738f80bdd82e8a8ff97ae03b7e1ece7047da8a51bd662522a3d8814a90bf7e29f4f77089', 'User15', 'PZ7s78mpqI-SUZMpChGK', 'eb24afaf4027ffc0afe249642f4f4821debcaf70f5e2a256a2c9e18cd089a466048358aa4d68986a470dc8e960a1f28f0ca3fc23a1afd6e8358150d1ce204add', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 5)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user16') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '883bcb8f49791b0fe6d0a7a1146127bb4ce733dbb7c90a9792536da8f11e595af57c66e864d9d414bd6673b4f90c8945edacf46e977620663d1c14da1e4805ea') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User16', 'c2c0385edf7e079ab4791427152b42f6c582bbba4b34d1c8c378c5c90e48c264b43e967333956d9fab0a4c9cf63670768a1983e8da6fb9438c90ef6bcd2b79fa', 'User16', 'BZX-k8FfKsg-Xfn2KIV6', '883bcb8f49791b0fe6d0a7a1146127bb4ce733dbb7c90a9792536da8f11e595af57c66e864d9d414bd6673b4f90c8945edacf46e977620663d1c14da1e4805ea', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user17') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '81e4fa693f86af560dc351f83b0cdedb7622b2eedc2c178dff2f364c3d1aace0887417c952fe91aaa8f763ec52302dedeb8ce67747a60b4b416dfe661d4eec4d') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User17', '8532e8a7dc12a534328344406d9cc0af3bf0ebb7478f28d3f3ca2d6ca5d8e1e862402fb18d3e5f1a3dd76e5d3b8b0f0c1ca3c5bca199dbe2eb0aaa67741ccdca', 'User17', '9zqHxkjlDYmRfVrZLDgk', '81e4fa693f86af560dc351f83b0cdedb7622b2eedc2c178dff2f364c3d1aace0887417c952fe91aaa8f763ec52302dedeb8ce67747a60b4b416dfe661d4eec4d', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user18') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '649eeb929f547d841a47451e35e1587b39edc5b90d25b885815086f744c80b45e54b35267f1fc24bb45a8ae0db9b59b914aaa010a213eb456898782afa5f4ce7') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User18', 'c890ab760d0029165b40e03332d166fde0b466cd3f379aa74ca215b8d783dc46c9520e9917414718ccf274ddb350e6a481a7790b35cd58d0f86beff1680705c8', 'User18', 'JoW9sI-U923E4lsW-pq1', '649eeb929f547d841a47451e35e1587b39edc5b90d25b885815086f744c80b45e54b35267f1fc24bb45a8ae0db9b59b914aaa010a213eb456898782afa5f4ce7', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user19') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3603206ff9d2f3f0529c0593d103ba02a27a4413945af638af54601517f9ebfd6cb1224af44d0bef5d85059d2ed16a0407e2ac8944c7ac822037b03b7f089da2') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User19', '6fb0d2537e7e6a562b920e09d10c47598f90f4f7b27c238a40dc5610149d398f28cb05420e701eda0433f27fdc1215843bbd79751dd7ed8175d49bcfb43a0084', 'User19', 'SefQJyhrfCsAeyl5BTHj', '3603206ff9d2f3f0529c0593d103ba02a27a4413945af638af54601517f9ebfd6cb1224af44d0bef5d85059d2ed16a0407e2ac8944c7ac822037b03b7f089da2', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user20') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '32498f4b01f250bf61657216878d39bad16c1b0da9347dd2237b86b02cbbf4da0165de25fc288cc975b721cb497ab8f71e62a9646703d2cb92b19934ef1b7b46') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User20', '2d29dff5176aa727c4ba0e55b4d7e18ea47f898a5dc7f2b703f3c68024ee720510231dd9078be00adfc40075f3bc6a26a2a24d3fa530d759b03bb92f947e1481', 'User20', '0G7EklCy3SScODBlWaVw', '32498f4b01f250bf61657216878d39bad16c1b0da9347dd2237b86b02cbbf4da0165de25fc288cc975b721cb497ab8f71e62a9646703d2cb92b19934ef1b7b46', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 3)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user21') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f64aea1a4df76a15385e309efbb92c75ac5246f24917208b02904a25446c63796fe11d377cca3b246304d1d95b39a00bdc3dd2ae198596a9e8b95b6c04b5464c') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User21', '1e384d8f5de8a1adbfa89a1ca7be1ac83dd68366b159e229ace288ccc5a6173bfe9724fbc062de63cf52e9c7e6ed246ca3986a5aa3825f66bcb3d890f88cc13f', 'User21', '4hslE247o-yS4ztgkema', 'f64aea1a4df76a15385e309efbb92c75ac5246f24917208b02904a25446c63796fe11d377cca3b246304d1d95b39a00bdc3dd2ae198596a9e8b95b6c04b5464c', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '324f0df105c52bb0210376fca5eec045fb82f5987ce67dff4e70fa3cab30784a91bda0298c0d27344a166be4cd32b1222d5486a404bbd48e0173cbb158b7edd5') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', 'c99be7d5981a19325e2961eb12008c5efac283e6da92dd2845b49987c7252a5e04fe1f597abbee5297b9906f6f1b00e3287bdd8804fb6ad6f716873292908265', 'User22', 'P4-4emDfYVm3U9h1Aumx', '324f0df105c52bb0210376fca5eec045fb82f5987ce67dff4e70fa3cab30784a91bda0298c0d27344a166be4cd32b1222d5486a404bbd48e0173cbb158b7edd5', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '22c99898148599aeecd32e4fb413088b5d5ee3090f833be349f81449fee30b6b64dc9560bfae257a1a5d59ffe7f582d1621328532edf5fc4b5bff6e6091efebd') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', 'fcf90d9164679536897d2c04760fb103f3f922659395dbe62d09545d65a468a27ea3b12b0a329a64189dd16684ef31edac53cb5faf3133cbf862eec10d0309d5', 'User1', '-a3k-jAgW_z8wWhgpjCw', '22c99898148599aeecd32e4fb413088b5d5ee3090f833be349f81449fee30b6b64dc9560bfae257a1a5d59ffe7f582d1621328532edf5fc4b5bff6e6091efebd', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '02e7596b4396dde5e6b39fd468a36aa16521d60be17fe3eb8ace7b1078a868705cc6cf0e1f3f2b8895f96c306c880e83d3c3b6ef06fde8d279f78f98919564f2') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', '4ad31190eb47c5c956e10fac618b2fd255409626ceeb88fbd9c4e87dc42347ff8ccd05a118336bff52a0f5309734015781cbb654d9ccaa12f18980138f79fad6', 'User2', 'Te_eDr9jfGkAtvhNjn2O', '02e7596b4396dde5e6b39fd468a36aa16521d60be17fe3eb8ace7b1078a868705cc6cf0e1f3f2b8895f96c306c880e83d3c3b6ef06fde8d279f78f98919564f2', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5a529b704909691770f442a600cd30d66855492f0aefff885708777d1be7cb198f972641dcb8d285683dc6db1ae18eea72a168cfc4006431b3293d74ff12dcc7') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', '4d9c4e2ada27f6517e77b224509de0bcadb9d7bed124fa813fff2c45ca83d744f9dbf9740d4736cdb566b2aac9303f8379f2bd2f91b8186c8c5b18e884842563', 'User3', 'R1N5zSyDghaYpcuUKWT0', '5a529b704909691770f442a600cd30d66855492f0aefff885708777d1be7cb198f972641dcb8d285683dc6db1ae18eea72a168cfc4006431b3293d74ff12dcc7', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('test', 5)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5 AND "databases".id <> 6) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '499287db50355ad0ae8c8530aa6132c37a3b1c44f22ced6c24ef569bbbc017da2fde6f3cf64861100dbd5ba38838125c6e981ffda118c841efa517c061468442') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', '90af25eae853d0c86cef0e03b49fa40f23570cffc7e6e95fefaa0b535c349a9e584fc9daf9e58eff0bfe811d4002b4dd58b419183f4e7e81aaecfe8fab9e1bc7', 'User4', 'JUdzA30AyvShoFJuyewi', '499287db50355ad0ae8c8530aa6132c37a3b1c44f22ced6c24ef569bbbc017da2fde6f3cf64861100dbd5ba38838125c6e981ffda118c841efa517c061468442', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2ab1f444547acacd9140a7a2218331a6fc943fe2174e5ffc48995091f0e23e110dce604f51e23977a2770752b9e6bc64028b361eb9cc3d07300438aeaa4461a5') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', 'e47edac3ffcc4317ff4591ed43273276ac7e3244187d8065b73aed80a2bad3fa49e5594c2c7da02e27bff62776c02428dd79e5a21680df6c5e3e227c28e72703', 'User5', 'lZT-T2eCc6qEVjjPidXK', '2ab1f444547acacd9140a7a2218331a6fc943fe2174e5ffc48995091f0e23e110dce604f51e23977a2770752b9e6bc64028b361eb9cc3d07300438aeaa4461a5', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '553e23f233801b0afdb73c573cafe7fad4394acf570b362099e4d4d78b5c803c1deb52f8bf48694fe57b7909412be9645c723c2860f6bf5f0ea5eedfa713f843') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', 'db7427084012bfc670621177823b07de92f1dbe8a168ff9afc942630f09f047c9f03632405545a6c523b18336ebb00a6786a4176e754fa52bce3666c3ad6a772', 'User6', 'wAmDdeN_820BcmefTER8', '553e23f233801b0afdb73c573cafe7fad4394acf570b362099e4d4d78b5c803c1deb52f8bf48694fe57b7909412be9645c723c2860f6bf5f0ea5eedfa713f843', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 5)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7f7761fab64340dbf8f502789c18a0a4616876589223769194fc9965ccff3f6d7e9a039ec2700e8a780018f9f8c4d7c6992bbfa1e796a2f674d3dd877bf19f3e') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', 'f943ed9abd682355d6256e547d5c7c739a2232f62a966578b99acdc3b27b2391cb85925fdb3a47a88121124c2aed5ce131067c67beff9bb2c080334a68c6d39d', 'User7', 'qgDlnJep-CX1HTSS4SK2', '7f7761fab64340dbf8f502789c18a0a4616876589223769194fc9965ccff3f6d7e9a039ec2700e8a780018f9f8c4d7c6992bbfa1e796a2f674d3dd877bf19f3e', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user8') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd5726ad583eb595bbcd4474e4a1ac7a9ec797869f02b0084ae495913e3fcb7bc49d91d0c4f4526af5fee1fd560fb393de402d36e02f35400a6ba6c8f510389c4') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User8', '2e3b1f9d822b6a5075a46b8edab31831fcfec81e229ea65b9340e3c4f9b9678c67a17c0de4bcc4aec70da734d65f76fa258c854538ce337630257de891a703bc', 'User8', 'Cf1z58PbQ3MGKozw6vVg', 'd5726ad583eb595bbcd4474e4a1ac7a9ec797869f02b0084ae495913e3fcb7bc49d91d0c4f4526af5fee1fd560fb393de402d36e02f35400a6ba6c8f510389c4', NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user9') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '00422fadc18cb6682c6c665d97b545cfcada524adf388000602d48109fd2d1b546f3ecb5061daf26ff904c749ed85372164b2c5c8fe5091a4a266e18be377c07') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User9', '494ffe2b731c69cbf0bcc067cd2dead3b04a91c6eaa1c0158c5dc2943777ba95ff8e3c3785c5acc6c1c251d29299c08b1db7b28cde3b654bef7e3176b8aea696', 'User9', 'CcQigeG-YLqJEOJJSNw4', '00422fadc18cb6682c6c665d97b545cfcada524adf388000602d48109fd2d1b546f3ecb5061daf26ff904c749ed85372164b2c5c8fe5091a4a266e18be377c07', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user10') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bf7f0a21a16b6d00b8ad0fa3cd2c668a4257e42c969c488c4fe045d9632678ffa4a2982fdef8d2e1f9e12f7c5bcbb4a3e686a8af89bc94155de1bdd12e55d3d7') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User10', 'c827f6f5034431a2a780ec3c447685816f4bcf5198ca32fecf52b46776b327d18f01307c56435c17702b17f877f9361aa2f11d2a39707c194dc476dacee8d454', 'User10', 'H6fU_GTpA8_3ycxqKUNe', 'bf7f0a21a16b6d00b8ad0fa3cd2c668a4257e42c969c488c4fe045d9632678ffa4a2982fdef8d2e1f9e12f7c5bcbb4a3e686a8af89bc94155de1bdd12e55d3d7', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 3)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Newer Database' AND "databases".user_id = 3 AND "databases".id <> 6) LIMIT 1[0m
+  [4;35;1mDatabase Update (0.0ms)[0m   [0mUPDATE "databases" SET "name" = 'Newer Database' WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user11') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '10ac7c65b0775d4131cfb3fe3543342a79a0b590b01e1795989cfe2ad12ca8f88b0943ce2fad8fec8b0dd6bc0fc2845833ba5f727aa06b68e089970e4eb4d7e9') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User11', 'df474bcd45502764ee5e18d9f07af48795ce24926217e8a1f0ad1ea03d28cca3cd6229dd223636cdbb3d551f8ae720b480427f0a8f768f315a2eea4c3143b091', 'User11', '-oO49JBMVEeWAeaySVjv', '10ac7c65b0775d4131cfb3fe3543342a79a0b590b01e1795989cfe2ad12ca8f88b0943ce2fad8fec8b0dd6bc0fc2845833ba5f727aa06b68e089970e4eb4d7e9', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user12') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9f79367a49c925068f4575402d835a52d3f562346e0925f1afe64283a596a1c80f532b9655e4d83cd55147149ab8528fec546960fb7dba34779dff1c69a4d5a6') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User12', '9896b4d2829accb123217f7447a12de901a7217f6f5f12f342d8d4b8a4bfaa2cf0b269d413fb764da01a800c8b87fa62283fbea3f713a4167abe2badbb6ecc5e', 'User12', 'qvkcPRIi0OeehOU3giet', '9f79367a49c925068f4575402d835a52d3f562346e0925f1afe64283a596a1c80f532b9655e4d83cd55147149ab8528fec546960fb7dba34779dff1c69a4d5a6', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user13') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c3b201bb1cc925a6e4826812dd30a952117ceecfa8b013c1ad02b2f9cce0a41e075b88ad1d3d3a048b938ae68db0375e47e757ec81a934eb7f48f028ad29fd90') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User13', '136e7edabbee6c83dff5071c90439a5b58aa24ccb091fab8d033620efe230726941326277fd01f733367d7ecc65e545264da9053a9adf34b0375ff35ae113d7a', 'User13', 'GxWR4z8W2_nBhXyqbf__', 'c3b201bb1cc925a6e4826812dd30a952117ceecfa8b013c1ad02b2f9cce0a41e075b88ad1d3d3a048b938ae68db0375e47e757ec81a934eb7f48f028ad29fd90', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user14') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e0995645330b8405fb6772a352d8b8237d068dca228b8b80c9795d4e3e20af04cd70821a3630f5c8e82fc16e5f7cec640d81413759b9052ae0f3cfee8c21796d') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User14', 'c34d7cef7b7dd4465184987b1b0b9e816578c1b28cdfb17475f924892672ac20bc9ba0640b5cce02ea29940ec4ec8817427573825f5491c1231d2c8f8319d18b', 'User14', 'm8MzaLkz2Yjd1fYlJYQo', 'e0995645330b8405fb6772a352d8b8237d068dca228b8b80c9795d4e3e20af04cd70821a3630f5c8e82fc16e5f7cec640d81413759b9052ae0f3cfee8c21796d', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user15') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6d6d88dc682ba12712665c1cf81971cea2bb80d12dc5ace887686c86a9c39e6b5120ff1ed26e9c027b15ec8f6c0eb8eec5da21fcd11d648e133735c18c407d03') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User15', 'e22f4f594ab7c9258cfa5c6c116fed8f5544dda4eaf536e47cca0eaf6cc575a51253ff8432df7f491bb11ff1f3faa1078fbfe9ebf7fb141f54a791d08c6b99c7', 'User15', 'MllIK8Bq8Giwrw2nRfGn', '6d6d88dc682ba12712665c1cf81971cea2bb80d12dc5ace887686c86a9c39e6b5120ff1ed26e9c027b15ec8f6c0eb8eec5da21fcd11d648e133735c18c407d03', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 5)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user16') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '98523007c49b89426bfc2ad43b641eae17da1e64d0358cf22ce4db9c772a8ce8fb28a2cd111ff7da972b00927c532865263e7ad4b35144fec06a8c783ccec743') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User16', '9f5cf0fa58b8647b09399d72f1e176d40899e7a5f12d0fe67465658075e001799e27686c5b55fb0ec60cae880045e9bb62556016c0edc6261f8bd8aa1685a4e7', 'User16', 'OOzQUUuIMMzt6H2-rcXK', '98523007c49b89426bfc2ad43b641eae17da1e64d0358cf22ce4db9c772a8ce8fb28a2cd111ff7da972b00927c532865263e7ad4b35144fec06a8c783ccec743', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user17') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1fa67037461c9b9c7854fadd9cf5ce2dde092a5ce094ee040a8734b6ab6b54a4fd8f596ac262529ed3489c81d1cfc295d46567d7491923d1ed1e731f313262f5') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User17', '0e869e70b6bb9289181b8605e8f0d92549bfebb3b4ac2dc71bd4185d68d5e97aad9b898e07cf682a5e051f7437e9e331e57d138427a53ff65e1c76730720b9c2', 'User17', 'AHFlK6UDA0HU08_fO5a2', '1fa67037461c9b9c7854fadd9cf5ce2dde092a5ce094ee040a8734b6ab6b54a4fd8f596ac262529ed3489c81d1cfc295d46567d7491923d1ed1e731f313262f5', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user18') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3a6848ca88d6b136f97328e89766ac58afb0d7fb2227c785fbbb759fdbb06584a5c945e8c1307b78f06f776e97200b4bf6a712e69b0da1b3505fdabfdd88bbb2') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User18', '0a99f9f65ec22caa8d4539d67fe17a3bdd84b757afa4dbd00d553c42f3d09a0960da79bfba385e345136e371514036bb50f12a036dcee1b1cbb85aeb1c123b7c', 'User18', 'O8FdBG3Aj7r6hYYqUNK8', '3a6848ca88d6b136f97328e89766ac58afb0d7fb2227c785fbbb759fdbb06584a5c945e8c1307b78f06f776e97200b4bf6a712e69b0da1b3505fdabfdd88bbb2', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user19') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '93239501f5a758f9fc1c516c145187c0aeb1f0e8e3ee04344da9408ec0be8d83d4ab63b45b23cda162b63f7e9b11a830808974ebd943ba952288d861c8e24723') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User19', '4293b8c0d9db0aa8e5c2d6d5ad7de0c594484f55203ab7800f87f20692ed2e2ab220c5462abe79a7c8b1b7570b5ad718379f78adabc78482196ab74d6598d299', 'User19', 'WyNlUsL7zU7EKOuOafeO', '93239501f5a758f9fc1c516c145187c0aeb1f0e8e3ee04344da9408ec0be8d83d4ab63b45b23cda162b63f7e9b11a830808974ebd943ba952288d861c8e24723', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user20') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2008a5a28277ca488d6979ef522e8f8fc774adf756bfda0b805cdf2871cab137063fbebf112d43657df8624572dcb97b8f3fe20c59c8f7384a7a4363e6b4d162') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User20', '5748e531f4d791860a4214bd116e286f4a03c65801cbeec4a40e09bd6bafd19692b6c115737c451d73c33e77d28624f53fcbefde7a2c06c03420c5d396eb6e47', 'User20', '8YVqkoqf9J4q8nbPgr_I', '2008a5a28277ca488d6979ef522e8f8fc774adf756bfda0b805cdf2871cab137063fbebf112d43657df8624572dcb97b8f3fe20c59c8f7384a7a4363e6b4d162', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB5', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB6' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '86a70ae7a0380a8fdf993c50590cd0101117ada5f6d65461615b68294730b9ecda22673a11ffb08409d2962c7f61de322a829a93fb869fae79694c2f5c7d1571') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User21', '2f5d8d63c7c2247432166e047f6093e1cc0e38ad594927be66c742ad73f00c0c8d3d8a0049a775a19e67a8b5c9dccf2afba2f1e9cb36dc9c5cba613be80d985f', 'User21', '8vCuE6hYao_yZ6VqOyMV', '86a70ae7a0380a8fdf993c50590cd0101117ada5f6d65461615b68294730b9ecda22673a11ffb08409d2962c7f61de322a829a93fb869fae79694c2f5c7d1571', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '224e27aa348bd3157f0d0a6e59eb9f4db4b9a1202494db9724c464379beca35791fab4fbbcecd2070850047ca8b78d104b3f90b8094ec16a63d08c52ff996817') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', '9c5916d93d2bc46cfee7f53d0b9fb74d3c21625a8b717a554881edb87d0ddbb253514c09c75610f07bc4c5ce8552b2b540e5c08b52f0afd61f637e46b3aab674', 'User22', 'ffA0Mpw596O00OLOoT8Q', '224e27aa348bd3157f0d0a6e59eb9f4db4b9a1202494db9724c464379beca35791fab4fbbcecd2070850047ca8b78d104b3f90b8094ec16a63d08c52ff996817', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '08de493d104c8aa7537d32cfbeb16a45c470ff0665d842d590b8a4fc263e11a77405c3d4babde79ae6ae0a62968edaccfb50c3b00e7c27d4b8435aac7d7c785a') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', '119510f9776ce747f4f002840ce62a5c6e954a219a9aa383cf391696fec9f5b7de674f291021a1b5a0d57a79ff38b1c982a27b95de8531fe4ac309ff244ba93d', 'User1', '0UwEdMPNiSNxkcImtHub', '08de493d104c8aa7537d32cfbeb16a45c470ff0665d842d590b8a4fc263e11a77405c3d4babde79ae6ae0a62968edaccfb50c3b00e7c27d4b8435aac7d7c785a', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '49db30a2730d4caef2a881a7bb7b32e1567dfd1870dce15c5b32ccc824f3791a23c35525dc9d9777949c8232adb6903d2f0f8b027dc4a80cdcfd8daf42d10848') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', 'a17e79b81edea619e89c9a82f464360af6849d0d5dcae8cd32d423962959d4b2803fb5e268dbe72058d2f87f55e8c40aa15f4744b52360c50ab370bd7a9b92d7', 'User2', 'SdjtrDUpKn3axgkbLETm', '49db30a2730d4caef2a881a7bb7b32e1567dfd1870dce15c5b32ccc824f3791a23c35525dc9d9777949c8232adb6903d2f0f8b027dc4a80cdcfd8daf42d10848', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '85db6474d7de51aa16a2a2bb71bcf167fba2ebfebc582585e341cf760d3da85973b38ae19638b34e471aeb03d323c8d5be16191c4f94fe02d556944e146a538f') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', 'f5715a8fa6afef363f11056738709ad8c5aa2c50aa065427a615a3f1f8a955629de31a4dd33372e839560881c743d2c03af03374bf6437f9a7882b80c1fae93c', 'User3', 'scfakhs5si3blkt2xUsl', '85db6474d7de51aa16a2a2bb71bcf167fba2ebfebc582585e341cf760d3da85973b38ae19638b34e471aeb03d323c8d5be16191c4f94fe02d556944e146a538f', NULL)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('test', 5)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'test' AND "databases".user_id = 5 AND "databases".id <> 6) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd3b7574ae3a0e7718fda9e16ff3d5965dc542e0a725887d3f026119ba39ff415954dfe16e4e4799bfeaf6ab357c9fa78ab33706f3d07be6d52127ad168525265') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', 'e2ca2ecbf476341e2b3548946e058877326abd27788ef100ca038f225fff29114e7626a9336e21ae0d9ca5e9c8c4096c55890905f9fdab9e9141a91b4ad67af8', 'User4', '_BdHNPlB5x-E20IAnHrO', 'd3b7574ae3a0e7718fda9e16ff3d5965dc542e0a725887d3f026119ba39ff415954dfe16e4e4799bfeaf6ab357c9fa78ab33706f3d07be6d52127ad168525265', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2e41e39407d8b203c3d9a621bae19280faf96076faf2bfa9a1ec6bc5a8907e5438116c53c3a76c3c8daaac0ea05277b9e9e9ccabd7dccd230e7fea7797387594') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', 'c178304792071673ad4de11d690d15261c933078e8c8d4137363eb34704daf5e1850d2aa51c06a696131c104f3118c023b5b5128209a53c322baee65be66d8a2', 'User5', 'fzhQazLd6HB4yAXJbs1u', '2e41e39407d8b203c3d9a621bae19280faf96076faf2bfa9a1ec6bc5a8907e5438116c53c3a76c3c8daaac0ea05277b9e9e9ccabd7dccd230e7fea7797387594', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7b34459a670a02b95e81a3e0d2403964e09fa5bfd17687ff9fbc3f795192121dd6de7d6e707c98a0c98e030ca3778ea086656e81a13bdfead5b9d8ab4233071b') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', '5fb6b05fe82c25653f450c4f141a8554ea299e427e300de457626a5e522754c84edd9d8b98052cf41290bde4d46dd4be834b71ac87b0e30cb532be5ea594c2e6', 'User6', '0uAk6kyQJzKPiNwQOw4_', '7b34459a670a02b95e81a3e0d2403964e09fa5bfd17687ff9fbc3f795192121dd6de7d6e707c98a0c98e030ca3778ea086656e81a13bdfead5b9d8ab4233071b', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 5)[0m
+  [4;35;1mDatabase Destroy (0.0ms)[0m   [0mDELETE FROM "databases" WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c0a41a987a8071d546e20c88c912a670708019ea8d1c5e77735baca3d8dc12f9732a36b0c511b8535ebcb21569e03b9e7a63e8c6fa97e99eb0c8038bad19d12b') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', 'c83588612c16efa9056d3a473b9168ec2af3653e36fe9d60fe4549609bc3613a9311ca7ea51b8165d706ad64a3dd9e9e02692fc9df49ae70b86ef79037b73b75', 'User7', 'M5h3-kk7YdGiB791WBca', 'c0a41a987a8071d546e20c88c912a670708019ea8d1c5e77735baca3d8dc12f9732a36b0c511b8535ebcb21569e03b9e7a63e8c6fa97e99eb0c8038bad19d12b', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user8') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd75db8883f8e15ea9d9a60ce20bdbc1a3881c8f2bf63f51d1507beb994690faa0890134f0a47a6871ef98c49c31010ccc863d0b503c7ef022e12a0bccd1cae2f') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User8', 'c101a92ce614a04c8a8d9037c1bb5fedaf5c1e9669a0cb389657ef588e7109b056480a1f157c5876d01070b2299d5b6a3a903a77604ae97c23f8ff8fda8dca8f', 'User8', 'h_K3i7FtTFpCwYiLymyK', 'd75db8883f8e15ea9d9a60ce20bdbc1a3881c8f2bf63f51d1507beb994690faa0890134f0a47a6871ef98c49c31010ccc863d0b503c7ef022e12a0bccd1cae2f', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user9') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7949983a2843474ca6aaff19f33f057cb6af203d76b7a418cb27f5fc01997c21ecf47ef010728bdc9c048fddac2af44f8d64c27c0f008fb7ff9c483c3a839258') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User9', '13e3407eb4eaa1d11670e7ef3e9fe3fce8b6e09b9498a93c40a13f25f2cf4429308e4f4b15aa2bc57afa752172fba4fe6c2eb8f505084d1bf0cb1beee2019aeb', 'User9', 'TUCl81lfO8HNmphlg0UH', '7949983a2843474ca6aaff19f33f057cb6af203d76b7a418cb27f5fc01997c21ecf47ef010728bdc9c048fddac2af44f8d64c27c0f008fb7ff9c483c3a839258', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user10') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '156ecf3a845aaf1f4c099d5ec2fff804ac0b8781a6b92dcc6aedd057d5e93559b2521a76b08b1e68882afc9318c8e8ace41f203d1feca199d44f95884788b820') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User10', '68e58149f843c8356136b3d44f53b606691ffdafc966761ba469c8e067251be3e53247666b9e7396a942816ffd66fc3c56ee84c7cde32f9c6a205755bf7ee155', 'User10', 'Ak-t202zKk09_dg2mC9W', '156ecf3a845aaf1f4c099d5ec2fff804ac0b8781a6b92dcc6aedd057d5e93559b2521a76b08b1e68882afc9318c8e8ace41f203d1feca199d44f95884788b820', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My First Database' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My First Database', 3)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Newer Database' AND "databases".user_id = 3 AND "databases".id <> 6) LIMIT 1[0m
+  [4;35;1mDatabase Update (0.0ms)[0m   [0mUPDATE "databases" SET "name" = 'Newer Database' WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user11') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '92216194f5babf49726ec9ca1e25a5e8418fc84eff9ceef58d5af999acb96cdef4821188c003518006d1ea86a77f54f278e8f7e84e0b7914d74e81f82d613f32') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User11', 'c3dae8fa90b2dcd3895523c32b0ae411ae35211b2d5ba52adcc4067d9df4ce75f09f450675d6477b85183e7fb909ffa9427d15542e976b91935052faf6f53810', 'User11', 'pBYxZm44BmkR9kVNJ2qt', '92216194f5babf49726ec9ca1e25a5e8418fc84eff9ceef58d5af999acb96cdef4821188c003518006d1ea86a77f54f278e8f7e84e0b7914d74e81f82d613f32', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user12') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6e921c88542d8c88e216d4e8906b0090baf488b781c2a0e43de0998269e2d259fa5c5c4358cc9e2a7567804c3d5b58c69f3128fd6ffa0ff401573f9322f0701c') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User12', 'a9b7d6b0912e37d0db1e7586a549604d6d869b1dc8c257331b5100c99f230246cc7dcc56ed5854b08e93ab50465cea3796b4af92b418fc51a4840c648c1cfe4d', 'User12', 'ey7uiXAFBNekuwCtePmQ', '6e921c88542d8c88e216d4e8906b0090baf488b781c2a0e43de0998269e2d259fa5c5c4358cc9e2a7567804c3d5b58c69f3128fd6ffa0ff401573f9322f0701c', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user13') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5241432e7f85cb420ed9a7740096ffd5d20bc37fc4b581fa4d2f65855dce96f917c4b0274462b8b6f41c2f388a90baf786f1469e2f6636d37963d76fa19bfe7f') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User13', '60a4636a00240df4244766a338809f8d2465d2249c2fe874be42457de9dbc2438dda3d44916d973287e2e8e400c593d409127163a56b9ec3a9112b0d7c8d0cb3', 'User13', 'RNIH_XSqXbeSJYjZsSv-', '5241432e7f85cb420ed9a7740096ffd5d20bc37fc4b581fa4d2f65855dce96f917c4b0274462b8b6f41c2f388a90baf786f1469e2f6636d37963d76fa19bfe7f', NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user14') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8bada1cb580704b036ec09c590eb7910a1050bccfc912ce4a8027a5ee4c208d783048339fbff1fc12281a2bcfb9cc76dde1571e6fc04f6f7c9c74ce0af9d45b6') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User14', 'cd5afe99f900161fde605b997a97045b10f45e6f1e214354b8a6a5021a706ba21b4bdb546d210087b80ae6cdc413fbf2d387f9070cbecd208517d75d9edc34f8', 'User14', 'O0tKLEwuUyw2VzCIlKDT', '8bada1cb580704b036ec09c590eb7910a1050bccfc912ce4a8027a5ee4c208d783048339fbff1fc12281a2bcfb9cc76dde1571e6fc04f6f7c9c74ce0af9d45b6', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user15') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1aabfa0760902d8e8676e050fcb7eae5591ccd20d08f326fe0732d9347724188ab583862f1843c8b76fec6f2d1fba9bccff9d49a028542fea88e429e777abeec') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User15', 'ee96051e527aae31b6b75f6557cd9d6b1bf0753a6b087ea1ab7d89f4aa6ce45bba8c895f96940418f65ddd3307eb9c7f7be143f468a94d166d53be66c48f0d96', 'User15', 'rABqqCJNpxBZ3jZCb_B0', '1aabfa0760902d8e8676e050fcb7eae5591ccd20d08f326fe0732d9347724188ab583862f1843c8b76fec6f2d1fba9bccff9d49a028542fea88e429e777abeec', NULL)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 5)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user16') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bbbc8283e329f523f31605cbe44eeae1ed51ed23d44afbf80546add29240f5e6323fbd9fdb59a49ebbd4bd9b9a692f8c1dac78ef92d19740a34c671634f51a92') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User16', '5e8ced8155c4e766d0206270da7087571312db33ce0994fe05e3665ff703140aead5f1b8bb2c005f77b09ee5de1d32239b744c375df5f5bc69eeee88e4437759', 'User16', 'Nut8O4VD-Te-ggCjRaXB', 'bbbc8283e329f523f31605cbe44eeae1ed51ed23d44afbf80546add29240f5e6323fbd9fdb59a49ebbd4bd9b9a692f8c1dac78ef92d19740a34c671634f51a92', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user17') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '31c46ef677ccd0961d5d118245ad99df8fbab9ce934b18c0af87a3e97d7a63df86bfdc61e6aef291209db4b6efc39178ae1f34d120cfdbd8d05ae85a45a337c9') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User17', '9902899e7138e4a27ab52e171e4dcc72cf7469565f0e93889696a27cb5c642fcc8d01befea2b4a66f727d45c63b660ba7e11ba9a865bf885e7d0c81b210d512a', 'User17', 'vBmWB2OqgQgEH5bg8paI', '31c46ef677ccd0961d5d118245ad99df8fbab9ce934b18c0af87a3e97d7a63df86bfdc61e6aef291209db4b6efc39178ae1f34d120cfdbd8d05ae85a45a337c9', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user18') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd413b02904582baef64cb45e21a7708a3367a5dc78e36ac69ff2a3edc99a29cbffb79c11ae624b5ef4b76d8a679a39160c1abc9844d3164c539829db35d4b94a') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User18', '449876073c87a0b7d836dc214582750c06eff2cd602cd43fef62b292d78a0d17973c2d1b0fff943aea2bfb3333852c5a7b0369543f4ae95a3a23a1f49bdeddc5', 'User18', 'HWGVCdFil1WczpW1nMSw', 'd413b02904582baef64cb45e21a7708a3367a5dc78e36ac69ff2a3edc99a29cbffb79c11ae624b5ef4b76d8a679a39160c1abc9844d3164c539829db35d4b94a', NULL)[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user19') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5f2162af19ff6c9f988dfcfb6868e3451efb89556dd7e9fe2931925e3e56a919cea4ea053413924ffe0d8bcedf9f88e8240f857bbbeaf22094f31294df65b048') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User19', 'd457c9bcf770578ea8318faa170a8ad175d4754045a19f5efa8522bc3ced5f1b77782df62249d046372838620dac75c0b6acc6661b01d3893e9192fddef360e0', 'User19', 'HQBtujGYqVuKsZ_aO2Q5', '5f2162af19ff6c9f988dfcfb6868e3451efb89556dd7e9fe2931925e3e56a919cea4ea053413924ffe0d8bcedf9f88e8240f857bbbeaf22094f31294df65b048', NULL)[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user20') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '862a034179d87715e430db512c46f719d58203de7116d3ac38443999e314c0af56e77aa47582727bf17bb82591144e347ad7c7369b619bc50e031485a282563c') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User20', 'ce3ae0296c62f8b969728913441c7ee38db82ac2cfe19f416b0cf5310dc8353979971cb27434eab29da3e41616cec93106e3b9ea78dedf7166c9451b221869b1', 'User20', 'kLQLQm6HLCkhpQnjSjGW', '862a034179d87715e430db512c46f719d58203de7116d3ac38443999e314c0af56e77aa47582727bf17bb82591144e347ad7c7369b619bc50e031485a282563c', NULL)[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.0ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB5', 3)[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB6' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user21') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fec393e92f6d8fb6a5deccbe84ed0122a80aeced992495fd8ad77f63a908b496440fca394e6699a57515d2e6252d594bc6e557fca86e160f6523984ed52874b6') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User21', '940229e8416b2606721ebdae5325c1dbc55ee093e45e3dc768e03a8ee0090e047db2eea13b73452f6e4ca8a400fd3a198f069a53d2246d615e691f8af4bf6416', 'User21', 'k7TiAmJ-RYju2U8UD6n3', 'fec393e92f6d8fb6a5deccbe84ed0122a80aeced992495fd8ad77f63a908b496440fca394e6699a57515d2e6252d594bc6e557fca86e160f6523984ed52874b6', NULL)[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user22') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '966394a3a63142eaab65cb64b1c3cff8e8ab8e50fdfc11215536866aca19b3998b6f945ce4353d41e54c65f1ae6d6c0c9c2fa2adf90081bff7d340561a4e007d') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User22', 'a092a0a29709151de312f741ae2b9398f678b9dc0236679739d6b3f8021cfbb438301856f3ac1a9b63fded0c6a792500d32ef292030b0751accca13ab0267f9f', 'User22', 'D-V1BAcofkpba-H23iFX', '966394a3a63142eaab65cb64b1c3cff8e8ab8e50fdfc11215536866aca19b3998b6f945ce4353d41e54c65f1ae6d6c0c9c2fa2adf90081bff7d340561a4e007d', NULL)[0m
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 12:56:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 46ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 12:56:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 12:59:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `add_database_path' for #<ActionView::Base:0x7a49c48>) on line #4 of app/views/databases/index.html.haml:
+1: %h1= 'All user Databases'
+2: - if current_user
+3:   %h1= 'My Databases'
+4:   %p= link_to('Add Database', add_database_path())
+5:   %table
+6:     %tr
+7:       %th= 'Name'
+
+    app/views/databases/index.html.haml:4:in `_run_haml_app47views47databases47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/databases_controller.rb:9:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 12:59:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 53ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 12:59:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#new (for 127.0.0.1 at 2010-04-23 12:59:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"databases"}
+Rendering template within layouts/application
+Rendering databases/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 46ms (View: 36, DB: 0) | 200 OK [http://localhost/databases/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 12:59:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#create (for 127.0.0.1 at 2010-04-23 12:59:58) [POST]
+  Parameters: {"commit"=>"Add Database", "action"=>"create", "authenticity_token"=>"ePClWPoa/kKwXOVWusOEKrYHyDsbY+X2l5Ig81hn9JQ=", "database"=>{"name"=>"Sean is a dick"}, "controller"=>"databases"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Sean is a dick' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mDatabase Create (2.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('Sean is a dick', 1)[0m
+Redirected to http://localhost:3000/databases/6
+Completed in 138ms (DB: 2) | 302 Found [http://localhost/databases]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 12:59:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 47ms (View: 36, DB: 1) | 200 OK [http://localhost/databases/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 12:59:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 13:00:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"6"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 59ms (View: 36, DB: 2) | 200 OK [http://localhost/tables/new?database_id=6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 13:00:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 13:00:19) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"ePClWPoa/kKwXOVWusOEKrYHyDsbY+X2l5Ig81hn9JQ=", "table"=>{"name"=>"8(*&F(&^8769", "database_id"=>"6"}, "controller"=>"tables"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 6) [0m
+  [4;36;1mTable Create (2.0ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('8(*&F(&^8769', 6)[0m
+Redirected to http://localhost:3000/tables/10
+Completed in 120ms (DB: 2) | 302 Found [http://localhost/tables]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 13:00:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"tables"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 10) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 48ms (View: 37, DB: 1) | 200 OK [http://localhost/tables/10]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 13:00:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 13:00:24) [GET]
+  Parameters: {"table_id"=>"10", "action"=>"new", "controller"=>"columns"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 53ms (View: 31, DB: 1) | 200 OK [http://localhost/columns/new?table_id=10]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 13:00:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 13:00:47) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ePClWPoa/kKwXOVWusOEKrYHyDsbY+X2l5Ig81hn9JQ=", "column"=>{"name"=>"Fish", "table_id"=>"10", "column_type"=>"String", "null"=>"Fish"}, "controller"=>"columns"}
+  [4;36;1mTable Load (1.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 10) [0m
+  [4;36;1mColumn Create (1.0ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Fish', 10, 'String', 'f')[0m
+Redirected to http://localhost:3000/tables/10
+Completed in 127ms (DB: 2) | 302 Found [http://localhost/columns]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 13:00:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"tables"}
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (1.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 10) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 1) | 200 OK [http://localhost/tables/10]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 13:00:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
