@@ -10,4 +10,5 @@
       %td= table.name
       %td= link_to('View',:controller => 'tables', :action => table.id.to_s)
       %td= link_to('Edit',:controller => 'tables', :action => 'edit/'+table.id.to_s)
+      %td= link_to('Delete', table, :confirm => "Are you sure?", :method => :delete)
 

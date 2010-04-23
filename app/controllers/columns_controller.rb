@@ -33,14 +33,15 @@ class ColumnsController < ApplicationController
   end
 
   def destroy
-    @database = Database.find(params[:database_id])
-    @table = @database.tables.find(params[:table_id])
-    @column = @table.column.find(params[:id])
+    #@database = Database.find(params[:database_id])
+    #@table = @database.tables.find(params[:table_id])
+    @column = Column.find(params[:id]) 
     @column.destroy
 
     respond_to do |format|
       format.html {
-        redirect_to_database_tables_columns_path(@database) }
+        redirect_to(:controller => 'databases', :action => 'index') 
+			}
     end
   end
 end

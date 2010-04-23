@@ -7,5 +7,6 @@
     - @mydatabases.each do |database|
       %tr
         %td= link_to(database.name, database)
+        %td= link_to('Delete', database, :confirm => "Are you sure?", :method => :delete )
 %h4= 'Please login above'
 

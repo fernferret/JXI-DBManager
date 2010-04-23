@@ -37,12 +37,12 @@ class TablesController < ApplicationController
   end
 
   def destroy
-		@database = Database.find(params[:database_id])
-		@table = @database.table.find(params[:id])
+		@table = Table.find(params[:id])
+		database = Database.find(@table.database_id)
 		@table.destroy
 
 		respond_to do |format|
-			format.html { redirect_to_database_tables_path(@database) }
+			format.html { (database) }
 		end
   end
 
