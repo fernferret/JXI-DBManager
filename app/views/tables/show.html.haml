@@ -13,5 +13,5 @@
       %td= column.column_type
       %td= column.null
       %td= link_to('View',:controller => 'columns', :action => 'show',:column => 'id')
-      %td= link_to('Edit',:controller => 'columns', :action => 'edit'+column.id.to_s)
+      %td= link_to('Edit',edit_column_path(column))
       %td= link_to('Delete', column, :confirm => "Are you sure?", :method => :delete)

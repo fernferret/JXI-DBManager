@@ -1,12 +1,8 @@
-%h1= 'All user tables'
-  - if current_user
-    %h1= 'My Tables'
-    %table
-      %tr
-        %th= 'Name'
-      - @mydatabases.each do |database|
-        %tr
-          %td= link_to(board.name, board)
-  %h4= 'Please login above'
-
+%h1= 'Edit a table'
+- form_for @table do |table|
+  = table.error_messages
+  %p
+    = table.label :name
+    %br= table.text_field :name
+  %p= submit_tag('Edit Database')
 

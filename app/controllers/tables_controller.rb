@@ -14,8 +14,22 @@ class TablesController < ApplicationController
   end
 
   def edit
-		@database = Database.find(params[:database_id])
-		@table = @database.tables.find(params[:id])
+    @table = Table.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def update
+    @table = Table.find(params[:id])
+    respond_to do |format|
+      if @table.update_attributes(params[:table])
+        flash[:notice] = 'Updated Table successfully'
+        format.html {redirect_to(@table)}
+      else
+        format.html {render :action => "edit"}
+      end
+    end
   end
 
   def new

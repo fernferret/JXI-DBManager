@@ -9,8 +9,22 @@ class ColumnsController < ApplicationController
   end
 
   def edit
-    @table = Table.find(params[:table_id]) 
-    @column = @table.columns.find(params[:id])
+    @column = Column.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def update
+    @column = Column.find(params[:id])
+    respond_to do |format|
+      if @column.update_attributes(params[:column])
+        flash[:notice] = 'Updated Database successfully'
+        format.html {redirect_to(root_url)}
+      else
+        format.html {render :action => "edit"}
+      end
+    end
   end
 
   def new

@@ -1,2 +1,14 @@
-<h1>ColumnController#edit</h1>
-<p>Find me in app/views/column_controller/edit.html.erb</p>
+%h1= 'Edit Column'
+- form_for(@column) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br= f.text_field :name
+    = f.label :column_type
+    %br= f.text_field :column_type
+    = f.label :null
+    %br= f.text_field :null
+    = f.hidden_field :table_id
+  %p= submit_tag('Edit Column')
+
+
