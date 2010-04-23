@@ -11,9 +11,9 @@ Factory.define :table, :class => Table do |f|
 end
 
 Factory.define :column, :class => Column do |f|
-  f.name "Column Name"
+  f.sequence(:name) { |n| "Column#{n}" }
   f.column_type "string"
-  f.null "null"
+  f.null "true"
   f.association :table
 end
 
