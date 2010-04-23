@@ -1,0 +1,11 @@
+%h1= 'All user Databases'
+- if current_user
+  %h1= 'My Databases'
+  %table
+    %tr
+      %th= 'Name'
+    - @mydatabases.each do |database|
+      %tr
+        %td= link_to(database.name, database)
+%h4= 'Please login above'
+
