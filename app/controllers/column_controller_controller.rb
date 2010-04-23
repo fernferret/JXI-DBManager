@@ -1,38 +1,43 @@
 class ColumnControllerController < ApplicationController
   def index
-		@columns = Column.all
-
-		respond_to do |format|
-			format.html
-		end
+		@database = Database.find(params[:database_id])
+		@table = @database.tables.find(params[:table_id]) 
+		@column = @table.columns
   end
 
   def show
-		@column = Column.find(params[:id])
-
-		respond_to do |format|
-			formatl.html
-		end
-  end
+		@database = Database.find(params[:database_id]) 
+		@table = @database.tables.find(params[:table_id]) 
+		@column = @table.columns.find(params[:id])
+	end
 
   def edit
-		@column = Column.find(params[:id])
+		@database = Database.find(params[:database_id]) 
+		@table = @database.tables.find(params[:table_id]) 
+		@column = @table.columns.find(params[:id])
   end
 
   def create
-		@column = Column.new(params[:column])
-		
-		respond_to do |format|
-			format.html { render :action => "new" }
+		@database = Database.find(params[database_id])
+		@table = @database.tables.find(params[:table_id])
+		@column = @table.columns.build
+
+		if @column.save
+			redirect_to_column_url(@column)
+		else
+			render :action => "new"
 		end
   end
 
   def destroy
-		@column = Column.find(params[:id])
+		@database = Database.find(params[:database_id])
+		@table = @database.tables.find(params[:table_id])
+		@column = @table.column.find(params[:id])
 		@column.destroy
 
 		respond_to do |format|
-			format.html { redirect_to(columns_url) }
+			format.html {
+				redirect_to_database_tables_columns_path(@database) }
 		end
   end
 
