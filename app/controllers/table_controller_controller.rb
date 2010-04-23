@@ -1,6 +1,7 @@
 class TableControllerController < ApplicationController
   def index
-		@tables = Table.all
+		@database = Database.find(params[:database_id])
+		@tables = @database.tables
 
 		respond_to do |format|
 			format.html
@@ -8,31 +9,33 @@ class TableControllerController < ApplicationController
   end
 
   def show
-		@table = Table.find(params[:id])
-
-		respond_to do |format|
-			format.html
-		end
+		@database = Database.find(params[:database_id])
+		@table = @database.tables.find(params[:id])
   end
 
   def edit
-		@table = Table.find(params[:id])	
+		@database = Database.find(params[:database_id])
+		@table = @database.table.find(params[:id])
   end
 
   def create
-		@table = Table.new(params[:table])
+		@database = Database.find(params[:database_id])
+		@table = @database.tables.build
 
-		respond_to do |format|
-			format.html { render :action => "new" }
-		end		
+		if @table.save
+			redirect_to_table_url(@table)
+		else
+			render :action => "new"
+		end
   end
 
   def destroy
-		@table = Table.find(params[:id])
+		@database = Database.find(params[:database_id])
+		@table = @database.table.find(params[:id])
 		@table.destroy
 
 		respond_to do |format|
-			format.html { redirect_to(tables_url) }
+			format.html { redirect_to_database_tables_path(@database) }
 		end
   end
 
