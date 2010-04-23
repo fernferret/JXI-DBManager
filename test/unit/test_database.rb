@@ -30,6 +30,7 @@ class DatabaseTest < ActiveSupport::TestCase
   end
 
   def test_should_not_save_with_no_user
+    flunk('Will be implemented when Auth is decided upon')
     database = Factory.build(:database, :user => nil)
     assert !database.valid?, 'Saved a new Database with no user!'
   end
@@ -64,6 +65,7 @@ class DatabaseTest < ActiveSupport::TestCase
   end
 
   def test_edit_own_database
+    flunk('Will be implemented when Auth is decided upon') 
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
     database.name = 'Newer Database'
     assert database.update_attributes(:name => 'Test'), 'Could not update database'
