@@ -45,5 +45,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :databases
   map.root :controller => 'databases'
   map.login "login", :controller => "user_sessions", :action => "new"
-  map.login "logout", :controller => "user_sessions", :action => "destroy"
+  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  
 end
