@@ -1,0 +1,14 @@
+%h1= 'New Column'
+- form_for(@column) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br= f.text_field :name
+    = f.label :column_type
+    %br= f.text_field :column_type
+    = f.label :null
+    %br= f.text_field :null
+    = f.hidden_field :table_id
+  %p= submit_tag('Add New Column')
+
+

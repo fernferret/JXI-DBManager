@@ -1,0 +1,16 @@
+%h1= "Table: #{@table.name}"
+=link_to('Add a Column', :controller => 'columns', :action => 'new', :table_id => @table.id)
+%table
+  %tr
+    %th= 'Name'
+    %th= 'Type'
+    %th= 'Null'
+    %th= 'View'
+    %th= 'Edit'
+  - @table.columns.each do |column|
+    %tr
+      %td= "#{column.name}"
+      %td= column.column_type
+      %td= column.null
+      %td= link_to('View',:controller => 'columns', :action => 'show',:column => 'id')
+      %td= link_to('Edit',:controller => 'columns', :action => 'edit'+column.id.to_s)

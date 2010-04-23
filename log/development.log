@@ -6806,3 +6806,2711 @@ ActionController::RoutingError (No route matches "/tables/add%2F1" with {:method
   c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 00:32:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 209ms (View: 32, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:32:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:32:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 56ms (View: 44, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:32:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:32:14) [GET]
+
+ActionController::RoutingError (No route matches "/tables/add%2F1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/tables/add/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:22) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:26) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#new (for 127.0.0.1 at 2010-04-23 00:33:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"databases"}
+Rendering template within layouts/application
+Rendering databases/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 111ms (View: 35, DB: 1) | 200 OK [http://localhost/databases/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:42) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:33:46) [GET]
+
+ActionController::RoutingError (No route matches "/tables" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:35:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:35:08) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new/1%60" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:35:10) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-23 00:35:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-23 00:35:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-23 00:35:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:35:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:36:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:36:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+NameError (uninitialized constant TablesController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:38:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:38:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:39:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:39:53) [GET]
+
+ActionController::RoutingError (No route matches "/tables/new/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:40:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:40:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:41:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:41:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:41:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:41:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"5"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:41:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"5"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Database with ID=5):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:41:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/tables/index.html.haml:
+1: %h1= 'All user tables'
+2:   - if current_user
+3:     %h1= 'My Tables'
+4:     %table
+5:       %tr
+
+    app/views/tables/index.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:6:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:42:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/tables/index.html.haml:
+1: %h1= 'All user tables'
+2:   - if current_user
+3:     %h1= 'My Tables'
+4:     %table
+5:       %tr
+
+    app/views/tables/index.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:6:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:42:23) [GET]
+  Parameters: {"fuckshitup_id"=>"1", "action"=>"index", "controller"=>"tables"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/tables/index.html.haml:
+1: %h1= 'All user tables'
+2:   - if current_user
+3:     %h1= 'My Tables'
+4:     %table
+5:       %tr
+
+    app/views/tables/index.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:6:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:42:43) [GET]
+  Parameters: {"action"=>"index", "id"=>"1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:42:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/tables/index.html.haml:
+1: %h1= 'All user tables'
+2:   - if current_user
+3:     %h1= 'My Tables'
+4:     %table
+5:       %tr
+
+    app/views/tables/index.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:6:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 00:43:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #7 of app/views/tables/index.html.haml:
+4:   %table
+5:     %tr
+6:       %th= 'Name'
+7:     - @mydatabases.each do |database|
+8:       %tr
+9:         %td= link_to(board.name, board)
+10: %h4= 'Please login above'
+
+    app/views/tables/index.html.haml:7:in `_run_haml_app47views47tables47index46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:6:in `index'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 00:45:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 61ms (View: 26, DB: 1) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:45:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (4.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 83ms (View: 63, DB: 4) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:45:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:45:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"add/1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:45:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"add/1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:46:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 57ms (View: 46, DB: 0) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:46:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:46:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"new/1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:47:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 78ms (View: 64, DB: 1) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:47:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 00:47:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"new?database_id=1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:48:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 57ms (View: 46, DB: 0) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:48:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 00:48:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:22:in `new'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 00:49:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.) on line #2 of app/views/tables/new.html.haml:
+1: %h1= 'New Table'
+2:   - form_for(@database) do |f|
+3:     = f.error_messages
+4:     %p
+5:       = f.label :name
+
+    app/views/tables/new.html.haml:2
+    haml (2.2.23) lib/haml/precompiler.rb:759:in `render_tag'
+    haml (2.2.23) lib/haml/precompiler.rb:231:in `process_line'
+    haml (2.2.23) lib/haml/precompiler.rb:195:in `precompile'
+    haml (2.2.23) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `new'
+    haml (2.2.23) rails/./lib/haml/template/plugin.rb:27:in `compile'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 00:50:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 128ms (View: 108, DB: 1) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#update (for 127.0.0.1 at 2010-04-23 00:50:39) [PUT]
+  Parameters: {"commit"=>"Add New Table", "action"=>"update", "_method"=>"put", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "id"=>"1", "database"=>{"name"=>"Sriram Table"}, "controller"=>"databases"}
+
+ActionController::UnknownAction (No action responded to update. Actions: create, destroy, index, new, and show):
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#update (for 127.0.0.1 at 2010-04-23 00:51:11) [PUT]
+  Parameters: {"commit"=>"Add New Table", "action"=>"update", "_method"=>"put", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "id"=>"1", "database"=>{"name"=>"Sriram Table"}, "controller"=>"databases"}
+
+ActionController::UnknownAction (No action responded to update. Actions: create, destroy, index, new, and show):
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 00:56:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 52ms (View: 38, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 00:56:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 51ms (View: 33, DB: 0) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#update (for 127.0.0.1 at 2010-04-23 00:56:16) [PUT]
+  Parameters: {"commit"=>"Add New Table", "action"=>"update", "_method"=>"put", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "id"=>"1", "database"=>{"name"=>"My Table"}, "controller"=>"databases"}
+
+ActionController::UnknownAction (No action responded to update. Actions: create, destroy, index, new, and show):
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 00:57:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 65ms (View: 35, DB: 1) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 00:57:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 00:57:27) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"My Table"}, "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:33:in `create'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#index (for 127.0.0.1 at 2010-04-23 01:01:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:3:in `index'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 01:01:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (2.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:01:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:01:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 55ms (View: 43, DB: 1) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:01:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `merge' for #<Database id: 1, user_id: 1, name: "My Database">) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field :database_id, @database
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:03:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `merge' for #<Database id: 1, user_id: 1, name: "My Database">) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field :database_id, @database
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:03:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `merge' for #<Database id: 1, user_id: 1, name: "My Database">) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field :database_id, @database
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:04:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 160ms (View: 130, DB: 1) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:04:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 01:04:14) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"Test"}, "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:30:in `create'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 01:06:33) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"Test"}, "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:30:in `create'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:06:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `merge' for 1:Fixnum) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field(:database_id, @database.id)
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:06:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `merge' for "1":String) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field(:database_id, @database.id.to_s)
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (168.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:09:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+
+ActionView::TemplateError (undefined method `hidden_field_tag' for #<ActionView::Helpers::FormBuilder:0x7a7f0c0>) on line #7 of app/views/tables/new.html.haml:
+4:   %p
+5:     = f.label :name
+6:     %br= f.text_field :name
+7:     = f.hidden_field_tag(:database_id, @database.id.to_s)
+8:   %p= submit_tag('Add New Table')
+
+    app/views/tables/new.html.haml:7
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202:in `call'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:202
+    haml (2.2.23) lib/haml/helpers.rb:573:in `call'
+    haml (2.2.23) lib/haml/helpers.rb:573:in `haml_bind_proc'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/tables/new.html.haml:2:in `_run_haml_app47views47tables47new46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/tables_controller.rb:24:in `new'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:09:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 182ms (View: 159, DB: 1) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:09:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:10:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 61ms (View: 40, DB: 0) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:11:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 01:11:03) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"Table", "database_id"=>"1"}, "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:30:in `create'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 01:11:39) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"Table", "database_id"=>"1"}, "controller"=>"tables"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+  [4;35;1mTable Create (3.0ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('Table', 1)[0m
+
+NoMethodError (undefined method `redirect_to_table_url' for #<TablesController:0x7775220>):
+  app/controllers/tables_controller.rb:33:in `create'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 01:12:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 53ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:12:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:12:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #11 of app/views/databases/show.html.haml:
+8:   - @database.tables.each do |table|
+9:     %tr
+10:       %td= table.name
+11:       %td= link_to('View',:controller => 'tables', :action => 'show/'+table.id)
+12:       %td= link_to('Edit',:controller => 'tables', :action => 'edit/'+table.id)
+
+    app/views/databases/show.html.haml:11:in `_run_haml_app47views47databases47show46html46haml'
+    app/views/databases/show.html.haml:8:in `_run_haml_app47views47databases47show46html46haml'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/databases_controller.rb:16:in `show'
+    haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (195.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:13:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 62ms (View: 49, DB: 3) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:13:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 01:13:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"1"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 51ms (View: 31, DB: 1) | 200 OK [http://localhost/tables/new?database_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:13:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 01:13:15) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "table"=>{"name"=>"David Pick", "database_id"=>"1"}, "controller"=>"tables"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+  [4;36;1mTable Create (2.0ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('David Pick', 1)[0m
+Redirected to http://localhost:3000/tables/2
+Completed in 199ms (DB: 3) | 302 Found [http://localhost/tables]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:13:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:13:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 54ms (View: 39, DB: 1) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:13:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:13:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"show/1", "controller"=>"tables"}
+
+ActiveRecord::RecordNotFound (Couldn't find Database without an ID):
+  app/controllers/tables_controller.rb:12:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:23) [GET]
+
+ActionController::RoutingError (No route matches "/tables/show/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:16:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"show", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Table with ID=show):
+  app/controllers/tables_controller.rb:13:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:39) [GET]
+
+ActionController::RoutingError (No route matches "/tables/show/1" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:16:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"tables"}
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (1.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 58ms (View: 46, DB: 2) | 200 OK [http://localhost/tables/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:16:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 56ms (View: 43, DB: 1) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 01:16:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 12, DB: 3) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:16:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 60ms (View: 44, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:16:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:16:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"show/2", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Table with ID=show/2):
+  app/controllers/tables_controller.rb:13:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (132.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:17:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:17:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:17:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 38, DB: 0) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:17:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-04-23 01:17:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"add/2", "controller"=>"columns"}
+
+LoadError (Expected c:/Users/stokesej/JXI-DBManager/app/controllers/columns_controller.rb to define ColumnsController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ColumnsController#index (for 127.0.0.1 at 2010-04-23 01:21:27) [GET]
+  Parameters: {"table_id"=>"1", "action"=>"index", "controller"=>"columns"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering columns/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 54ms (View: 35, DB: 1) | 200 OK [http://localhost/columns?table_id=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:21:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 01:25:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 10, DB: 1) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:25:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:25:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (1.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 148ms (View: 135, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:25:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:25:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 48ms (View: 36, DB: 1) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:25:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#show (for 127.0.0.1 at 2010-04-23 01:35:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"add/2", "controller"=>"columns"}
+  [4;35;1mColumn Load (0.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Column with ID=add/2):
+  app/controllers/columns_controller.rb:8:in `show'
+  haml (2.2.23) rails/./lib/sass/plugin/rails.rb:20:in `process'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:35:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;36;1mTable Load (1.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 136ms (View: 124, DB: 3) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:35:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 01:35:57) [GET]
+  Parameters: {"table_id"=>"2", "action"=>"new", "controller"=>"columns"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 62ms (View: 41, DB: 2) | 200 OK [http://localhost/columns/new?table_id=2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:35:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 01:36:14) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "column"=>{"name"=>"Test", "table_id"=>"2", "column_type"=>"String", "null"=>"1"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;35;1mColumn Create (5.0ms)[0m   [0mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES(NULL, 2, NULL, NULL)[0m
+Redirected to http://localhost:3000/columns/1
+Completed in 180ms (DB: 5) | 302 Found [http://localhost/columns]
+
+
+Processing ColumnsController#show (for 127.0.0.1 at 2010-04-23 01:36:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"columns"}
+  [4;36;1mColumn Load (0.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering columns/show
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 44ms (View: 33, DB: 0) | 200 OK [http://localhost/columns/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:36:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 01:36:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 48ms (View: 10, DB: 2) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 01:36:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 53ms (View: 40, DB: 2) | 200 OK [http://localhost/databases/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:36:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:36:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (1.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 52ms (View: 39, DB: 2) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:36:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 01:38:00) [GET]
+  Parameters: {"table_id"=>"2", "action"=>"new", "controller"=>"columns"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 128ms (View: 103, DB: 1) | 200 OK [http://localhost/columns/new?table_id=2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:38:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 01:38:07) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "column"=>{"name"=>"TEst", "table_id"=>"2", "column_type"=>"Test", "null"=>"Test"}, "controller"=>"columns"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;36;1mColumn Create (2.0ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES(NULL, 2, NULL, NULL)[0m
+Redirected to http://localhost:3000/tables/2
+Completed in 133ms (DB: 2) | 302 Found [http://localhost/columns]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:38:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 56ms (View: 44, DB: 2) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:39:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (1.0ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 61ms (View: 48, DB: 2) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:40:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 59ms (View: 47, DB: 2) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:40:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 01:42:22) [GET]
+  Parameters: {"table_id"=>"2", "action"=>"new", "controller"=>"columns"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 55ms (View: 33, DB: 1) | 200 OK [http://localhost/columns/new?table_id=2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:42:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 01:42:29) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"BumNvoOro1bP7XI4Guuox5DVWgJwV543yB3szSUggA8=", "column"=>{"name"=>"Test", "table_id"=>"2", "column_type"=>"Test", "null"=>"True"}, "controller"=>"columns"}
+  [4;36;1mTable Load (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+  [4;36;1mColumn Create (2.0ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Test', 2, 'Test', 'f')[0m
+Redirected to http://localhost:3000/tables/2
+Completed in 110ms (DB: 2) | 302 Found [http://localhost/columns]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 01:42:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"tables"}
+  [4;35;1mTable Load (0.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (1.0ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 129ms (View: 115, DB: 2) | 200 OK [http://localhost/tables/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 01:42:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

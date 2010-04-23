@@ -3,7 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :users
   map.resources :databases
-
+  map.resources :tables
+  map.resources :columns
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
@@ -47,6 +48,5 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
   map.register 'register', :controller => 'user_sessions', :action => 'create'
-  map.add 'add', :controller => 'databases', :action => 'new'
-  
+ 
 end

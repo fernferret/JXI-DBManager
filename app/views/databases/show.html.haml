@@ -1,5 +1,5 @@
 %h1= "Database: #{@database.name}"
-=link_to('Add a Table', :controller => 'tables', :action => 'add/'+@database.id.to_s)
+=link_to('Add a Table', :controller => 'tables', :action => 'new', :database_id => @database.id)
 %table
   %tr
     %th= 'Name'
@@ -8,6 +8,6 @@
   - @database.tables.each do |table|
     %tr
       %td= table.name
-      %td= link_to('View',:controller => 'tables', :action => 'show/'+table.id)
-      %td= link_to('Edit',:controller => 'tables', :action => 'edit/'+table.id)
+      %td= link_to('View',:controller => 'tables', :action => table.id.to_s)
+      %td= link_to('Edit',:controller => 'tables', :action => 'edit/'+table.id.to_s)
 

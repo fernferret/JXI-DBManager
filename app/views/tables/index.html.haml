@@ -1,12 +1,10 @@
 %h1= 'All user tables'
-  - if current_user
-    %h1= 'My Tables'
-    %table
+- if current_user
+  %h1= 'My Tables'
+  %table
+    %tr
+      %th= 'Name'
+    - @tables.each do |table|
       %tr
-        %th= 'Name'
-      - @mydatabases.each do |database|
-        %tr
-          %td= link_to(board.name, board)
-  %h4= 'Please login above'
-
+        %td= link_to(table.name, table)
 
