@@ -1,0 +1,2 @@
+module ColumnControllerHelper
+end
