@@ -8,5 +8,6 @@
       %tr
         %td= link_to(database.name, database)
         %td= link_to('Delete', database, :confirm => "Are you sure?", :method => :delete )
+        %td= link_to('Edit', edit_database_path(database))
 %h4= 'Please login above'
 

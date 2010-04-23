@@ -18,9 +18,25 @@ class DatabasesController < ApplicationController
     end
   end
 
-	def edit
-		@database = Database.find(params[:id])
-	end
+  def edit
+    @database = Database.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def update
+    @database = Database.find(params[:id])
+    @database.user = current_user 
+    respond_to do |format|
+      if @database.update_attributes(params[:database])
+        flash[:notice] = 'Updated Database successfully'
+        format.html {redirect_to(@database)}
+      else
+        format.html {render :action => "edit"}
+      end
+    end
+  end
 
   def new
     @database = Database.new
