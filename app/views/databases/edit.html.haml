@@ -1,7 +1,7 @@
-%h1= 'Add a database'
+%h1= 'Edit a database'
 - form_for @database do |db|
   = db.error_messages
   %p
     = db.label :name
     %br= db.text_field :name
-  %p= submit_tag('Add Database')
+  %p= submit_tag('Edit Database')

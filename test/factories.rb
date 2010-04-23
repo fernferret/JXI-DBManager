@@ -6,7 +6,7 @@ Factory.define :database, :class => Database do |d|
 end
 
 Factory.define :table, :class => Table do |f|
-  f.name "Table"
+  f.sequence(:name) { |n| "Table#{n}" }
   f.association :database
 end
 
@@ -14,6 +14,7 @@ Factory.define :column, :class => Column do |f|
   f.name "Column Name"
   f.column_type "string"
   f.null "null"
+  f.association :table
 end
 
 Factory.define :user, :class => User do |f|
