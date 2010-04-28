@@ -18,4 +18,34 @@ class UserTest < ActiveSupport::TestCase
 #    user.name = "My Name"
     assert user.save, 'Could not save a new User!'
   end
+
+	def test_save_user_without_password
+#    Sample use of the factory
+    user = Factory.build(:user, :password => nil)
+#    user = User.new
+#    user.username = "Username"
+#    user.password = "Password"
+#    user.name = "My Name"
+    assert !user.valid?, 'Saved user without password'
+  end
+
+	def test_save_user_without_username
+#    Sample use of the factory
+    user = Factory.build(:user, :username => nil)
+#    user = User.new
+#    user.username = "Username"
+#    user.password = "Password"
+#    user.name = "My Name"
+    assert !user.valid?, 'Saved user without username'
+  end
+
+	def test_save_user_without_name
+#    Sample use of the factory
+    user = Factory.build(:user, :name => nil)
+#    user = User.new
+#    user.username = "Username"
+#    user.password = "Password"
+#    user.name = "My Name"
+    assert !user.valid?, 'Saved user without name'
+	end 
 end
