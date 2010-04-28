@@ -18486,3 +18486,1105 @@ Rendering rescues/layout (not_found)
   [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table7', 7)[0m
   [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column6' AND "columns".table_id = 11) LIMIT 1[0m
   [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column7' AND "columns".table_id IS NULL) LIMIT 1[0m
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:45:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.6ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mDatabase Load (0.2ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" IS NULL) [0m
+Rendering template within layouts/application
+Rendering databases/index
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:45:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-23 14:45:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (10.5ms)
+Completed in 121ms (View: 63, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:45:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-23 14:46:06) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "controller"=>"users", "user"=>{"name"=>"kyle rhodes", "password_confirmation"=>"[FILTERED]", "username"=>"rhodeska", "password"=>"[FILTERED]"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'rhodeska') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('kyle rhodes', 'c5103053a9964037402341cef091df41759124e42587fd597cbc6c10233d913e0dc33834fb820a6643ae8c5744ff4d347125954114ebfec427ec7e02c33e463d', 'rhodeska', '8l8e65YeLh2VFFinGJTk', '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f', NULL)[0m
+Redirected to http://localhost:3000/
+Completed in 123ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:46:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.5ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 3) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 17ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#new (for 127.0.0.1 at 2010-04-23 14:46:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"databases"}
+Rendering template within layouts/application
+Rendering databases/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 37ms (View: 32, DB: 0) | 200 OK [http://localhost/databases/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#create (for 127.0.0.1 at 2010-04-23 14:46:12) [POST]
+  Parameters: {"commit"=>"Add Database", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "database"=>{"name"=>"Sriram Mohan"}, "controller"=>"databases"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'Sriram Mohan' AND "databases".user_id = 3) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.2ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('Sriram Mohan', 3)[0m
+Redirected to http://localhost:3000/databases/7
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/databases]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 14:46:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.2ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 104ms (View: 31, DB: 1) | 200 OK [http://localhost/databases/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 14:46:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"7"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 171ms (View: 163, DB: 0) | 200 OK [http://localhost/tables/new?database_id=7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 14:46:15) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "table"=>{"name"=>"It works", "database_id"=>"7"}, "controller"=>"tables"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 7) [0m
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'It works' AND "tables".database_id = 7) LIMIT 1[0m
+  [4;35;1mTable Create (0.2ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('It works', 7)[0m
+Redirected to http://localhost:3000/tables/11
+Completed in 23ms (DB: 0) | 302 Found [http://localhost/tables]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 14:46:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"tables"}
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 11) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://localhost/tables/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 14:46:17) [GET]
+  Parameters: {"table_id"=>"11", "action"=>"new", "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 108ms (View: 100, DB: 0) | 200 OK [http://localhost/columns/new?table_id=11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:46:22) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"Test", "table_id"=>"11", "column_type"=>"1", "null"=>"2"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Test' AND "columns".table_id = 11) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:46:25) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"Test", "table_id"=>"11", "column_type"=>"1", "null"=>"false"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Test' AND "columns".table_id = 11) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 84ms (View: 75, DB: 0) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:46:28) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"Test", "table_id"=>"11", "column_type"=>"1", "null"=>"true"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Test' AND "columns".table_id = 11) LIMIT 1[0m
+  [4;36;1mColumn Create (0.2ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Test', 11, '1', 't')[0m
+Redirected to http://localhost:3000/tables/11
+Completed in 50ms (DB: 0) | 302 Found [http://localhost/columns]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 14:46:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.2ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 11) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/tables/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:46:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:47:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.5ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 3) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:47:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '39021957a8c1f64728ca73cd6d469e406fea158d3b67f3e54c892ea28d4010dd907f10589c7438f7e3e19cf8b3ac81a17655f1a07f2744f96f1b242bc8bcdd22') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', '25580233e3bc6cd96dae37fa56b008ca20c57147cbce91380a0a20078e007b8fa4c7c4a990c744ae565269cb75ba1faba14e0a60c3a672fcdf1ccf480f4cd2cf', 'User1', 'xSgRlySmwMA7jXiJt3wx', '39021957a8c1f64728ca73cd6d469e406fea158d3b67f3e54c892ea28d4010dd907f10589c7438f7e3e19cf8b3ac81a17655f1a07f2744f96f1b242bc8bcdd22', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table1' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table1', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column1', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12 AND "columns".id <> 13) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '099311632f6445e115368cca44b0d6c36566d3cf695e866bdadd5a1d3db2f2205e4700bbae4513212fc7bf7136004e2932640c738d8e883c2d62e08b17e56090') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', 'ce59b2e098ac1042cb54326ffbbe5b5db88569ac142540e68f37858dfbaa107183a79bc24c42baeab05dce8396724efb333820eba0537b19941f8879a0364073', 'User2', 'cwn-GWX7w7yu-hO1LHkF', '099311632f6445e115368cca44b0d6c36566d3cf695e866bdadd5a1d3db2f2205e4700bbae4513212fc7bf7136004e2932640c738d8e883c2d62e08b17e56090', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table2' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table2', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column2' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column2', 12, 'string', 't')[0m
+  [4;35;1mColumn Destroy (0.1ms)[0m   [0mDELETE FROM "columns" WHERE "id" = 13[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b300a8b90076a02a6affbb3b936b77613f3e454c88b9a1d99f2270dc226f5635ea0ca7dd7c3fefcbf59acdf143440a92bbbf029731af9675b24d5ba4b535d461') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', 'c1423427d4e7482e960e372b5e53436d4f047744d90db89630ef406cc283787ef09be97021a634d8c5cbe86d9a6d72ffea8167b85e0b36cd8482466bebd1bf4c', 'User3', '_iEYxN6Dd0A9PXoxHtqm', 'b300a8b90076a02a6affbb3b936b77613f3e454c88b9a1d99f2270dc226f5635ea0ca7dd7c3fefcbf59acdf143440a92bbbf029731af9675b24d5ba4b535d461', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table3' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table3', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Same Name', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '216b3bf83b520cc8067efed181e123f47a961fab4e517745f3c3972267f7ce489f4989551ab2aab703335cff1f9338adf82457831af5bd91256c95862fa698e8') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', '925c808bb73dc771f4f09e27aafa16757c474899d16b321518343fbbea4db748f8452ec6aa595adce60d7a46febc3da65706b51da841f928e7392ae05f4f50f8', 'User4', 'V4YZGu7q_ex3NPiKwjW6', '216b3bf83b520cc8067efed181e123f47a961fab4e517745f3c3972267f7ce489f4989551ab2aab703335cff1f9338adf82457831af5bd91256c95862fa698e8', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table4' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table4', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column3' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3ec31f1065c62f3d24c844e29cb60434ed5ef4bd6725d7f1c9db24b03ede3a19b9876ae47926ef3642d00dbb186e57ac10a658fdc6efeb6c20c146b138bf56bf') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', 'c7853a65e3b296f8eb6ab2ca40d48011fd63df68e31ebecdc5c0b983a57c951358a8266740a5100ffed76ec79539823982dc3ae1b18ea5b4f35e2181620833b8', 'User5', 'p3Gq-c1R-zBhUxb7hRWA', '3ec31f1065c62f3d24c844e29cb60434ed5ef4bd6725d7f1c9db24b03ede3a19b9876ae47926ef3642d00dbb186e57ac10a658fdc6efeb6c20c146b138bf56bf', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB5', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table5' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table5', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column4' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column4', 12, 'string', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '405444a72ffd4a42900e8595ab91c404eda5908872d902fefb85ce6574e4de66c0e2a664f929dc7e292b03001d4c32c990e2870cc03e0b122751a7a79e99c293') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', 'b75aeb3a6c62e99fa16e5854231dde56b0e2460cc962e2ae90a351b9df15bd0e3e1929542661e305337d4eaf27ada296abc2ba3b1a54aaaf82a4d862b1d42103', 'User6', 'XN5F-N4Ob-IbJDmyY5wo', '405444a72ffd4a42900e8595ab91c404eda5908872d902fefb85ce6574e4de66c0e2a664f929dc7e292b03001d4c32c990e2870cc03e0b122751a7a79e99c293', NULL)[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB6' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.1ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB6', 5)[0m
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table6' AND "tables".database_id = 9) LIMIT 1[0m
+  [4;35;1mTable Create (0.0ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('Table6', 9)[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e775549672dc1985ed145354bba9baf907e5bc32832d7eadc47e944a65018dfd59b2165214d49dfc123f1a1c1c287e22675adcee89724d2efd42e2ca3c5f569d') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', '95f295457002f79a21a6eaacd6d8a2b7cb000cfaabfbd8b9ddaae7b72c2ea7e3d85bd70aeb997d8ab7b288b6574b40b875fcfb1072d40817a2aa05321a949242', 'User7', 'u2Ma2P_w8fjE0YgkX9ai', 'e775549672dc1985ed145354bba9baf907e5bc32832d7eadc47e944a65018dfd59b2165214d49dfc123f1a1c1c287e22675adcee89724d2efd42e2ca3c5f569d', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB7' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB7', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table7' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table7', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column6' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column7' AND "columns".table_id IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f9f9a09c219e99734497e159acf2ab3ae9cb6100e49fd13d087244edca01df3cb935415cd107e9fce7bdbfed5033517e04816981d4bb615b53ec82e935f54e9b') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', 'ca932326ca57f679787f939feb97dcd40c52611237bce4790869c16e3234ebdd8a71ff4f5c51f813eba68fbc2eaf87cd1a41de406ae3020e1d286b8c992ec5c9', 'User1', '3sVTNeWQHInHPySwc-rI', 'f9f9a09c219e99734497e159acf2ab3ae9cb6100e49fd13d087244edca01df3cb935415cd107e9fce7bdbfed5033517e04816981d4bb615b53ec82e935f54e9b', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table1' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table1', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column1', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12 AND "columns".id <> 13) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4de3fa349ee418e2d4de78a2c7f72e120f3aec272853e6f5389fc369a0b62123f0bc512cd5533b1468c4fed4a69fc58f4cb7b4a18d65765f58de13a171504909') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', '467ce01e9d09ba95bb4127ec55aecef9e23a275408b4d00de1bbbce90e312e32197f3778a06b923ac28c9fb4d85a9ee23d15a8e71dfcfab51adaa3cf4920978f', 'User2', 'JoHSyO1rvYbC4moKQbPM', '4de3fa349ee418e2d4de78a2c7f72e120f3aec272853e6f5389fc369a0b62123f0bc512cd5533b1468c4fed4a69fc58f4cb7b4a18d65765f58de13a171504909', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table2' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table2', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column2' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column2', 12, 'string', 't')[0m
+  [4;35;1mColumn Destroy (0.0ms)[0m   [0mDELETE FROM "columns" WHERE "id" = 13[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '78a9505d9a138c3ebe9dfd9a900882880a4c985d65e75d17c848aff86a1c6bfc8022142a178937980108ba92ed545875e2036ba82a290c887d3eaf83b21ce439') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', 'a7dfb5f0f6a531e3d707e66c4cba37401c675a8c64f65580a9cec0c4668aa6278646330ea37de52bb07cae2cd68ff62f4d8ed3afcd02590b45db47dac121a8ce', 'User3', 'vsQLN-o86__9oYJD4cf5', '78a9505d9a138c3ebe9dfd9a900882880a4c985d65e75d17c848aff86a1c6bfc8022142a178937980108ba92ed545875e2036ba82a290c887d3eaf83b21ce439', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table3' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table3', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Same Name', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6f0d56d4ec5a0b573ebc6bdafce828dce3b0fd665591ba8da223fa0315d4ffe0f42fa7bcc9bfa183d00fcf101a1856c4824a2db26cfd5a0eee28902713742fdf') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', '96356967b8548a264893b4ae647512c3de2b8febeb38c179f3402979cc2a40082f84051243922f49b161b4af091d9465afadbb899f0ce4f99103561318f60004', 'User4', 'GYVEVedi9j_1iQiDi8Mx', '6f0d56d4ec5a0b573ebc6bdafce828dce3b0fd665591ba8da223fa0315d4ffe0f42fa7bcc9bfa183d00fcf101a1856c4824a2db26cfd5a0eee28902713742fdf', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table4' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table4', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column3' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '8af66549c72c6b9cb7ecd82ad21a78d3b2a423514fdb00c921dc0f989081462e22ebd311ec1a4901ebedd44cc88f5b5b14c4deb37d332909dd1b16c6fbf4bbd0') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', 'd055c4da1b5e32effecfc47e7a56282929968b9e418024e3e1dbb242972fcd7e8b1cede96316ff1b8739847480033a9a933f4fa00b9302f716b8fc97a77884fd', 'User5', 'Mq7sfB-fRf00M1UoZi2P', '8af66549c72c6b9cb7ecd82ad21a78d3b2a423514fdb00c921dc0f989081462e22ebd311ec1a4901ebedd44cc88f5b5b14c4deb37d332909dd1b16c6fbf4bbd0', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB5', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table5' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table5', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column4' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column4', 12, 'string', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7a7a7220104ace2b69b536099ae9ed74332e43cabdc939bf0f973113a423d6eb2ff679ab0de95414256ef7b87bbd5763a9b13b446c2fc491515469a45b001b4e') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', 'e069724a8d4bc6e36dab585c906da234fe0f8bb1803c0ef553afb04eed9646a482d4623f886f4f8d7ce90601762fbc51fb0be25ac410a05a3001d470851bcb6e', 'User6', '8VgSYne00iY2Js6GuQ8J', '7a7a7220104ace2b69b536099ae9ed74332e43cabdc939bf0f973113a423d6eb2ff679ab0de95414256ef7b87bbd5763a9b13b446c2fc491515469a45b001b4e', NULL)[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB6' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.1ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB6', 5)[0m
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table6' AND "tables".database_id = 9) LIMIT 1[0m
+  [4;35;1mTable Create (0.1ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('Table6', 9)[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'fd769e7722559b412cbbbe249e5490b105bde6d0e2410ab5227956aca02b79739c92c101c3af5c18b24aa00d8080bc38e58a0eb7210607091c350e67cb28bef8') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', '81b70aa124b27ff19218df615d58703de7d0dde2eefe744723834e9aaa2ad91fe4f6895ff65b2f051133dea813bf3c7acbcf2f4dd82cd8a780c4838dbb70aa51', 'User7', 'sV7TyWBL4yS-ps6z7Eub', 'fd769e7722559b412cbbbe249e5490b105bde6d0e2410ab5227956aca02b79739c92c101c3af5c18b24aa00d8080bc38e58a0eb7210607091c350e67cb28bef8', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB7' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB7', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table7' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table7', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column6' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column7' AND "columns".table_id IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '06fb18920bfeefdfd137cd5c4015cfa3ac2f81b3d3b97fd09b070e616fa6deb819967bedc58079c56c53e0f8fc5b33877ebc28cee519a67099610acf944d42e6') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User1', 'df150707495c06bb69bb35f2b1fc06f98c1781f7d09ffd90a0fd959dbeedd68f05b66c658ebb6c696c02b7326a61b8b3c863948e67aef9770d598a44cfb4e3c6', 'User1', 'HM00IqISqFIDQnvevWp6', '06fb18920bfeefdfd137cd5c4015cfa3ac2f81b3d3b97fd09b070e616fa6deb819967bedc58079c56c53e0f8fc5b33877ebc28cee519a67099610acf944d42e6', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB1' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB1', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table1' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table1', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column1', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column1' AND "columns".table_id = 12 AND "columns".id <> 13) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e963e361741472873d0b804db8c0e30267274ce88e0366a2d0b16bdb005208575ffc4dfae0f3c92fa938bf7e19a2f9fb516212da317dbb126aca1b2d16ca3177') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User2', '87b810a2dce30cb317e165ba37536329b384a3803e941e7358859c1102d7fc707993b25f24b1a181655adb5c39d436a90f18bac8bbb8ca90c1d4111356dfceeb', 'User2', '_nxCL36PTpUcgnVvct0Y', 'e963e361741472873d0b804db8c0e30267274ce88e0366a2d0b16bdb005208575ffc4dfae0f3c92fa938bf7e19a2f9fb516212da317dbb126aca1b2d16ca3177', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB2' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB2', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table2' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table2', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column2' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column2', 12, 'string', 't')[0m
+  [4;35;1mColumn Destroy (0.0ms)[0m   [0mDELETE FROM "columns" WHERE "id" = 13[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7e4f3ffaf6c39e1c75366c7e3aabec4931a4f50c9371b813d3a3bc467c3e7a9fd0415646b3b8e40e47699d0bf75787969a3f3d84c9ce535b26a8da316a64a769') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User3', 'd7e209a3b55fb7644e6d6a1d80e7a9ac27a3c9809075c131f06382cde810e5a7ec40870466617270397fc99190a7d711e2aabbb3fdf2145b74d2d48b1373a7cd', 'User3', 'hvwBAQjHhXw3WvCyAKRL', '7e4f3ffaf6c39e1c75366c7e3aabec4931a4f50c9371b813d3a3bc467c3e7a9fd0415646b3b8e40e47699d0bf75787969a3f3d84c9ce535b26a8da316a64a769', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB3' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB3', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table3' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table3', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Same Name', 12, 'string', 't')[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Same Name' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5f57148b0b96266a01d81c3ee04c1598c3e61bba0f1a43781866eb7622973c638d1b2a18dfe4ea31bfc04a2db44dc21cb33b751157ccaa908068bbe704bd3f3f') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User4', '05e0408b7518796a00e4887cfc6dc260f0a7b32dd8c312d35f7050f17dee937d26a4831e2d8af6e9361ad901ab998af9612bffcf718d3c70c94f2c0a5998575b', 'User4', '81B8Z7lJu44_7c7zEDVx', '5f57148b0b96266a01d81c3ee04c1598c3e61bba0f1a43781866eb7622973c638d1b2a18dfe4ea31bfc04a2db44dc21cb33b751157ccaa908068bbe704bd3f3f', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB4' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB4', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table4' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table4', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column3' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user5') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '86e474f2b5ff03fa208db7c659f31b2cd072f84e5850107109815856e6cda754dff387fecaf1c93f77dd30770cb3b623b93ff1e816d45acdabfa4102aeb34977') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User5', '8a9b358839eb4a271d6dbdc8e3459f9a99775bb64ebd70dbf3f0bd5fee90f353a981459def69665eb036213750800e49bbc3e06d164dec073f9bd4a45c8f5ea9', 'User5', '3Mb9VRpvGYbbiZ2jc8iC', '86e474f2b5ff03fa208db7c659f31b2cd072f84e5850107109815856e6cda754dff387fecaf1c93f77dd30770cb3b623b93ff1e816d45acdabfa4102aeb34977', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB5' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB5', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table5' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table5', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column4' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.1ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('Column4', 12, 'string', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user6') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0454ae2eb1a552a48f387023456243868e9f8e75f68990c63fb916d490d5686583e9c6eca88f942aee733b66f6090a0ae5a0eb8677fc338e0494978539632179') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User6', '1813d491f0c9528b69dd3cc9b00f729595649b00678f9f564d67327f3746c98b6064b543d6dc493b04a06b4e5216daa1e13bdd14291091e25c75def2c6a370a9', 'User6', 'zUbotzkH0JGSykq-6IyF', '0454ae2eb1a552a48f387023456243868e9f8e75f68990c63fb916d490d5686583e9c6eca88f942aee733b66f6090a0ae5a0eb8677fc338e0494978539632179', NULL)[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB6' AND "databases".user_id = 5) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.1ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My DB6', 5)[0m
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table6' AND "tables".database_id = 9) LIMIT 1[0m
+  [4;35;1mTable Create (0.0ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('Table6', 9)[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user7') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a0dd9e0bcb31a3277d0cb4af5882010ac69d056cac23d3627edc9de12a29dc7098bb0be863ed904e2264a4436709d4a8e62b88b8428b935a145f5f606d8277cf') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('User7', 'c033f090a235fa6508e27379894900d5cc9126d6810309ed45a34352c0e9ced5527978982a79f18339cfce13cd932ea1a650d60f8c4879d1f3cab161b8b15617', 'User7', 'Cuw84IqPycEL8Z-xgrtS', 'a0dd9e0bcb31a3277d0cb4af5882010ac69d056cac23d3627edc9de12a29dc7098bb0be863ed904e2264a4436709d4a8e62b88b8428b935a145f5f606d8277cf', NULL)[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My DB7' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.1ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('My DB7', 4)[0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'Table7' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table7', 8)[0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column6' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column7' AND "columns".table_id IS NULL) LIMIT 1[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-23 14:50:57) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '35e688318bdbf5e04d44bd933ec6dadeb23ebbd8acb2d06588d1123ca6fa0e83c7899ccacb7f3dc05b3660a0263793f5e8fa30659922a8c19c734bb632e6522f') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:50:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.5ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" IS NULL) [0m
+Rendering template within layouts/application
+Rendering databases/index
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:50:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-23 14:51:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.5ms)
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:51:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-23 14:51:10) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "controller"=>"users", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'de949f55e0fb49853798cc863cc21777c5f8aca6354f68457d542438d2235eb5ce9f4a504151096027021a8303b2470846bc1e48274f8587ba2e6b515fa399be') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (10.8ms)
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:51:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-23 14:52:07) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "controller"=>"users", "user"=>{"name"=>"commish", "password_confirmation"=>"[FILTERED]", "username"=>"kyle", "password"=>"[FILTERED]"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'kyle') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;35;1mUser Create (0.7ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password") VALUES('commish', '3b09e8b950378549190ece5bce0c5d34360a8746ca44f0c0d550bf3edd5a325b3b807f17f8f38f117432eee997d3e1f241bcc790e6b104c5cd3c461f7d23893c', 'kyle', 'DelvLX1FXtG-N6LUDgH7', '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72', NULL)[0m
+Redirected to http://localhost:3000/
+Completed in 113ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:52:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.5ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 4) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:52:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-23 14:52:10) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (3.5ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:52:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#new (for 127.0.0.1 at 2010-04-23 14:52:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"databases"}
+Rendering template within layouts/application
+Rendering databases/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 79ms (View: 75, DB: 0) | 200 OK [http://localhost/databases/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:52:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#create (for 127.0.0.1 at 2010-04-23 14:52:21) [POST]
+  Parameters: {"commit"=>"Add Database", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "database"=>{"name"=>""}, "controller"=>"databases"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = '' AND "databases".user_id = 4) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering databases/new
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:52:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#create (for 127.0.0.1 at 2010-04-23 14:52:56) [POST]
+  Parameters: {"commit"=>"Add Database", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "database"=>{"name"=>"1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"}, "controller"=>"databases"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' AND "databases".user_id = 4) LIMIT 1[0m
+  [4;36;1mDatabase Create (0.2ms)[0m   [0;1mINSERT INTO "databases" ("name", "user_id") VALUES('1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', 4)[0m
+Redirected to http://localhost:3000/databases/8
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/databases]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 14:52:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 8) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/databases/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:52:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 14:53:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"8"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/tables/new?database_id=8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:53:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#create (for 127.0.0.1 at 2010-04-23 14:54:04) [POST]
+  Parameters: {"commit"=>"Add New Table", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "table"=>{"name"=>"$%\#@!&*()+_*&^%$\#@!@$", "database_id"=>"8"}, "controller"=>"tables"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = '$%#@!&*()+_*&^%$#@!@$' AND "tables".database_id = 8) LIMIT 1[0m
+  [4;35;1mTable Create (0.2ms)[0m   [0mINSERT INTO "tables" ("name", "database_id") VALUES('$%#@!&*()+_*&^%$#@!@$', 8)[0m
+Redirected to http://localhost:3000/tables/12
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/tables]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 14:54:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"tables"}
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT * FROM "columns" WHERE ("columns".table_id = 12) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/tables/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:54:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#new (for 127.0.0.1 at 2010-04-23 14:54:11) [GET]
+  Parameters: {"table_id"=>"12", "action"=>"new", "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 79ms (View: 72, DB: 0) | 200 OK [http://localhost/columns/new?table_id=12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:54:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:55:52) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"False"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:55:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:56:34) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"abcd"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 84ms (View: 75, DB: 1) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:56:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:56:36) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"abcd"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:56:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:57:22) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"True"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 85ms (View: 76, DB: 1) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:57:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:57:24) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"True"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering columns/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/columns]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:57:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#create (for 127.0.0.1 at 2010-04-23 14:57:33) [POST]
+  Parameters: {"commit"=>"Add New Column", "action"=>"create", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"varchar2(35)", "null"=>"true"}, "controller"=>"columns"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12) LIMIT 1[0m
+  [4;36;1mColumn Create (0.5ms)[0m   [0;1mINSERT INTO "columns" ("name", "table_id", "column_type", "null") VALUES('amINull?', 12, 'varchar2(35)', 't')[0m
+Redirected to http://localhost:3000/tables/12
+Completed in 53ms (DB: 1) | 302 Found [http://localhost/columns]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 14:57:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.2ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 12) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/tables/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:57:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#edit (for 127.0.0.1 at 2010-04-23 14:57:49) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"columns"}
+  [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering columns/edit
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 39ms (View: 35, DB: 0) | 200 OK [http://localhost/columns/13/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:57:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ColumnsController#update (for 127.0.0.1 at 2010-04-23 14:58:11) [PUT]
+  Parameters: {"commit"=>"Edit Column", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "column"=>{"name"=>"amINull?", "table_id"=>"12", "column_type"=>"Struct", "null"=>"t"}, "id"=>"13", "controller"=>"columns"}
+  [4;36;1mColumn Load (0.2ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns"."id" = 13) [0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'amINull?' AND "columns".table_id = 12 AND "columns".id <> 13) LIMIT 1[0m
+  [4;35;1mColumn Update (0.2ms)[0m   [0mUPDATE "columns" SET "column_type" = 'Struct' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/
+Completed in 116ms (DB: 1) | 302 Found [http://localhost/columns/13]
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:58:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.6ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 4) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:58:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 14:58:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.2ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 8) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/databases/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:58:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#edit (for 127.0.0.1 at 2010-04-23 14:58:24) [GET]
+  Parameters: {"action"=>"edit", "id"=>"12", "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering tables/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 75ms (View: 70, DB: 0) | 200 OK [http://localhost/tables/12/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:58:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#update (for 127.0.0.1 at 2010-04-23 14:59:02) [PUT]
+  Parameters: {"commit"=>"Edit Database", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "id"=>"12", "table"=>{"name"=>"ValidTableName"}, "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT "tables".id FROM "tables" WHERE ("tables"."name" = 'ValidTableName' AND "tables".database_id = 8 AND "tables".id <> 12) LIMIT 1[0m
+  [4;36;1mTable Update (0.2ms)[0m   [0;1mUPDATE "tables" SET "name" = 'ValidTableName' WHERE "id" = 12[0m
+Redirected to http://localhost:3000/tables/12
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/tables/12]
+
+
+Processing TablesController#show (for 127.0.0.1 at 2010-04-23 14:59:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"12", "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering tables/show
+  [4;36;1mColumn Load (0.3ms)[0m   [0;1mSELECT * FROM "columns" WHERE ("columns".table_id = 12) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 80ms (View: 76, DB: 1) | 200 OK [http://localhost/tables/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:59:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.6ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 4) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#edit (for 127.0.0.1 at 2010-04-23 14:59:20) [GET]
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering databases/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 133ms (View: 128, DB: 0) | 200 OK [http://localhost/databases/8/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#update (for 127.0.0.1 at 2010-04-23 14:59:27) [PUT]
+  Parameters: {"commit"=>"Edit Database", "action"=>"update", "_method"=>"put", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "id"=>"8", "database"=>{"name"=>"ValidDatabase"}, "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'ValidDatabase' AND "databases".user_id = 4 AND "databases".id <> 8) LIMIT 1[0m
+  [4;35;1mDatabase Update (0.2ms)[0m   [0mUPDATE "databases" SET "name" = 'ValidDatabase' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/databases/8
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/databases/8]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 14:59:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (0.2ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 8) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/databases/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#destroy (for 127.0.0.1 at 2010-04-23 14:59:32) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"ujyUHNZ+Sne5CLSg/4ixGhZ4L/hrE8MBeWng1TTLujI=", "id"=>"12", "controller"=>"tables"}
+  [4;35;1mTable Load (0.1ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables"."id" = 12) [0m
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+  [4;35;1mTable Destroy (0.2ms)[0m   [0mDELETE FROM "tables" WHERE "id" = 12[0m
+Rendering template within layouts/application
+Rendering tables/destroy
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/tables/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-23 14:59:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (2.3ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-23 14:59:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (2.5ms)
+Completed in 77ms (View: 4, DB: 0) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-23 14:59:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (2.5ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-23 14:59:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"current", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (2.4ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:59:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.6ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 4) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/databases]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-23 14:59:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.1ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mTable Load (0.1ms)[0m   [0;1mSELECT * FROM "tables" WHERE ("tables".database_id = 8) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/databases/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TablesController#new (for 127.0.0.1 at 2010-04-23 14:59:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"tables", "database_id"=>"8"}
+  [4;36;1mDatabase Load (0.1ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering tables/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '80beed4db4387cd04f37734df2ba061d3fc61a806e9d2933eb36bb4f4bda990abcfe4a49f1dc24b7e757f8ce44b38568de5222c6bc6810030525fddff19baa72') LIMIT 1[0m
+Completed in 80ms (View: 12, DB: 0) | 200 OK [http://localhost/tables/new?database_id=8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 14:59:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/master.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
