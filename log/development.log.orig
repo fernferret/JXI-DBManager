@@ -18486,6 +18486,7 @@ Rendering rescues/layout (not_found)
   [4;36;1mTable Create (0.1ms)[0m   [0;1mINSERT INTO "tables" ("name", "database_id") VALUES('Table7', 7)[0m
   [4;35;1mColumn Load (0.1ms)[0m   [0mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column6' AND "columns".table_id = 11) LIMIT 1[0m
   [4;36;1mColumn Load (0.1ms)[0m   [0;1mSELECT "columns".id FROM "columns" WHERE ("columns"."name" = 'Column7' AND "columns".table_id IS NULL) LIMIT 1[0m
+<<<<<<< HEAD
 
 
 Processing DatabasesController#index (for 127.0.0.1 at 2010-04-23 14:45:55) [GET]
@@ -19588,6 +19589,7 @@ ActionController::RoutingError (No route matches "/stylesheets/master.css" with 
   
 
 Rendering rescues/layout (not_found)
+=======
   [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e9de71d06a7411b87d2c153018f873db75fe88d7c7d9e8d2fdf7f25a4e5b1e8722bce910dae25fd782be30c0c63cc5bce2fc75529ea593e005aaa9ab1fee4d55') LIMIT 1[0m
   [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
@@ -19620,3 +19622,4 @@ Rendering rescues/layout (not_found)
   [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2a3a26e28f2b795b0a052da8e60c402633d102e725669a6a27bf0ea3df59ab78c4a35afcdaf72616e99871a0823196754f8c0d15a0c7c7decf4cc6ce162d3f57') LIMIT 1[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4a33d8a1c0354a6861991f525b7117f366ba76a37009e5c8022988b7d90d92c433723114793cfe486d6d44bd03b9afb10fc74096b5bff44fb7c09ec187847da1') LIMIT 1[0m
+>>>>>>> a9295c3771d01c2777fcb19dc3af8a5a18e60883
