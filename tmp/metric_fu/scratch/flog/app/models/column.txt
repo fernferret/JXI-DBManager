@@ -1,0 +1,7 @@
+     3.3: flog total
+     3.3: flog/method average
+
+     3.3: Column#none
+     1.1: validates_presence_of
+     1.1: validates_uniqueness_of
+     1.1: belongs_to

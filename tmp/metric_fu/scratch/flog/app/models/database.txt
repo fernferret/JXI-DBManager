@@ -1,0 +1,8 @@
+     4.4: flog total
+     4.4: flog/method average
+
+     4.4: Database#none
+     1.1: belongs_to
+     1.1: validates_presence_of
+     1.1: validates_uniqueness_of
+     1.1: has_many
