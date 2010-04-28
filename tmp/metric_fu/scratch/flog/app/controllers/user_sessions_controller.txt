@@ -1,0 +1,25 @@
+    22.9: flog total
+     7.6: flog/method average
+
+    14.5: UserSessionsController#create
+     4.0: assignment
+     2.8: flash
+     1.6: root_url
+     1.6: params
+     1.4: redirect_to
+     1.4: username
+     1.4: []
+     1.3: render
+     1.2: branch
+     1.2: new
+     1.2: save
+     6.6: UserSessionsController#destroy
+     2.4: assignment
+     1.4: root_url
+     1.2: flash
+     1.2: find
+     1.2: destroy
+     1.2: redirect_to
+     1.7: UserSessionsController#new
+     1.2: new
+     1.2: assignment
