@@ -9,6 +9,16 @@ require 'test/test_helper'
 require 'mocha'
 
 class ColumnTest < ActiveSupport::TestCase
+	def setup
+		@userA = Factory.create(:user)
+		@tableA = Factory.create(:table, :association => @columnA, :user => @userA)
+		@columnA = Factory.create(:column, :table => @tableA)
+		@userB = Factory.create(:user)
+		@userAdmin = Factory.create(:user)
+		@userTA = Factory.create(:user)
+		@sharedTable = Factor.create(:table, :user => @userA, :shared_with	=> [@userB])
+	end
+
   def test_add_all_criteria
     column = Factory.create(:column)
     assert column.save, 'Could not save a new Column!'
@@ -53,4 +63,43 @@ class ColumnTest < ActiveSupport::TestCase
     column = Factory.create(:column)
     assert column.destroy, 'Unable to destroy column'
   end
+
+#edit
+  def test_edit_own_table
+    assert @columnA.edit_table(:name => 'Sweet Table', :user => @userA), 'Could not update table'
+  end
+		
+	def test_edit_someone_elses_table
+    assert !@columnA.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
+  end
+
+	def test_edit_someone_elses_table_shared
+    assert @sharedTable.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
+  end
+
+	def admin_can_edit_someone_elses_table
+		assert @columnA.edit_table(:name => 'table', :user => @userAdmin), 'Admin could edit someone else\'s table'
+	end
+
+	def ta_cant_edit_someone_elses_table
+		assert !@columnA.edit_table(:name => 'table', :user => @userTA), 'TA could edit someone else\'s table'
+	end
+
+#view
+	def test_view_own_table
+    assert @columnA.view_table(:name => 'Sweet Table', :user => @userA), 'Could not view table'
+  end
+		
+	def test_view_someone_elses_table
+    assert !@columnA.view_table(:name => 'Sweet Table', :user => @userB), 'User could view someone else\'s table'
+  end
+
+	def admin_can_view_someone_elses_table
+		assert !@columnA.view_table(:name => 'table', :user => @userAdmin), 'Admin not could view someone else\'s table'
+	end
+
+	def ta_cant_view_someone_elses_table
+		assert !@columnA.view_table(:name => 'table', :user => @userTA), 'TA could view someone else\'s table'
+	end
+
 end

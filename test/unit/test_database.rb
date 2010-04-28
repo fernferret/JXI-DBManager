@@ -9,6 +9,8 @@ class DatabaseTest < ActiveSupport::TestCase
     
     @userA = Factory.create(:user)
     @userB = Factory.create(:user)
+		@adminUser = Factory.create(:user, :permissions => "admin")
+		@taUser = Factory.create(:user, :permissions => "ta")
   end
   def test_add_all_criteria
 #    Sample use of the factory
@@ -42,27 +44,98 @@ class DatabaseTest < ActiveSupport::TestCase
   end
 
   def test_should_not_save_database_with_same_name_per_user
-    flunk('Will be implemented when Auth is decided upon')
     database_old = Factory.create(:database, :name => 'My First Database', :user => @userA)
     database_new = Factory.build(:database, :name => 'My First Database', :user => @userA)
     assert !database_new.valid?, 'Saved a database with a duplicate name!'
   end
 
-  def test_user_must_be_logged_in_to_create_database
-    flunk('Will be implemented when Auth is decided upon')
-  end
-
+#Destroy
   def test_delete_database
-    database = Factory.create(:database) 
-    assert database.destroy, 'Unable to destroy database'
+    database = Factory.create(:database, :user => @userA) 
+    assert database.destroy_database(@userA), 'Unable to destroy database'
   end
 
-  def test_delete_someone_elses_database
-    flunk('Will be implemented when Auth is decided upon')
+  def test_admin_delete_someone_elses_database
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert database.exists_with_title('My First Database'), 'Test Table does not exist, cannot proceed'
-    my_id = 2
-    assert !database.destroy, 'I destroyed someone else\'s database!'
+
+    assert database.destroy_database(@adminUser), 'Admin could not delete database'
+  end
+
+  def test_ta_delete_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.destroy_database(@taUser), 'TA could delete database'
+  end
+
+  def test_user_delete_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.destroy_database(@userB), 'User could delete someone else\'s database'
+  end
+
+#Edit
+  def test_delete_database
+    database = Factory.create(:database, :user => @userA) 
+    assert database.edit_database(@userA), 'Unable to destroy database'
+  end
+
+  def test_admin_edit_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert database.edit_database(@adminUser), 'Admin could not edit database'
+  end
+
+  def test_ta_edit_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.edit_database(@taUser), 'TA could edit database'
+  end
+
+  def test_user_edit_someone_elses_database_with_permissions
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.edit_database(@userB), 'User could edit someone else\'s database'
+  end
+
+  def test_user_edit_someone_elses_database_without_permissions
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.edit_database(@userB), 'User could edit someone else\'s database'
+  end
+
+  def test_edit_own_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+    assert database.update_attributes(:name => 'Newer Database'), 'Could not update database'
+  end
+
+#View
+  def test_view_database
+    database = Factory.create(:database, :user => @userA) 
+    assert database.view_database(@userA), 'Unable to destroy database'
+  end
+
+  def test_admin_view_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert database.view_database(@adminUser), 'Admin could not view database'
+  end
+
+  def test_ta_view_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.view_database(@taUser), 'TA could view database'
+  end
+
+  def test_user_view_someone_elses_database_with_permissions
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.view_database(@userB), 'User could view someone else\'s database'
+  end
+
+  def test_user_view_someone_elses_database_without_permissions
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+
+    assert !database.view_database(@userB), 'User could view someone else\'s database'
   end
 
   def test_edit_own_database
