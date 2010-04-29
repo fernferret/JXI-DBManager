@@ -20,3 +20,4 @@ pkg
 
 ## PROJECT::SPECIFIC
 .sqlite3
+*.log

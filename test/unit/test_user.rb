@@ -68,7 +68,7 @@ class UserTest < ActiveSupport::TestCase
 #    user.password = "Password"
 #    user.name = "My Name"
 		user.permissions = "admin"
-    assert_equals "admin", user.permissions, 'User was not an admin'
+    assert_equal "admin", user.permissions, 'User was not an admin'
 	end 
 
 	def test_user_is_ta
@@ -79,7 +79,7 @@ class UserTest < ActiveSupport::TestCase
 #    user.password = "Password"
 #    user.name = "My Name"
 		user.permissions = "ta"
-    assert_equals "ta", user.permissions, 'User was not a ta'
+    assert_equal "ta", user.permissions, 'User was not a ta'
 	end 
 
 	def test_user_is_regular_user
@@ -89,6 +89,6 @@ class UserTest < ActiveSupport::TestCase
 #    user.username = "Username"
 #    user.password = "Password"
 #    user.name = "My Name"
-    assert_equals "", user.permissions, 'User was not a regular user'
+    assert_equal nil, user.permissions, 'User was not a regular user'
 	end 
 end

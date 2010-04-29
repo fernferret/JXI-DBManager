@@ -19620,3 +19620,167 @@ Rendering rescues/layout (not_found)
   [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2a3a26e28f2b795b0a052da8e60c402633d102e725669a6a27bf0ea3df59ab78c4a35afcdaf72616e99871a0823196754f8c0d15a0c7c7decf4cc6ce162d3f57') LIMIT 1[0m
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4a33d8a1c0354a6861991f525b7117f366ba76a37009e5c8022988b7d90d92c433723114793cfe486d6d44bd03b9afb10fc74096b5bff44fb7c09ec187847da1') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+Migrating to DatabaseModel (20100419140635)
+Migrating to TableModel (20100419161656)
+Migrating to ColumnModel (20100419161707)
+Migrating to AddUserAuth (20100420011546)
+Migrating to AddEmailToUser (20100429184514)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100429184514')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '50f1414825503707d2dd00d294b03b328ae5fc7b5ef507c48ff19d4c8b2ec430245b981f7f7d61a268640272464b5557b2ac385c60e86576de3d267a6920d733') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6123aa919c1c88de047d3521c5f12320f46b4b08eae2341d1b3991691aa4f648a5938780bd9386be53a4b8eb4a90136f3213a9b3f1d15f9aaa297fdb01966cdb') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '41ae867154dc694bde005fdab8770a62526edc4ea49cda5b56ef50c97c66c3e28080a4f2e12e94d1396877f840eb2e7c6dac286de46ece8c0e7dbf324646bfac') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4b0989e46da982e38f72e99d250be41a21534c9409cdefec8dd7fb267b82ce96e658e8c226536b4f694a33f28ce6c554896564ac661e32a6a62f6ed4b553f98d') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '433f63e668a71ec69a2abaca602aa7354a687093a6ee97db8bbbce6ad0fd21dbb16073dddadb9f3e96aee67ca6120c70b09d42c68ac4423299ae3fc69fea38d4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '25009a05377d70c7eee82972cc9a4cc9aa5999a097f58a3d7ca43308ca5593d626c3f2f2624c38d55f8cc02f9e76f91dbe5c6dd950c5a649b6f27c8b022daab4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a4140582126ecefb2d7b7c4beb13b810cd9dfcd79cc5a9ae65bd2b4859320bee418fc94cb8455f707b5e7b6488673d6c08c8e65ee0ea88ebc7244771c9dde8a9') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6e29592379e1621a462b586f928a3d38193b436562bc0bbe73e506fb3a319ac7c3772f4993f069321a11cad361cd445206bb5aa29ff802ec86558e390bafc09f') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com4') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4ccced292dd7386cec5524ee85d2d17c35e0dd54c5818b53f3b1bd7d1f16672e3e4c8b1a0e32788f1961974ea42dcc0d4c6aa4a58cd29c58043ce5c33bf21f16') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c25a2f173d8434a32692b1f5e32580ec8173ed3065247714f9f82989184ad364ad36febead2cc175d3464173112087c9398bfe841d979d64650de9b1ca08e330') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com3') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '431c0e639aad52c5a58855c251bcec9072a0262978bb77e5e43e3850205e30ec15d5688a7acda9548be8d859176b3c31b4396e3d3c57bbf4a93bde18f6c89411') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '26aefcc26aedec33af5944af038dc8db216366f1b588095183141cda890f75a2a82ba22a8df55df9d4de10e2c9ed2dec0eccfa479fccb7d1fd60e7b2270e6e19') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email@example.com4') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ef5d12495e97541a89d22f841b2d7cdcb2cbf1ce2af861cfe225838b2e1eef9fe85bd263c9fa0fcae7ff531d50b96e4cab4fc9a0a2ccef6212e97e174e050032') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "password", "email") VALUES('User1', 'c0b05ac1f8d1c32bfe31e7e5a3666297ac74ce1e320d6d149d5cc4cb6bed91063bc006dabdc0f5bb2a89278b6f7343d19dda2b6fc50fb1aa84dd92cd607e4a31', 'User1', 'e8L6lWt5zwmYrfQ3yQTN', 'ef5d12495e97541a89d22f841b2d7cdcb2cbf1ce2af861cfe225838b2e1eef9fe85bd263c9fa0fcae7ff531d50b96e4cab4fc9a0a2ccef6212e97e174e050032', NULL, 'Email1@example.com')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com' AND "users".id <> 5) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '92fc41c5bf6e12064d442b9268eb0a2411c40ef43f72bbe86d8cde0cad6118567ccf971b9ba4ca99e2b02f7322bfdab183017277f121141f4b7e583feb9c2abd') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email3@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '2880f0d5ab610f1464550704e0bce4b1d19783042e95984f960d13e3b93dc9548c9affb37453606dc063a48202376f8765589ae5733265df8870b82626318d5f') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email3@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email4@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a7c383a68d435a9d35967c381afe39c5045284bf740085369decade0e10f84a42cd1c3593874bf0530ed45f9db871abb7fea29b74523e76192918f15bc837db2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email4@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UserModel (20100419140607)
+Migrating to DatabaseModel (20100419140635)
+Migrating to TableModel (20100419161656)
+Migrating to ColumnModel (20100419161707)
+Migrating to AddUserAuth (20100420011546)
+Migrating to AddEmailToUser (20100429184514)
+Migrating to AddPermissions (20100429185447)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "users" ADD "permissions" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100429185447')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("columns")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("databases")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tables")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b02c81128f698ad377ff07f60916e129975a971adb46d240961aa134546762150c122096b83325a8f2be2700632c8300011c6bc225f85d6e912849447ead03d2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('User1', '6b73fe5835b46e3ac22b4c6a709f6179d56bf27a6255f6da6f64e45b48fcef2433c2c6450ab3bf00a4479e30308aabe04d5d81cca8705d94f56e5bbe516d377e', 'User1', 'GuOTm9Lvpy8kA6kfITeX', 'b02c81128f698ad377ff07f60916e129975a971adb46d240961aa134546762150c122096b83325a8f2be2700632c8300011c6bc225f85d6e912849447ead03d2', NULL, NULL, 'Email1@example.com')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com' AND "users".id <> 5) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9ea170b04b30b72f25e5d59924f3c442b7f3fdf0967f2be3310760ff74e5c06cf1c1d2c0561dd881ca24ce53f41d573771e1dd3edc6b814ca4320d4778a51e90') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email3@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7dee63a86cfd3ea9eca58596d9bff82580be349485a4fd7c58e6e7832e286b6a8ae18ccda0658482b2ce0ee391f125f8820d82dbc7bcd0d73baa12b0d1d8e5eb') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email3@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email4@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'bed1e497358b347d8044a64580b25437e4896e38d3ad73d40023f324d942076246e2e666c09a996a0b2f93769bd22d6059462006dbfd0fc343ddbbfb0012a817') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email4@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e358f206e74c0895d74f8678a83b0503799eca515dfc09b4d6d8fc8befde399e896a620aef4e7a07d12ec8583561a6e53e67ed76cd1de004bb0e833a60576b9a') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('User1', '4b315057c76557cae8683bfab052e5b68bd60bdd6eb747c7bd1c55ae7abe623a0539e293406e9998e04f8f09fdb4ac6eb54557ab68938654e01da9e4a6558f48', 'User1', 'FaJBZewhLpuYR2pbdvIh', 'e358f206e74c0895d74f8678a83b0503799eca515dfc09b4d6d8fc8befde399e896a620aef4e7a07d12ec8583561a6e53e67ed76cd1de004bb0e833a60576b9a', NULL, NULL, 'Email1@example.com')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com' AND "users".id <> 5) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e113014c1553e0c81ff519926bbd5ed7fb517ede42df0bd8d6e0b6f05eb98c36c78301465ac6fd48d894724a8b81231c7329735ed610bbc755014d78cc8ac9a4') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email3@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '59b7e2396e11ece7723a63980072ecdf71ac36ffd2811ece65da387929443ddd7421b642cfe007ee7aa9791e0772ad66ddebcaaf68ddd3061ff2ac1b098704ab') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email3@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email4@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '03c1fb92a9ca53fe813169a23abd901dddab689efe3f3f6a7608d6682147dc513d4af6175330b30c3879b716ed938f7702f88ccdb6232b77fa1eb14a46d5ec8e') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email4@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4b3e9013c3efea2b7d15dd4454452c2f0736f9b40ff420dc832b3f8537ca911ad386f2fced327b96a11995d6acb1760d1a82e38acf53327d05eb41f4b9297d3e') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('User1', 'a59932b6496df95c61f1458d10df36429cd4fd391e7b2f8da75f85c98f594334c5b0932659a9800017cbf39901d83d1d55cab79bb3c870a2c6443ae8458d553d', 'User1', 'wmCJHNOUycnFV_A8VV5P', '4b3e9013c3efea2b7d15dd4454452c2f0736f9b40ff420dc832b3f8537ca911ad386f2fced327b96a11995d6acb1760d1a82e38acf53327d05eb41f4b9297d3e', NULL, NULL, 'Email1@example.com')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com' AND "users".id <> 5) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3e5496c4023e84c977ba8bd340e08a7091abd966730221a6d62bcd2969418f22e118e8b74489c11f5611d36fdfefa453cc327cf5b1a4f733be0340b6a32839f1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email3@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user3') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3c5ce5006b20adc0e67180459df5b320a80fad7c1dc23e3e113b02a7cba4bbb9ed0abc79f7275ed14dcb0b13a1b0169bd5cd0ce10124cd32854fcae91801dc4b') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email3@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email4@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5a99388b18121123ca7479d9bb80d6731277a988d407adefa124c0a67b3e7a71d65e1a3fb7f092a99c0901cc1e1d4e16e797d41901b8c2889bf01c63abea0544') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email4@example.com') LIMIT 1[0m
