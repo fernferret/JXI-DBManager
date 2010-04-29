@@ -11,13 +11,17 @@ class Database < ActiveRecord::Base
   
   def destroy_database(user)
     if self.user == user || user.permissions == "admin"
-      self.destroy
+      return true
+    else
+      return false
     end
   end
 
-  def edit_database(user, params)
+  def edit_database(user)
     if self.user == user || user.permissions == "admin"
-      self.update_attributes(params)
+      return true
+    else
+      return false
     end
   end
 

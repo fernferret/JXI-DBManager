@@ -76,35 +76,35 @@ class DatabaseTest < ActiveSupport::TestCase
 #Edit
   def test_edit_database
     database = Factory.create(:database, :user => @userA, :name => 'My Database') 
-    assert database.edit_database(@userA, :name => 'My Database2'), 'Unable to destroy database'
+    assert database.edit_database(@userA), 'Unable to destroy database'
   end
 
   def test_admin_edit_someone_elses_database
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
 
-    assert database.edit_database(@adminUser, :name => 'My Database2'), 'Admin could not edit database'
+    assert database.edit_database(@adminUser), 'Admin could not edit database'
   end
 
   def test_ta_edit_someone_elses_database
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert !database.edit_database(@taUser, :name => 'My Database2'), 'TA could edit database'
+    assert !database.edit_database(@taUser), 'TA could edit database'
   end
 
   def test_user_edit_someone_elses_database_with_permissions
     flunk("Not a test case for the current release")
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert database.edit_database(@userB, :name => 'My Database2'), 'User could edit someone else\'s database'
+    assert database.edit_database(@userB), 'User could edit someone else\'s database'
   end
 
   def test_user_edit_someone_elses_database_without_permissions
     flunk("Not a test case for the current release")
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert !database.edit_database(@userB, :name => 'My Database2'), 'User could edit someone else\'s database'
+    assert !database.edit_database(@userB), 'User could edit someone else\'s database'
   end
 
   def test_edit_own_database
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert database.edit_database(@userA, :name => 'Newer Database'), 'Could not update database'
+    assert database.edit_database(@userA), 'Could not update database'
   end
 
 #View
