@@ -13,8 +13,15 @@ class DatabasesController < ApplicationController
 
   def show
     @database = Database.find(params[:id])
-    respond_to do |format|
-      format.html
+    if @database.view_database(current_user);
+      respond_to do |format|
+        format.html
+      end
+    else
+      respond_to do |format|
+        flash[:notice] = 'You do not have permission to view this database'
+        format.html { redirect_to(:controller => "databases", :action => "index") }
+      end
     end
   end
 
@@ -24,7 +31,7 @@ class DatabasesController < ApplicationController
       format.html
     end
   end
-  
+
   def update
     @database = Database.find(params[:id])
     @database.user = current_user 
@@ -66,14 +73,14 @@ class DatabasesController < ApplicationController
     end
   end
 
-	def destroy_database(user)
-		@database = Database.find(params[:id])
-		if @database.user == user || user.permissions == "admin"
-			@database.destroy
-			flash[:notice] = 'Sucessfully removed database'
-			format.html { redirect_to(@database) }	
-		else
-			format.html { "You don't have permissions to destroy this database" }
-		end
-	end
+  def destroy_database(user)
+    @database = Database.find(params[:id])
+    if @database.user == user || user.permissions == "admin"
+      @database.destroy
+      flash[:notice] = 'Sucessfully removed database'
+      format.html { redirect_to(@database) }	
+    else
+      format.html { "You don't have permissions to destroy this database" }
+    end
+  end
 end
