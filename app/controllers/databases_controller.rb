@@ -65,4 +65,15 @@ class DatabasesController < ApplicationController
       format.html { redirect_to(databases_url) }
     end
   end
+
+	def destroy_database(user)
+		@database = Database.find(params[:id])
+		if @database.user == user || user.permissions == "admin"
+			@database.destroy
+			flash[:notice] = 'Sucessfully removed database'
+			format.html { redirect_to(@database) }	
+		else
+			format.html { "You don't have permissions to destroy this database" }
+		end
+	end
 end

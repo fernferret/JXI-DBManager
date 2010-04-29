@@ -8,4 +8,8 @@ class Database < ActiveRecord::Base
   def exists_with_title(name)
     return true
   end
+	
+	def destroy_database(user)
+		return true
+	end
 end
