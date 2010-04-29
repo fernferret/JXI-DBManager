@@ -1273,20 +1273,20 @@
     :loc_per_method: 0
     :name: Functional tests
     :classes: 2
-  - :loc: 133
-    :methods: 24
-    :methods_per_class: 4
-    :lines: 208
+  - :loc: 164
+    :methods: 31
+    :methods_per_class: 5
+    :lines: 281
     :loc_per_method: 3
     :name: Unit tests
     :classes: 6
-  - :loc: 409
-    :methods: 55
-    :methods_per_class: 2
-    :lines: 533
+  - :loc: 440
+    :methods: 62
+    :methods_per_class: 3
+    :lines: 606
     :loc_per_method: 5
     :name: Total
     :classes: 19
   :codeLOC: 264
-  :testLOC: 145
-  :code_to_test_ratio: 0.5
+  :testLOC: 176
+  :code_to_test_ratio: 0.7
