@@ -19,11 +19,13 @@ class ColumnTest < ActiveSupport::TestCase
 		@columnA = Factory.create(:column, :table => @tableA)
 	end
 
+  # Test setting up a new column
   def test_add_all_criteria
     column = Factory.create(:column)
     assert column.save, 'Could not save a new Column!'
   end
 
+  # Test that a column shouldn not save without a name.
   def test_should_not_save_with_no_name
     # Create a new column with no name
     column = Factory.create(:column)
@@ -37,21 +39,25 @@ class ColumnTest < ActiveSupport::TestCase
     assert_equal new_column.name, 'Column'+prev_column_id.to_s, 'Saved a new Column with no name!'  
   end
   
+  #Test that a column should not save without a type (string, int,etc.)
   def test_should_not_save_with_no_column_type
     column = Factory.build(:column, :column_type => nil)
     assert !column.save, 'Saved a new Column with no column_type!'    
   end
   
+  #Test that the column should not save without a is null.
   def test_should_not_save_with_no_null
     column = Factory.build(:column, :null => nil)
     assert !column.save, 'Saved a new Column with no null!'    
   end
 
+  # Test that a column should not save without a table associated with it
   def test_should_not_save_with_no_table
     column = Factory.build(:column, :table => nil)
-    assert !column.save, 'Saved a new Column with no user!'
+    assert !column.save, 'Saved a new Column with no table!'
   end
 
+  #Test that a column should not save if there already exists one with that name on the same table.
   def test_should_not_save_column_with_same_name
     table = Factory.create(:table)
     column = Factory.create(:column, :name => 'Same Name', :table => table)
@@ -59,69 +65,82 @@ class ColumnTest < ActiveSupport::TestCase
     assert !column2.valid?, 'Saved a column with a duplicate name!'
   end
 
+  # Test that we can delete a column properly.
   def test_delete_column
     column = Factory.create(:column)
     assert column.destroy, 'Unable to destroy column'
   end
 
 #destroy
+
+  #Test that the column is properly destroyed.
 	def test_destroy_column
 		assert @columnA.destroy_column(@userA), 'User was unable to destroy column'
 	end
 
+  # Test that the column cannot be destroyed by another general user.
 	def test_destroy_someone_elses_column
 		assert !@columnA.destroy_column(@userB), 'User could delete someone else\'s column'
 	end
 
 #edit
+
+  #Test that the column can be properly edited
   def test_edit_own_column
     assert @columnA.edit_column(@userA), 'Could not update column'
   end
-		
+
+  # Test that the column cannot be edited by a general user
 	def test_edit_someone_elses_column
     assert !@columnA.edit_column(@userB), 'User could update someone else\'s column'
   end
 
+  #Test that an admin can edit any column
 	def admin_can_edit_someone_elses_column
 		assert @columnA.edit_column(@userAdmin), 'Admin could edit someone else\'s column'
 	end
 
+  #Test that a TA cannot edit other people's information
 	def ta_cant_edit_someone_elses_column
 		assert !@columnA.edit_column(@userTA), 'TA could edit someone else\'s column'
 	end
-
-	def test_edit_own_column_name
-		assert @columnA.update_attributes(:name => 'new column'), 'Could not update column'
-	end
 	
+	# Test that a user can edit their own column name
 	def test_edit_own_column_name
 	  @columnA.name = 'column name'
 		assert @columnA.update_attributes(:name => 'new column'), 'Could not update column\'s name'
 	end
 	
+	# Test that a user can edit their own column types
 	def test_edit_own_column_type
 	  @columnA.column_type = 'ints'
 		assert @columnA.update_attributes(:column_type => 'string'), 'Could not update column\'s type'
 	end
 	
+	# Test that a user can edit their own is null checks
 	def test_edit_own_column_null
 	  @columnA.null = 'f'
 		assert @columnA.update_attributes(:null => 't'), 'Could not update column\'s null field'
 	end
 
 #view
+
+  #Test that you can view your own columns.
 	def test_view_own_column
     assert @columnA.view_column(@userA), 'Could not view column'
   end
-		
+	
+	#Test that a general user cannot view someone else's columns.	
 	def test_view_someone_elses_column
     assert !@columnA.view_column(@userB), 'User could view someone else\'s column'
   end
 
+  #Test that an admin can see any column
 	def admin_can_view_someone_elses_column
 		assert !@columnA.view_column(@userAdmin), 'Admin not could view someone else\'s column'
 	end
 
+  #Test that a ta cannot view someone else's column
 	def ta_cant_view_someone_elses_column
 		assert !@columnA.view_column(@userTA), 'TA could view someone else\'s column'
 	end
