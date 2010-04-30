@@ -1163,3 +1163,314 @@ Rendering template within layouts/application
 Rendering databases/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 9ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" IS NULL) [0m
+Rendering template within layouts/application
+Rendering databases/index
+Completed in 6798ms (View: 79, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /users/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-30 07:13:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://www.example.com/users/new]
+REQUESTING PAGE: POST /users with {"commit"=>"Register", "user"=>{"name"=>"Eric Stokes", "password_confirmation"=>"password", "username"=>"FernFerret", "password"=>"password", "email"=>"email@example.com"}} and HTTP headers {"HTTP_REFERER"=>"/users/new"}
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"name"=>"Eric Stokes", "password_confirmation"=>"[FILTERED]", "username"=>"FernFerret", "password"=>"[FILTERED]", "email"=>"email@example.com"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'fernferret') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0ec7b6443df66a360b0f0ba302d7abdc08b0d8563e6c62bf84e3b7b56953541321be79f9f8799baa6c4a578338f4c0af9596b2bba401dd4333950274f07bcd15') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'email@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'FernFerret') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('Eric Stokes', 'e46b965dab7626f53226c987bba2774dae136ce16bdff9052df8e9e258ad97c6d29023d89211801c9fd510d01bd63f6c6b88cdf132fbde00f1b9e7cd27aaf89f', 'FernFerret', 'tusAfOUiFIWWExUfNWdy', '0ec7b6443df66a360b0f0ba302d7abdc08b0d8563e6c62bf84e3b7b56953541321be79f9f8799baa6c4a578338f4c0af9596b2bba401dd4333950274f07bcd15', NULL, NULL, 'email@example.com')[0m
+Redirected to http://www.example.com/
+Completed in 198ms (DB: 3) | 302 Found [http://www.example.com/users]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '0ec7b6443df66a360b0f0ba302d7abdc08b0d8563e6c62bf84e3b7b56953541321be79f9f8799baa6c4a578338f4c0af9596b2bba401dd4333950274f07bcd15') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '0ec7b6443df66a360b0f0ba302d7abdc08b0d8563e6c62bf84e3b7b56953541321be79f9f8799baa6c4a578338f4c0af9596b2bba401dd4333950274f07bcd15') LIMIT 1[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'adminemail1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'admin1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1926d803bd03511f00f9581da49e7dbe76c9b1c5a12a29889d8588d258d23f70c4dd78546cbda00c976192a0561886a72e255fbc0d7937fbdefa6cbaa9c0a41b') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'AdminEmail1@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'Admin1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '0ec7b6443df66a360b0f0ba302d7abdc08b0d8563e6c62bf84e3b7b56953541321be79f9f8799baa6c4a578338f4c0af9596b2bba401dd4333950274f07bcd15') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('Admin1', '45c8838dc50951184b1f2fd8c3a8f8b8a63f50e59a2ea5463befec345ace7ca0a635e180a9296a550b70c16bdea7a24f1db7a94d65682b926c1a78d7078d1dd7', 'Admin1', '9BmdM_f9gVwlRmyaHOhI', '1926d803bd03511f00f9581da49e7dbe76c9b1c5a12a29889d8588d258d23f70c4dd78546cbda00c976192a0561886a72e255fbc0d7937fbdefa6cbaa9c0a41b', 'admin', NULL, 'AdminEmail1@example.com')[0m
+REQUESTING PAGE: GET http://www.example.com/login with {} and HTTP headers {}
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /user_sessions with {"commit"=>"Login", "user_session"=>{"username"=>"Admin1", "password"=>"Password"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/login"}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"Admin1", "password"=>"[FILTERED]"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'admin1') LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/user_sessions]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'taemail1@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'ta1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '88dd0ad98e936b5e8f8593874e5555797c4a76e022eb1ee410aca5941673819e0ec4cc103aeebeec418a840c82a1199184efd9263ab8a8201f85c92a835b5e66') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'TAEmail1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'TA1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('TA1', '39b64038e4e3549c748c696df3959697eb6cf9541f5b380ac460bfca5557dd8b27df162300199fec02cf60ed7164ae1c8e69221df3cbaa26072db0df5117080b', 'TA1', 'b8CLgqOIcpRmaqDoHpcS', '88dd0ad98e936b5e8f8593874e5555797c4a76e022eb1ee410aca5941673819e0ec4cc103aeebeec418a840c82a1199184efd9263ab8a8201f85c92a835b5e66', 'ta', NULL, 'TAEmail1@example.com')[0m
+REQUESTING PAGE: GET http://www.example.com/login with {} and HTTP headers {}
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 5ms (View: 5, DB: 2) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /user_sessions with {"commit"=>"Login", "user_session"=>{"username"=>"TA1", "password"=>"Password"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/login"}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"TA1", "password"=>"[FILTERED]"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'ta1') LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/user_sessions]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 76ms (View: 71, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (1.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'taemail2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'ta2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '25ac8c008856f8aeef1271e35b54edbc15090e30c0f8b75d4a06a7747c078702d2fb2624bc137a447aeeaec192beca19c0d78d2477660236748767631400d97c') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'TAEmail2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'TA2') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('TA2', '27c1054c80bd4a18b5a3736582f84ea2740df395387468cf93e24554df5107bf6ac1e2f2473e265caf42f218c61544741f24d8aca623a1dd695b622cbf9f0f66', 'TA2', '6yqkywOafdtl5n6757Gh', '25ac8c008856f8aeef1271e35b54edbc15090e30c0f8b75d4a06a7747c078702d2fb2624bc137a447aeeaec192beca19c0d78d2477660236748767631400d97c', 'ta', NULL, 'TAEmail2@example.com')[0m
+REQUESTING PAGE: GET http://www.example.com/login with {} and HTTP headers {}
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /user_sessions with {"commit"=>"Login", "user_session"=>{"username"=>"TA2", "password"=>"Password"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/login"}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"TA2", "password"=>"[FILTERED]"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'ta2') LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/user_sessions]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (1.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" IS NULL) [0m
+Rendering template within layouts/application
+Rendering databases/index
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email1@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a569264bc3480f012b0555aac55a5cfb2feefd74980d279a8dfeb0ce1f3ce1a12fc81664377836428fe3d6fdd9e441f5c909b5ac1b5138cb9ddc5d03ae04c1c7') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email1@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'User1') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('User1', '026431a1b9cbcb283753409757844552fc8e07633b106713923606a4d39c3d797c47c716fa278d1ff4c60db5814005c736ffe971a48bc2a17bcb1d5f39c8fda0', 'User1', 'gCWZMzvNnr7e_abbGhvE', 'a569264bc3480f012b0555aac55a5cfb2feefd74980d279a8dfeb0ce1f3ce1a12fc81664377836428fe3d6fdd9e441f5c909b5ac1b5138cb9ddc5d03ae04c1c7', NULL, NULL, 'Email1@example.com')[0m
+REQUESTING PAGE: GET http://www.example.com/login with {} and HTTP headers {}
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 5ms (View: 5, DB: 2) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /user_sessions with {"commit"=>"Login", "user_session"=>{"username"=>"User1", "password"=>"Password"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/login"}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"User1", "password"=>"[FILTERED]"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'user1') LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/user_sessions]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 77ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /databases/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing DatabasesController#new (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"databases"}
+Rendering template within layouts/application
+Rendering databases/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://www.example.com/databases/new]
+REQUESTING PAGE: POST /databases with {"commit"=>"Add Database", "database"=>{"name"=>"My new Database"}} and HTTP headers {"HTTP_REFERER"=>"/databases/new"}
+
+
+Processing DatabasesController#create (for 127.0.0.1 at 2010-04-30 07:13:20) [POST]
+  Parameters: {"commit"=>"Add Database", "action"=>"create", "database"=>{"name"=>"My new Database"}, "controller"=>"databases"}
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT "databases".id FROM "databases" WHERE ("databases"."name" = 'My new Database' AND "databases".user_id = 1) LIMIT 1[0m
+  [4;35;1mDatabase Create (0.0ms)[0m   [0mINSERT INTO "databases" ("name", "user_id") VALUES('My new Database', 1)[0m
+Redirected to http://www.example.com/databases/1
+Completed in 138ms (DB: 3) | 302 Found [http://www.example.com/databases]
+REQUESTING PAGE: GET http://www.example.com/databases/1 with {} and HTTP headers {"HTTP_REFERER"=>"/databases"}
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2010-04-30 07:13:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"databases"}
+  [4;36;1mDatabase Load (0.0ms)[0m   [0;1mSELECT * FROM "databases" WHERE ("databases"."id" = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mTable Load (1.0ms)[0m   [0mSELECT * FROM "tables" WHERE ("tables".database_id = 1) [0m
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://www.example.com/databases/1]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'email2@example.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'user2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c8af8e10d2d9238c7b285d3541612d6a8495e990e6f57cf4920622d12355a1838c93944ce83f48d801f89286c820d6cc2f68522c4578591eb2d454edafc46ae6') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'Email2@example.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'User2') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "crypted_password", "username", "password_salt", "persistence_token", "permissions", "password", "email") VALUES('User2', 'da95b5522dc125d36625e8f5c9bd349c9760342db911dd765294fdb7c525f11100052701b54c944ca8ece6110307f06a0479e1be2d185823f1c5c778b2661726', 'User2', 'gVC9iWdt4WSku-PpxLJD', 'c8af8e10d2d9238c7b285d3541612d6a8495e990e6f57cf4920622d12355a1838c93944ce83f48d801f89286c820d6cc2f68522c4578591eb2d454edafc46ae6', NULL, NULL, 'Email2@example.com')[0m
+REQUESTING PAGE: GET http://www.example.com/login with {} and HTTP headers {}
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-30 07:13:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 5ms (View: 5, DB: 2) | 200 OK [http://www.example.com/login]
+REQUESTING PAGE: POST /user_sessions with {"commit"=>"Login", "user_session"=>{"username"=>"User2", "password"=>"Password"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/login"}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-30 07:13:21) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"User2", "password"=>"[FILTERED]"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'user2') LIMIT 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/user_sessions]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions"}
+
+
+Processing DatabasesController#index (for 127.0.0.1 at 2010-04-30 07:13:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"databases"}
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mDatabase Load (0.0ms)[0m   [0mSELECT * FROM "databases" WHERE ("databases"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering databases/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]

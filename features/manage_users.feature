@@ -14,6 +14,68 @@ Feature: Manage users
     And I click the "Register" button
     Then I should see "Registration successful."
 
+      Scenario: Register new user, missing username
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    And I fill in "Name" with "Eric Stokes"
+    And I fill in "Password" and "Password confirmation" with "password"
+    And I fill in "Email" with "email@example.com"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
+      Scenario: Register new user, missing name
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    When I fill in "Username" with "FernFerret"
+    And I fill in "Password" and "Password confirmation" with "password"
+    And I fill in "Email" with "email@example.com"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
+          Scenario: Register new user, missing password
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    When I fill in "Username" with "FernFerret"
+    And I fill in "Name" with "Eric Stokes"
+    And I fill in "Email" with "email@example.com"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
+          Scenario: Register new user, missing password confirm
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    When I fill in "Username" with "FernFerret"
+    And I fill in "Name" with "Eric Stokes"
+    And I fill in "Password" with "password"
+    And I fill in "Email" with "email@example.com"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
+          Scenario: Register new user, missing email
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    When I fill in "Username" with "FernFerret"
+    And I fill in "Name" with "Eric Stokes"
+    And I fill in "Password" and "Password confirmation" with "password"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
+          Scenario: Register new user, incorrect email
+    Given I am on the home page
+    When I follow "Register"
+    Then I should see "New User"
+    When I fill in "Username" with "FernFerret"
+    And I fill in "Name" with "Eric Stokes"
+    And I fill in "Password" and "Password confirmation" with "password"
+    And I fill in "Email" with "eric.stokes"
+    And I click the "Register" button
+    Then I should see "Registration successful."
+
   Scenario: Logged in as an Admin
     Given I am logged in as an Admin
     And I am on the homepage

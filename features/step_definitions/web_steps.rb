@@ -10,10 +10,16 @@ require 'uri'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
 @current_user = nil
+@adminA = Factory.create(:admin)
+@adminB = Factory.create(:admin)
+@taA = Factory.create(:ta)
+@taB = Factory.create(:ta)
+@userA = Factory.create(:user)
+@userB = Factory.create(:user)
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
 Given /^(?:|I )am logged in as an Admin$/ do ||
-  @current_user = Factory.create(:admin)
+  @current_user = @adminA
 visit path_to("login")
 fill_in('Username', :with => @current_user.username)
 fill_in('Password', :with => @current_user.password)
@@ -21,7 +27,7 @@ click_button("Login")
 end
 
 Given /^(?:|I )am logged in as a TA$/ do ||
-  @current_user = Factory.create(:ta)
+  @current_user = @taA
 visit path_to("login")
 fill_in('Username', :with => @current_user.username)
 fill_in('Password', :with => @current_user.password)
@@ -29,11 +35,17 @@ click_button("Login")
 end
 
 Given /^(?:|I )am logged in as a User$/ do ||
-  @current_user = Factory.create(:user)
+  @current_user = @userA
 visit path_to("login")
 fill_in('Username', :with => @current_user.username)
 fill_in('Password', :with => @current_user.password)
 click_button("Login")
+end
+
+Given /^(?:|I )have created a database named "([^\"]*)" do |dbname|
+  visit path_to(new_database_path)
+  fill_in('Name', :with => dbname)
+  click_button("Add Database")
 end
 
 Given /^(?:|I )am not logged in$/ do ||
