@@ -9,9 +9,15 @@ module NavigationHelpers
     case page_name
     
     when /the home\s?page/
-      '/'
+      root_url
+    when /the new user page/
+      new_user_path
+    when /login/
+      login_url
     when /the new table page/
       new_table_path
+    when /the (add|new) database page/
+      new_database_path
 
     
     # Add more mappings here.

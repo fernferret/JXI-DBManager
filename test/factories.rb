@@ -24,3 +24,21 @@ Factory.define :user, :class => User do |f|
   f.password_confirmation { |u| u.password }
   f.sequence(:email) { |n| "Email#{n}@example.com" }
 end
+
+Factory.define :admin, :class => User do |f|
+  f.sequence(:username) { |n| "Admin#{n}" }
+  f.sequence(:name) { |n| "Admin#{n}" }
+  f.password "Password"
+  f.password_confirmation { |u| u.password }
+  f.permissions "admin"
+  f.sequence(:email) { |n| "AdminEmail#{n}@example.com" }
+end
+
+Factory.define :ta, :class => User do |f|
+  f.sequence(:username) { |n| "TA#{n}" }
+  f.sequence(:name) { |n| "TA#{n}" }
+  f.password "Password"
+  f.password_confirmation { |u| u.password }
+  f.permissions "ta"
+  f.sequence(:email) { |n| "TAEmail#{n}@example.com" }
+end

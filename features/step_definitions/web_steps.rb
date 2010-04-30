@@ -4,14 +4,40 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-
+# Add the factories file so we can create users
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "..", "test", "factories"))
 require 'uri'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
+@current_user = nil
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
-Given /^(?:|I )am logged in as \"([A-Za-z0-9]+)\"/ do |user|
-  assert_equal true, false
+Given /^(?:|I )am logged in as an Admin$/ do ||
+  @current_user = Factory.create(:admin)
+visit path_to("login")
+fill_in('Username', :with => @current_user.username)
+fill_in('Password', :with => @current_user.password)
+click_button("Login")
+end
+
+Given /^(?:|I )am logged in as a TA$/ do ||
+  @current_user = Factory.create(:ta)
+visit path_to("login")
+fill_in('Username', :with => @current_user.username)
+fill_in('Password', :with => @current_user.password)
+click_button("Login")
+end
+
+Given /^(?:|I )am logged in as a User$/ do ||
+  @current_user = Factory.create(:user)
+visit path_to("login")
+fill_in('Username', :with => @current_user.username)
+fill_in('Password', :with => @current_user.password)
+click_button("Login")
+end
+
+Given /^(?:|I )am not logged in$/ do ||
+  @current_user = nil
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
@@ -26,6 +52,10 @@ When /^(?:|I )press "([^\"]*)"$/ do |button|
   click_button(button)
 end
 
+When /^(?:|I )click the "([^\"]*)" button$/ do |button|
+  click_button(button)
+end
+
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
   click_link(link)
 end
@@ -36,6 +66,11 @@ end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(field, :with => value)
+end
+
+When /^(?:|I )fill in "([^\"]*)" and "([^\"]*)" with "([^\"]*)"$/ do |fielda, fieldb, value|
+  fill_in(fielda, :with => value)
+  fill_in(fieldb, :with => value)
 end
 
 When /^(?:|I )have filled in "([^\"]*)" with "([^\"]*)"/ do |field, value|
@@ -142,7 +177,7 @@ When /^(?:|I )attach the file "([^\"]*)" to "([^\"]*)"$/ do |path, field|
   when "gif"
     type = "image/gif"
   end
-  
+
   attach_file(field, path, type)
 end
 
@@ -267,7 +302,7 @@ end
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   actual_params   = CGI.parse(URI.parse(current_url).query)
   expected_params = Hash[expected_pairs.rows_hash.map{|k,v| [k,[v]]}]
- 
+
   if defined?(Spec::Rails::Matchers)
     actual_params.should == expected_params
   else
