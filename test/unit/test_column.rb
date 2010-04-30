@@ -11,12 +11,12 @@ require 'mocha'
 class ColumnTest < ActiveSupport::TestCase
 	def setup
 		@userA = Factory.create(:user)
-		@tableA = Factory.create(:table, :association => @columnA, :user => @userA)
-		@columnA = Factory.create(:column, :table => @tableA)
+		@databaseA = Factory.create(:database, :user => @userA)
+		@tableA = Factory.create(:table, :database => @databaseA)
 		@userB = Factory.create(:user)
 		@userAdmin = Factory.create(:user)
 		@userTA = Factory.create(:user)
-		@sharedTable = Factor.create(:table, :user => @userA, :shared_with	=> [@userB])
+		@columnA = Factory.create(:column, :table => @tableA)
 	end
 
   def test_add_all_criteria
@@ -64,42 +64,51 @@ class ColumnTest < ActiveSupport::TestCase
     assert column.destroy, 'Unable to destroy column'
   end
 
-#edit
-  def test_edit_own_table
-    assert @columnA.edit_table(:name => 'Sweet Table', :user => @userA), 'Could not update table'
-  end
-		
-	def test_edit_someone_elses_table
-    assert !@columnA.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
-  end
-
-	def test_edit_someone_elses_table_shared
-    assert @sharedTable.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
-  end
-
-	def admin_can_edit_someone_elses_table
-		assert @columnA.edit_table(:name => 'table', :user => @userAdmin), 'Admin could edit someone else\'s table'
+#destroy
+	def test_destroy_column
+		assert @columnA.destroy_column(@userA), 'User was unable to destroy column'
 	end
 
-	def ta_cant_edit_someone_elses_table
-		assert !@columnA.edit_table(:name => 'table', :user => @userTA), 'TA could edit someone else\'s table'
+	def test_destroy_someone_elses_column
+		assert !@columnA.destroy_column(@userB), 'User could delete someone else\'s column'
+	end
+
+#edit
+  def test_edit_own_column
+    assert @columnA.edit_column(@userA), 'Could not update column'
+  end
+		
+	def test_edit_someone_elses_column
+    assert !@columnA.edit_column(@userB), 'User could update someone else\'s column'
+  end
+
+	def admin_can_edit_someone_elses_column
+		assert @columnA.edit_column(@userAdmin), 'Admin could edit someone else\'s column'
+	end
+
+	def ta_cant_edit_someone_elses_column
+		assert !@columnA.edit_column(@userTA), 'TA could edit someone else\'s column'
+	end
+
+	def test_edit_own_column
+		assert @columnA.update_attributes(:name => 'new column'), 'Could not update column'
 	end
 
 #view
-	def test_view_own_table
-    assert @columnA.view_table(:name => 'Sweet Table', :user => @userA), 'Could not view table'
+	def test_view_own_column
+    assert @columnA.view_column(@userA), 'Could not view column'
   end
 		
-	def test_view_someone_elses_table
-    assert !@columnA.view_table(:name => 'Sweet Table', :user => @userB), 'User could view someone else\'s table'
+	def test_view_someone_elses_column
+    assert !@columnA.view_column(@userB), 'User could view someone else\'s column'
   end
 
-	def admin_can_view_someone_elses_table
-		assert !@columnA.view_table(:name => 'table', :user => @userAdmin), 'Admin not could view someone else\'s table'
+	def admin_can_view_someone_elses_column
+		assert !@columnA.view_column(@userAdmin), 'Admin not could view someone else\'s column'
 	end
 
-	def ta_cant_view_someone_elses_table
-		assert !@columnA.view_table(:name => 'table', :user => @userTA), 'TA could view someone else\'s table'
+	def ta_cant_view_someone_elses_column
+		assert !@columnA.view_column(@userTA), 'TA could view someone else\'s column'
 	end
 
 end

@@ -12,12 +12,11 @@ require 'test/test_helper'
 class TableTest < ActiveSupport::TestCase
 	def setup
 		@userA = Factory.create(:user)
+		@databaseA = Factory.create(:database, :user => @userA)
 		@tableA = Factory.create(:table, :database => @databaseA)
-		@databaseA = Factory.create(:database, :association => @tableA, :user => @userA)
 		@userB = Factory.create(:user)
 		@userAdmin = Factory.create(:user)
 		@userTA = Factory.create(:user)
-		@sharedTable = Factor.create(:table, :user => @userA, :shared_with	=> [@userB])
 	end
 
   def test_add_all_criteria
@@ -54,42 +53,50 @@ class TableTest < ActiveSupport::TestCase
     table = Factory.create(:table)
     assert table.destroy, 'Unable to destroy table'
   end
+#destroy
+	def test_destroy_table
+		assert @tableA.destroy_table(@userA), 'User was unable to destroy table'
+	end
+
+	def test_destroy_someone_elses_table
+		assert !@tableA.destroy_table(@userB), 'User could delete someone else\'s table'
+	end
 
 #edit
   def test_edit_own_table
-    assert @tableA.edit_table(:name => 'Sweet Table', :user => @userA), 'Could not update table'
+    assert @tableA.edit_table(@userA), 'Could not update table'
   end
 		
 	def test_edit_someone_elses_table
-    assert !@tableA.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
-  end
-
-	def test_edit_someone_elses_table_shared
-    assert @sharedTable.edit_table(:name => 'Sweet Table', :user => @userB), 'User could update someone else\'s table'
+    assert !@tableA.edit_table(@userB), 'User could update someone else\'s table'
   end
 
 	def admin_can_edit_someone_elses_table
-		assert @tableA.edit_table(:name => 'table', :user => @userAdmin), 'Admin could edit someone else\'s table'
+		assert @tableA.edit_table(@userAdmin), 'Admin could edit someone else\'s table'
 	end
 
 	def ta_cant_edit_someone_elses_table
-		assert !@tableA.edit_table(:name => 'table', :user => @userTA), 'TA could edit someone else\'s table'
+		assert !@tableA.edit_table(@userTA), 'TA could edit someone else\'s table'
+	end
+
+	def test_edit_own_table
+		assert @tableA.update_attributes(:name => "new table"), 'Could not update table'
 	end
 
 #view
 	def test_view_own_table
-    assert @tableA.view_table(:name => 'Sweet Table', :user => @userA), 'Could not view table'
+    assert @tableA.view_table(@userA), 'Could not view table'
   end
 		
 	def test_view_someone_elses_table
-    assert !@tableA.view_table(:name => 'Sweet Table', :user => @userB), 'User could view someone else\'s table'
+    assert !@tableA.view_table(@userB), 'User could view someone else\'s table'
   end
 
 	def admin_can_view_someone_elses_table
-		assert !@tableA.view_table(:name => 'table', :user => @userAdmin), 'Admin not could view someone else\'s table'
+		assert !@tableA.view_table(@userAdmin), 'Admin not could view someone else\'s table'
 	end
 
 	def ta_cant_view_someone_elses_table
-		assert !@tableA.view_table(:name => 'table', :user => @userTA), 'TA could view someone else\'s table'
+		assert !@tableA.view_table(@userTA), 'TA could view someone else\'s table'
 	end
 end

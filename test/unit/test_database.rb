@@ -107,6 +107,11 @@ class DatabaseTest < ActiveSupport::TestCase
     assert database.edit_database(@userA), 'Could not update database'
   end
 
+	def test_edit_own_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+    assert database.update_attributes(:name => 'Newer Database'), 'Could not update database'
+  end
+
 #View
   def test_view_database
     database = Factory.create(:database, :user => @userA) 
@@ -135,10 +140,5 @@ class DatabaseTest < ActiveSupport::TestCase
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
 
     assert !database.view_database(@userB), 'User could view someone else\'s database'
-  end
-
-  def test_edit_own_database
-    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert database.update_attributes(:name => 'Newer Database'), 'Could not update database'
   end
 end

@@ -3,4 +3,28 @@ class Table < ActiveRecord::Base
   belongs_to :database
   validates_presence_of :name, :database
   validates_uniqueness_of :name, :scope => :database_id
+	
+	def destroy_table(user)
+		if self.database.user == user || user.permissions == "admin"
+			return true
+		else
+			return false
+		end
+	end
+
+	def edit_table(user)
+		if self.database.user == user || user.permissions == "admin"
+			return true
+		else
+			return false
+		end
+	end
+
+  def view_table(user)
+    if self.database.user == user || user.permissions == "ta" || user.permissions == "admin"
+      return true
+    else
+      return false
+    end
+  end
 end
