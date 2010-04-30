@@ -90,8 +90,23 @@ class ColumnTest < ActiveSupport::TestCase
 		assert !@columnA.edit_column(@userTA), 'TA could edit someone else\'s column'
 	end
 
-	def test_edit_own_column
+	def test_edit_own_column_name
 		assert @columnA.update_attributes(:name => 'new column'), 'Could not update column'
+	end
+	
+	def test_edit_own_column_name
+	  @columnA.name = 'column name'
+		assert @columnA.update_attributes(:name => 'new column'), 'Could not update column\'s name'
+	end
+	
+	def test_edit_own_column_type
+	  @columnA.column_type = 'ints'
+		assert @columnA.update_attributes(:column_type => 'string'), 'Could not update column\'s type'
+	end
+	
+	def test_edit_own_column_null
+	  @columnA.null = 'f'
+		assert @columnA.update_attributes(:null => 't'), 'Could not update column\'s null field'
 	end
 
 #view
