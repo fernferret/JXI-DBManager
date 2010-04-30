@@ -9,47 +9,47 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "..", "test", "
 require 'uri'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
-@current_user = nil
-@adminA = Factory.create(:admin)
-@adminB = Factory.create(:admin)
-@taA = Factory.create(:ta)
-@taB = Factory.create(:ta)
-@userA = Factory.create(:user)
-@userB = Factory.create(:user)
+$current_user = nil
+$adminA = Factory.create(:admin)
+$adminB = Factory.create(:admin)
+$taA = Factory.create(:ta)
+$taB = Factory.create(:ta)
+$userA = Factory.create(:user)
+$userB = Factory.create(:user)
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
 Given /^(?:|I )am logged in as an Admin$/ do ||
-  @current_user = @adminA
+  $current_user = $adminA
 visit path_to("login")
-fill_in('Username', :with => @current_user.username)
-fill_in('Password', :with => @current_user.password)
+fill_in('Username', :with => $current_user.username)
+fill_in('Password', :with => $current_user.password)
 click_button("Login")
 end
 
 Given /^(?:|I )am logged in as a TA$/ do ||
-  @current_user = @taA
+  $current_user = $taA
 visit path_to("login")
-fill_in('Username', :with => @current_user.username)
-fill_in('Password', :with => @current_user.password)
+fill_in('Username', :with => $current_user.username)
+fill_in('Password', :with => $current_user.password)
 click_button("Login")
 end
 
 Given /^(?:|I )am logged in as a User$/ do ||
-  @current_user = @userA
+  $current_user = $userA
 visit path_to("login")
-fill_in('Username', :with => @current_user.username)
-fill_in('Password', :with => @current_user.password)
+fill_in('Username', :with => $current_user.username)
+fill_in('Password', :with => $current_user.password)
 click_button("Login")
 end
 
-Given /^(?:|I )have created a database named "([^\"]*)" do |dbname|
-  visit path_to(new_database_path)
+Given /^(?:|I )have created a database named "([^\"]*)"$/ do |dbname|
+  visit new_database_url
   fill_in('Name', :with => dbname)
   click_button("Add Database")
 end
 
 Given /^(?:|I )am not logged in$/ do ||
-  @current_user = nil
+  $current_user = nil
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

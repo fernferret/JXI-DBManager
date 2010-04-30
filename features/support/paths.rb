@@ -16,7 +16,7 @@ module NavigationHelpers
       login_url
     when /the new table page/
       new_table_path
-    when /the (add|new) database page/
+    when /the (add a|new) database page/
       new_database_path
 
     

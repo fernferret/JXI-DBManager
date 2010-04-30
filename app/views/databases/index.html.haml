@@ -1,4 +1,18 @@
-%h1= 'All user Databases'
+- if @alldatabases != nil
+  %h1= 'All Databases'
+  %table
+    %tr
+      %th= 'Name'
+    - if @current_user != nil and @current_user.permissions == "admin"
+      - @alldatabases.each do |database|
+        %tr
+          %td= link_to(database.name, database)
+          %td= link_to('Delete', database, :confirm => "Are you sure?", :method => :delete )
+          %td= link_to('Edit', edit_database_path(database))
+    - else
+      - @alldatabases.each do |database|
+        %tr
+          %td= link_to(database.name, database)
 - if current_user
   %h1= 'My Databases'
   %p= link_to('Add Database', new_database_path())

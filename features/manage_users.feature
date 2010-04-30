@@ -22,7 +22,7 @@ Feature: Manage users
     And I fill in "Password" and "Password confirmation" with "password"
     And I fill in "Email" with "email@example.com"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Username can't be blank"
 
       Scenario: Register new user, missing name
     Given I am on the home page
@@ -32,7 +32,7 @@ Feature: Manage users
     And I fill in "Password" and "Password confirmation" with "password"
     And I fill in "Email" with "email@example.com"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Name can't be blank"
 
           Scenario: Register new user, missing password
     Given I am on the home page
@@ -42,18 +42,19 @@ Feature: Manage users
     And I fill in "Name" with "Eric Stokes"
     And I fill in "Email" with "email@example.com"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Password can't be blank"
 
-          Scenario: Register new user, missing password confirm
+          Scenario: Register new user, mismatched password and password confirm
     Given I am on the home page
     When I follow "Register"
     Then I should see "New User"
     When I fill in "Username" with "FernFerret"
     And I fill in "Name" with "Eric Stokes"
     And I fill in "Password" with "password"
+    And I fill in "Password confirmation" with "badpass"
     And I fill in "Email" with "email@example.com"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Password doesn't match confirmation"
 
           Scenario: Register new user, missing email
     Given I am on the home page
@@ -63,7 +64,7 @@ Feature: Manage users
     And I fill in "Name" with "Eric Stokes"
     And I fill in "Password" and "Password confirmation" with "password"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Email can't be blank"
 
           Scenario: Register new user, incorrect email
     Given I am on the home page
@@ -74,7 +75,7 @@ Feature: Manage users
     And I fill in "Password" and "Password confirmation" with "password"
     And I fill in "Email" with "eric.stokes"
     And I click the "Register" button
-    Then I should see "Registration successful."
+    Then I should see "Email should look like an email address"
 
   Scenario: Logged in as an Admin
     Given I am logged in as an Admin
@@ -115,4 +116,5 @@ Feature: Manage users
     And I have created a database named "My Database"
     And I am on the add a database page
     When I fill in "Name" with "My Database"
-    Then I should see "Error"
+    And I click the "Add Database" button
+    Then I should see "error"

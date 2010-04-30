@@ -5,6 +5,15 @@ class DatabasesController < ApplicationController
     @databases = Database.all
     current_user = UserSession.find
     user_id = current_user && current_user.record.id
+    @alldatabases = nil
+    if UserSession.find and user_id != nil
+      @current_user = User.find(:first, :conditions => {:id => user_id})
+      if @current_user.permissions == "admin" || @current_user.permissions == "ta"
+        @alldatabases = Database.find(:all)
+      else
+        @alldatabases = nil
+      end
+    end
     @mydatabases = Database.find(:all, :conditions => {:user_id => user_id})
     respond_to do |format|
       format.html
