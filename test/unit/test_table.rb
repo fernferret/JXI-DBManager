@@ -117,4 +117,31 @@ class TableTest < ActiveSupport::TestCase
 	def ta_can_view_someone_elses_table
 		assert @tableA.view_table(@userTA), 'TA could view someone else\'s table'
 	end
+
+  # TESTING SQL COMMANDS
+  def test_add_sql_table
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "CREATE TABLE " + tablename, table.create_dbsql, 'Did not generate valid SQL'
+  end
+
+  def test_alter_sql_table
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ALTER TABLE " + tablename, table.alter_dbsql, 'Did not generate valid SQL'
+  end
+
+  def test_drop_sql_table
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "DROP TABLE " + tablename, table.drop_dbsql, 'Did not generate valid SQL'
+  end
 end

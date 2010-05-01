@@ -144,5 +144,37 @@ class ColumnTest < ActiveSupport::TestCase
 	def ta_cant_view_someone_elses_column
 		assert !@columnA.view_column(@userTA), 'TA could view someone else\'s column'
 	end
+  # TESTING SQL COMMANDS
+  def test_add_sql_column
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
+    assert_equal "ALTER TABLE " + tablename, table.alter_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ADD " + column.name + " " + column.column_type, column.add_dbsql, 'Did not generate valid SQL'
+  end
+
+  def test_alter_sql_column
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ALTER TABLE " + tablename, table.alter_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ALTER COLUMN " + column.name + " " + column.column_type, column.alter_dbsql, 'Did not generate valid SQL'
+  end
+
+  def test_drop_sql_column
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ALTER TABLE " + tablename, table.alter_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "DROP COLUMN " + column.name, column.drop_dbsql, 'Did not generate valid SQL'
+  end
 end
