@@ -524,8 +524,18 @@ table td.score {
 
 <img src="flog.png?Thu Apr 29 20:54:48 -0400 2010">
 
+<<<<<<< HEAD
+
+<canvas id="graph"></canvas>
+<script language="javascript" src="flog.js?1273250324" type="text/javascript"></script>
+
+
+<h2>Total Flog score for all methods: 483.4</h2>
+<h2>Average Flog score for all methods: 8.5</h2>
+=======
 <h2>Total Flog score for all methods: 418.7</h2>
 <h2>Average Flog score for all methods: 9.3</h2>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
 <table>
   <tr>
@@ -538,10 +548,17 @@ table td.score {
     
     <tr>
       <td><a href="#_app_controllers_databases_controller_rb">/app/controllers/databases_controller.rb</a></td>
+<<<<<<< HEAD
+      <td>124</td>
+      <td>8</td>
+      <td>15</td>
+      <td>25</td>
+=======
       <td>110</td>
       <td>8</td>
       <td>14</td>
       <td>21</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     </tr>
   
     <tr>
@@ -570,6 +587,44 @@ table td.score {
   
     <tr>
       <td><a href="#_app_models_column_rb">/app/models/column.rb</a></td>
+<<<<<<< HEAD
+      <td>57</td>
+      <td>8</td>
+      <td>7</td>
+      <td>13</td>
+    </tr>
+  
+    <tr>
+      <td><a href="#_app_controllers_users_controller_rb">/app/controllers/users_controller.rb</a></td>
+      <td>26</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+    </tr>
+  
+    <tr>
+      <td><a href="#_app_models_table_rb">/app/models/table.rb</a></td>
+      <td>45</td>
+      <td>8</td>
+      <td>6</td>
+      <td>11</td>
+    </tr>
+  
+    <tr>
+      <td><a href="#_app_models_database_rb">/app/models/database.rb</a></td>
+      <td>40</td>
+      <td>8</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+  
+    <tr>
+      <td><a href="#_app_models_user_rb">/app/models/user.rb</a></td>
+      <td>7</td>
+      <td>1</td>
+      <td>7</td>
+      <td>7</td>
+=======
       <td>35</td>
       <td>4</td>
       <td>9</td>
@@ -598,6 +653,7 @@ table td.score {
       <td>4</td>
       <td>7</td>
       <td>10</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     </tr>
   
     <tr>
@@ -606,6 +662,8 @@ table td.score {
       <td>3</td>
       <td>4</td>
       <td>6</td>
+<<<<<<< HEAD
+=======
     </tr>
   
     <tr>
@@ -614,12 +672,500 @@ table td.score {
       <td>1</td>
       <td>6</td>
       <td>6</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     </tr>
   
 </table>
 
 
+<<<<<<< HEAD
+  <h2 id="_app_controllers_databases_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>/app/controllers/databases_controller.rb</a></h2>
+    
+      <p>DatabasesController#index</p>
+      <p>Total Score: 25.0</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>11.7</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>7.6</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>6.6</td>
+            <td>find</td>
+          </tr>
+        
+          <tr>
+            <td>4.3</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>3.4</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>record</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>id</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>all</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#destroy_database</p>
+      <p>Total Score: 20.7</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>5.1</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>3.1</td>
+            <td>format</td>
+          </tr>
+        
+          <tr>
+            <td>2.7</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>redirect_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>destroy</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>flash</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#update</p>
+      <p>Total Score: 20.1</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>5.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>5.2</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>3.3</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>2.9</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>2.9</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>redirect_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>flash</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>render</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>update_attributes</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>current_user</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#show</p>
+      <p>Total Score: 17.2</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>5.5</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>5.3</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>2.9</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>respond_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>redirect_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>flash</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>current_user</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>view_database</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#create</p>
+      <p>Total Score: 17.1</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>5.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>5.2</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>2.9</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>redirect_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>render</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>flash</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>save</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>current_user</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>new</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#destroy</p>
+      <p>Total Score: 11.5</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.5</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>2.5</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>databases_url</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>redirect_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>destroy</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#edit</p>
+      <p>Total Score: 7.3</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.5</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+      </table>
+    
+      <p>DatabasesController#new</p>
+      <p>Total Score: 4.6</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.5</td>
+            <td>assignment</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>new</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>respond_to</td>
+          </tr>
+        
+      </table>
+    
+
+  <h2 id="_app_controllers_columns_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/columns_controller.rb'>/app/controllers/columns_controller.rb</a></h2>
+=======
   <h2 id="_app_controllers_databases_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/databases_controller.rb'>/app/controllers/databases_controller.rb</a></h2>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     
       <p>DatabasesController#destroy_database</p>
       <p>Total Score: 20.7</p>
@@ -715,42 +1261,22 @@ table td.score {
           </tr>
         
           <tr>
-            <td>4.3</td>
-            <td>==</td>
-          </tr>
-        
-          <tr>
-            <td>3.4</td>
-            <td>permissions</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>record</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>id</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
+            <td>3.3</td>
             <td>params</td>
           </tr>
         
           <tr>
-            <td>1.5</td>
+            <td>2.9</td>
+            <td>html</td>
+          </tr>
+        
+          <tr>
+            <td>2.9</td>
+            <td>[]</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
             <td>redirect_to</td>
           </tr>
         
@@ -765,18 +1291,13 @@ table td.score {
           </tr>
         
           <tr>
-            <td>1.4</td>
-            <td>destroy</td>
+            <td>1.3</td>
+            <td>update_attributes</td>
           </tr>
         
           <tr>
             <td>1.2</td>
             <td>current_user</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
           </tr>
         
           <tr>
@@ -915,16 +1436,6 @@ table td.score {
           </tr>
         
           <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>current_user</td>
-          </tr>
-        
-          <tr>
             <td>1.2</td>
             <td>current_user</td>
           </tr>
@@ -965,13 +1476,8 @@ table td.score {
           </tr>
         
           <tr>
-            <td>1.5</td>
-            <td>render</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>flash</td>
+            <td>1.4</td>
+            <td>redirect_to</td>
           </tr>
         
           <tr>
@@ -981,7 +1487,7 @@ table td.score {
         
           <tr>
             <td>1.3</td>
-            <td>save</td>
+            <td>html</td>
           </tr>
         
           <tr>
@@ -996,7 +1502,7 @@ table td.score {
         
           <tr>
             <td>1.2</td>
-            <td>respond_to</td>
+            <td>destroy</td>
           </tr>
         
       </table>
@@ -1132,10 +1638,17 @@ table td.score {
       </table>
     
 
+<<<<<<< HEAD
+  <h2 id="_app_controllers_tables_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/tables_controller.rb'>/app/controllers/tables_controller.rb</a></h2>
+    
+      <p>TablesController#update</p>
+      <p>Total Score: 18.7</p>
+=======
   <h2 id="_app_controllers_columns_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/columns_controller.rb'>/app/controllers/columns_controller.rb</a></h2>
     
       <p>ColumnsController#update</p>
       <p>Total Score: 20.3</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -1204,355 +1717,11 @@ table td.score {
         
       </table>
     
-      <p>ColumnsController#create</p>
-      <p>Total Score: 15.6</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>4.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>3.4</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>2.4</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>columns</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>redirect_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>render</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>save</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>build</td>
-          </tr>
-        
-      </table>
-    
-      <p>ColumnsController#new</p>
-      <p>Total Score: 10.1</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>3.7</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>columns</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>build</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-      </table>
-    
-      <p>ColumnsController#destroy</p>
-      <p>Total Score: 9.9</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>2.5</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>2.5</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>redirect_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>destroy</td>
-          </tr>
-        
-      </table>
-    
-      <p>ColumnsController#edit</p>
-      <p>Total Score: 7.3</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>2.5</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>branch</td>
-          </tr>
-        
-      </table>
-    
-      <p>ColumnsController#index</p>
-      <p>Total Score: 5.9</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>2.4</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>columns</td>
-          </tr>
-        
-      </table>
-    
-      <p>ColumnsController#show</p>
-      <p>Total Score: 4.4</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>assignment</td>
-          </tr>
-        
-      </table>
-    
-
-  <h2 id="_app_controllers_tables_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/tables_controller.rb'>/app/controllers/tables_controller.rb</a></h2>
-    
-      <p>TablesController#update</p>
-      <p>Total Score: 18.7</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>5.4</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>4.0</td>
-            <td>assignment</td>
-          </tr>
-        
-          <tr>
-            <td>3.3</td>
-            <td>params</td>
-          </tr>
-        
-          <tr>
-            <td>2.9</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
-            <td>2.9</td>
-            <td>[]</td>
-          </tr>
-        
-          <tr>
-            <td>1.6</td>
-            <td>redirect_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>render</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>flash</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>update_attributes</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-      </table>
-    
+<<<<<<< HEAD
       <p>TablesController#create</p>
+=======
+      <p>ColumnsController#create</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <p>Total Score: 15.6</p>
       <table>
         <tr>
@@ -1577,7 +1746,11 @@ table td.score {
         
           <tr>
             <td>1.4</td>
+<<<<<<< HEAD
             <td>tables</td>
+=======
+            <td>columns</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
@@ -1592,12 +1765,20 @@ table td.score {
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
             <td>find</td>
+=======
+            <td>branch</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
             <td>branch</td>
+=======
+            <td>find</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
@@ -1612,8 +1793,13 @@ table td.score {
         
       </table>
     
+<<<<<<< HEAD
       <p>TablesController#destroy</p>
       <p>Total Score: 11.4</p>
+=======
+      <p>ColumnsController#new</p>
+      <p>Total Score: 10.1</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -1626,6 +1812,7 @@ table td.score {
           </tr>
         
           <tr>
+<<<<<<< HEAD
             <td>2.5</td>
             <td>branch</td>
           </tr>
@@ -1636,13 +1823,19 @@ table td.score {
           </tr>
         
           <tr>
+=======
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
             <td>1.6</td>
             <td>params</td>
           </tr>
         
           <tr>
             <td>1.4</td>
+<<<<<<< HEAD
             <td>database_id</td>
+=======
+            <td>columns</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
@@ -1657,18 +1850,40 @@ table td.score {
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
+=======
+            <td>build</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
             <td>respond_to</td>
           </tr>
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
             <td>destroy</td>
+=======
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
       </table>
     
+<<<<<<< HEAD
       <p>TablesController#new</p>
       <p>Total Score: 10.1</p>
+=======
+      <p>ColumnsController#destroy</p>
+      <p>Total Score: 9.9</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -1676,11 +1891,16 @@ table td.score {
         </tr>
         
           <tr>
+<<<<<<< HEAD
             <td>3.7</td>
+=======
+            <td>2.5</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
             <td>assignment</td>
           </tr>
         
           <tr>
+<<<<<<< HEAD
             <td>1.6</td>
             <td>params</td>
           </tr>
@@ -1688,6 +1908,24 @@ table td.score {
           <tr>
             <td>1.4</td>
             <td>tables</td>
+=======
+            <td>2.5</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.6</td>
+            <td>params</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+<<<<<<< HEAD
+            <td>[]</td>
+=======
+            <td>redirect_to</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
@@ -1696,18 +1934,22 @@ table td.score {
           </tr>
         
           <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
+<<<<<<< HEAD
             <td>1.2</td>
             <td>respond_to</td>
+=======
+            <td>1.3</td>
+            <td>html</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
             <td>branch</td>
+=======
+            <td>find</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
@@ -1720,10 +1962,20 @@ table td.score {
             <td>find</td>
           </tr>
         
+          <tr>
+            <td>1.2</td>
+            <td>destroy</td>
+          </tr>
+        
       </table>
     
+<<<<<<< HEAD
       <p>TablesController#index</p>
       <p>Total Score: 8.8</p>
+=======
+      <p>ColumnsController#edit</p>
+      <p>Total Score: 7.3</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -1757,23 +2009,32 @@ table td.score {
         
           <tr>
             <td>1.2</td>
-            <td>branch</td>
+            <td>respond_to</td>
           </tr>
         
           <tr>
             <td>1.2</td>
+<<<<<<< HEAD
             <td>tables</td>
           </tr>
         
           <tr>
             <td>1.2</td>
             <td>respond_to</td>
+=======
+            <td>branch</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
       </table>
     
+<<<<<<< HEAD
       <p>TablesController#edit</p>
       <p>Total Score: 7.3</p>
+=======
+      <p>ColumnsController#index</p>
+      <p>Total Score: 5.9</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -1781,7 +2042,7 @@ table td.score {
         </tr>
         
           <tr>
-            <td>2.5</td>
+            <td>2.4</td>
             <td>assignment</td>
           </tr>
         
@@ -1796,28 +2057,22 @@ table td.score {
           </tr>
         
           <tr>
-            <td>1.3</td>
-            <td>html</td>
-          </tr>
-        
-          <tr>
             <td>1.2</td>
             <td>find</td>
           </tr>
         
           <tr>
             <td>1.2</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>respond_to</td>
+            <td>columns</td>
           </tr>
         
       </table>
     
+<<<<<<< HEAD
       <p>TablesController#show</p>
+=======
+      <p>ColumnsController#show</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <p>Total Score: 4.4</p>
       <table>
         <tr>
@@ -1848,7 +2103,11 @@ table td.score {
       </table>
     
 
-  <h2 id="_app_controllers_user_sessions_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/user_sessions_controller.rb'>/app/controllers/user_sessions_controller.rb</a></h2>
+<<<<<<< HEAD
+  <h2 id="_app_controllers_user_sessions_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/user_sessions_controller.rb'>/app/controllers/user_sessions_controller.rb</a></h2>
+=======
+  <h2 id="_app_controllers_tables_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/tables_controller.rb'>/app/controllers/tables_controller.rb</a></h2>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     
       <p>UserSessionsController#create</p>
       <p>Total Score: 14.5</p>
@@ -1976,7 +2235,7 @@ table td.score {
       </table>
     
 
-  <h2 id="_app_models_column_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/column.rb'>/app/models/column.rb</a></h2>
+  <h2 id="_app_models_column_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/column.rb'>/app/models/column.rb</a></h2>
     
       <p>Column#view_column</p>
       <p>Total Score: 12.9</p>
@@ -2018,46 +2277,6 @@ table td.score {
         
       </table>
     
-      <p>Column#destroy_column</p>
-      <p>Total Score: 9.5</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>2.6</td>
-            <td>==</td>
-          </tr>
-        
-          <tr>
-            <td>2.4</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.9</td>
-            <td>table</td>
-          </tr>
-        
-          <tr>
-            <td>1.7</td>
-            <td>database</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>user</td>
-          </tr>
-        
-          <tr>
-            <td>1.5</td>
-            <td>permissions</td>
-          </tr>
-        
-      </table>
-    
       <p>Column#edit_column</p>
       <p>Total Score: 9.5</p>
       <table>
@@ -2088,12 +2307,117 @@ table td.score {
         
           <tr>
             <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
             <td>user</td>
+          </tr>
+        
+      </table>
+    
+      <p>Column#destroy_column</p>
+      <p>Total Score: 9.5</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.9</td>
+            <td>table</td>
+          </tr>
+        
+          <tr>
+            <td>1.7</td>
+            <td>database</td>
           </tr>
         
           <tr>
             <td>1.5</td>
             <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+          </tr>
+        
+      </table>
+    
+      <p>Column#add_dbsql</p>
+      <p>Total Score: 7.4</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.2</td>
+            <td>+</td>
+          </tr>
+        
+          <tr>
+            <td>1.8</td>
+            <td>name</td>
+          </tr>
+        
+          <tr>
+            <td>1.4</td>
+            <td>column_type</td>
+          </tr>
+        
+      </table>
+    
+      <p>Column#alter_dbsql</p>
+      <p>Total Score: 6.0</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.2</td>
+            <td>+</td>
+          </tr>
+        
+          <tr>
+            <td>1.8</td>
+            <td>name</td>
+          </tr>
+        
+      </table>
+    
+      <p>Column#rename_column</p>
+      <p>Total Score: 6.0</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.2</td>
+            <td>+</td>
+          </tr>
+        
+          <tr>
+            <td>1.8</td>
+            <td>name</td>
           </tr>
         
       </table>
@@ -2108,6 +2432,11 @@ table td.score {
         
           <tr>
             <td>1.1</td>
+            <td>validates_presence_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
             <td>validates_uniqueness_of</td>
           </tr>
         
@@ -2116,15 +2445,30 @@ table td.score {
             <td>belongs_to</td>
           </tr>
         
+      </table>
+    
+      <p>Column#drop_dbsql</p>
+      <p>Total Score: 2.6</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
           <tr>
-            <td>1.1</td>
-            <td>validates_presence_of</td>
+            <td>1.4</td>
+            <td>name</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>+</td>
           </tr>
         
       </table>
     
 
-  <h2 id="_app_controllers_users_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/users_controller.rb'>/app/controllers/users_controller.rb</a></h2>
+  <h2 id="_app_controllers_users_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/users_controller.rb'>/app/controllers/users_controller.rb</a></h2>
     
       <p>UsersController#update</p>
       <p>Total Score: 11.5</p>
@@ -2287,7 +2631,11 @@ table td.score {
       </table>
     
 
-  <h2 id="_app_models_table_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/table.rb'>/app/models/table.rb</a></h2>
+<<<<<<< HEAD
+  <h2 id="_app_models_table_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/table.rb'>/app/models/table.rb</a></h2>
+=======
+  <h2 id="_app_controllers_user_sessions_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/user_sessions_controller.rb'>/app/controllers/user_sessions_controller.rb</a></h2>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     
       <p>Table#view_table</p>
       <p>Total Score: 11.1</p>
@@ -2373,8 +2721,80 @@ table td.score {
           </tr>
         
           <tr>
+<<<<<<< HEAD
             <td>2.4</td>
             <td>branch</td>
+=======
+            <td>1.2</td>
+            <td>flash</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>destroy</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>redirect_to</td>
+          </tr>
+        
+      </table>
+    
+      <p>UserSessionsController#new</p>
+      <p>Total Score: 1.7</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>new</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>assignment</td>
+          </tr>
+        
+      </table>
+    
+
+  <h2 id="_app_models_column_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/column.rb'>/app/models/column.rb</a></h2>
+    
+      <p>Column#view_column</p>
+      <p>Total Score: 12.9</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.1</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>3.7</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>3.2</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.9</td>
+            <td>table</td>
           </tr>
         
           <tr>
@@ -2384,7 +2804,37 @@ table td.score {
         
           <tr>
             <td>1.5</td>
-            <td>permissions</td>
+            <td>user</td>
+          </tr>
+        
+      </table>
+    
+      <p>Column#destroy_column</p>
+      <p>Total Score: 9.5</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.9</td>
+            <td>table</td>
+          </tr>
+        
+          <tr>
+            <td>1.7</td>
+            <td>database</td>
           </tr>
         
           <tr>
@@ -2392,15 +2842,122 @@ table td.score {
             <td>user</td>
           </tr>
         
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
       </table>
     
-      <p>Table#none</p>
-      <p>Total Score: 4.4</p>
+      <p>Column#edit_column</p>
+      <p>Total Score: 9.5</p>
       <table>
         <tr>
           <th>Score</th>
           <th>Operator</th>
         </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.9</td>
+            <td>table</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+          <tr>
+            <td>1.7</td>
+            <td>database</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+<<<<<<< HEAD
+            <td>permissions</td>
+=======
+            <td>user</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+<<<<<<< HEAD
+            <td>user</td>
+=======
+            <td>permissions</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+      <p>Table#rename_table</p>
+      <p>Total Score: 6.0</p>
+=======
+      <p>Column#none</p>
+      <p>Total Score: 3.3</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+<<<<<<< HEAD
+            <td>4.2</td>
+            <td>+</td>
+          </tr>
+        
+          <tr>
+            <td>1.8</td>
+            <td>name</td>
+=======
+            <td>1.1</td>
+            <td>validates_uniqueness_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>belongs_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_presence_of</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+      <p>Table#none</p>
+      <p>Total Score: 4.4</p>
+=======
+
+  <h2 id="_app_controllers_users_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/users_controller.rb'>/app/controllers/users_controller.rb</a></h2>
+    
+      <p>UsersController#update</p>
+      <p>Total Score: 11.5</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>belongs_to</td>
+          </tr>
         
           <tr>
             <td>1.1</td>
@@ -2414,12 +2971,7 @@ table td.score {
         
           <tr>
             <td>1.1</td>
-            <td>validates_uniqueness_of</td>
-          </tr>
-        
-          <tr>
-            <td>1.1</td>
-            <td>belongs_to</td>
+            <td>has_many</td>
           </tr>
         
       </table>
@@ -2485,6 +3037,355 @@ table td.score {
       </table>
     
 
+  <h2 id="_app_models_database_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/database.rb'>/app/models/database.rb</a></h2>
+    
+      <p>Database#view_database</p>
+      <p>Total Score: 9.5</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.1</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>3.7</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>3.2</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+          </tr>
+        
+      </table>
+    
+      <p>Database#edit_database</p>
+      <p>Total Score: 6.1</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+      </table>
+    
+      <p>Database#destroy_database</p>
+      <p>Total Score: 6.1</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+      </table>
+    
+      <p>Database#rename_dbsql</p>
+      <p>Total Score: 6.0</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>4.2</td>
+            <td>+</td>
+          </tr>
+        
+          <tr>
+            <td>1.8</td>
+            <td>name</td>
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+      <p>Database#none</p>
+      <p>Total Score: 4.4</p>
+=======
+
+  <h2 id="_app_models_table_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/table.rb'>/app/models/table.rb</a></h2>
+    
+      <p>Table#view_table</p>
+      <p>Total Score: 11.1</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+<<<<<<< HEAD
+            <td>1.1</td>
+            <td>belongs_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_presence_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_uniqueness_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>has_many</td>
+=======
+            <td>4.1</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>3.7</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>3.2</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.7</td>
+            <td>database</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+      <p>Database#drop_dbsql</p>
+      <p>Total Score: 2.6</p>
+=======
+      <p>Table#destroy_table</p>
+      <p>Total Score: 7.7</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+<<<<<<< HEAD
+            <td>1.4</td>
+            <td>name</td>
+=======
+            <td>2.6</td>
+            <td>==</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>+</td>
+          </tr>
+        
+      </table>
+    
+      <p>Database#use_dbsql</p>
+      <p>Total Score: 2.6</p>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+<<<<<<< HEAD
+            <td>1.4</td>
+            <td>name</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>+</td>
+=======
+            <td>1.7</td>
+            <td>database</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+      <p>Database#create_dbsql</p>
+      <p>Total Score: 2.6</p>
+=======
+      <p>Table#edit_table</p>
+      <p>Total Score: 7.7</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+<<<<<<< HEAD
+            <td>1.4</td>
+            <td>name</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>+</td>
+=======
+            <td>2.6</td>
+            <td>==</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.7</td>
+            <td>database</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>permissions</td>
+          </tr>
+        
+          <tr>
+            <td>1.5</td>
+            <td>user</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+      </table>
+    
+<<<<<<< HEAD
+
+  <h2 id="_app_models_user_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/user.rb'>/app/models/user.rb</a></h2>
+    
+      <p>User#none</p>
+      <p>Total Score: 6.6</p>
+=======
+      <p>Table#none</p>
+      <p>Total Score: 4.4</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Operator</th>
+        </tr>
+        
+          <tr>
+            <td>1.1</td>
+<<<<<<< HEAD
+            <td>has_many</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>acts_as_authentic</td>
+=======
+            <td>validates_presence_of</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_uniqueness_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_uniqueness_of</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>belongs_to</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>validates_format_of</td>
+          </tr>
+        
+      </table>
+    
+
+<<<<<<< HEAD
+  <h2 id="_app_controllers_application_controller_rb"><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/application_controller.rb'>/app/controllers/application_controller.rb</a></h2>
+    
+      <p>ApplicationController#none</p>
+      <p>Total Score: 5.5</p>
+=======
   <h2 id="_app_models_database_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/database.rb'>/app/models/database.rb</a></h2>
     
       <p>Database#view_database</p>
@@ -2579,6 +3480,7 @@ table td.score {
     
       <p>Database#none</p>
       <p>Total Score: 4.4</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -2587,91 +3489,57 @@ table td.score {
         
           <tr>
             <td>1.1</td>
+<<<<<<< HEAD
+            <td>protect_from_forgery</td>
+=======
             <td>validates_uniqueness_of</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
             <td>1.1</td>
+<<<<<<< HEAD
+            <td>filter_parameter_logging</td>
+=======
             <td>has_many</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
             <td>1.1</td>
+<<<<<<< HEAD
+            <td>helper_method</td>
+=======
             <td>belongs_to</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
           <tr>
             <td>1.1</td>
+<<<<<<< HEAD
+            <td>private</td>
+          </tr>
+        
+          <tr>
+            <td>1.1</td>
+            <td>helper</td>
+=======
             <td>validates_presence_of</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
       </table>
     
-      <p>Database#drop_dbsql</p>
-      <p>Total Score: 2.6</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>name</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>+</td>
-          </tr>
-        
-      </table>
-    
-      <p>Database#use_dbsql</p>
-      <p>Total Score: 2.6</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>name</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>+</td>
-          </tr>
-        
-      </table>
-    
-      <p>Database#create_dbsql</p>
-      <p>Total Score: 2.6</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>1.4</td>
-            <td>name</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>+</td>
-          </tr>
-        
-      </table>
-    
+<<<<<<< HEAD
+      <p>ApplicationController#current_user</p>
+      <p>Total Score: 4.9</p>
+=======
 
   <h2 id="_app_controllers_application_controller_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/controllers/application_controller.rb'>/app/controllers/application_controller.rb</a></h2>
     
       <p>ApplicationController#none</p>
       <p>Total Score: 5.5</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -2679,6 +3547,23 @@ table td.score {
         </tr>
         
           <tr>
+<<<<<<< HEAD
+            <td>2.8</td>
+            <td>current_user_session</td>
+          </tr>
+        
+          <tr>
+            <td>2.4</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.3</td>
+            <td>record</td>
+          </tr>
+        
+          <tr>
+=======
             <td>1.1</td>
             <td>protect_from_forgery</td>
           </tr>
@@ -2754,17 +3639,23 @@ table td.score {
           </tr>
         
           <tr>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
             <td>1.2</td>
             <td>assignment</td>
           </tr>
         
       </table>
     
+<<<<<<< HEAD
+      <p>ApplicationController#current_user_session</p>
+      <p>Total Score: 2.1</p>
+=======
 
   <h2 id="_app_models_user_rb"><a href='file:///home/david/Documents/JXI-DBManager/app/models/user.rb'>/app/models/user.rb</a></h2>
     
       <p>User#none</p>
       <p>Total Score: 5.5</p>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       <table>
         <tr>
           <th>Score</th>
@@ -2772,6 +3663,20 @@ table td.score {
         </tr>
         
           <tr>
+<<<<<<< HEAD
+            <td>1.2</td>
+            <td>branch</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>find</td>
+          </tr>
+        
+          <tr>
+            <td>1.2</td>
+            <td>assignment</td>
+=======
             <td>1.1</td>
             <td>acts_as_authentic</td>
           </tr>
@@ -2794,77 +3699,17 @@ table td.score {
           <tr>
             <td>1.1</td>
             <td>has_many</td>
-          </tr>
-        
-          <tr>
-            <td>1.1</td>
-            <td>private</td>
-          </tr>
-        
-          <tr>
-            <td>1.1</td>
-            <td>helper</td>
-          </tr>
-        
-      </table>
-    
-      <p>ApplicationController#current_user</p>
-      <p>Total Score: 4.9</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>2.8</td>
-            <td>current_user_session</td>
-          </tr>
-        
-          <tr>
-            <td>2.4</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.3</td>
-            <td>record</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>assignment</td>
-          </tr>
-        
-      </table>
-    
-      <p>ApplicationController#current_user_session</p>
-      <p>Total Score: 2.1</p>
-      <table>
-        <tr>
-          <th>Score</th>
-          <th>Operator</th>
-        </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>branch</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>find</td>
-          </tr>
-        
-          <tr>
-            <td>1.2</td>
-            <td>assignment</td>
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
           </tr>
         
       </table>
     
 
+<<<<<<< HEAD
+<p>Generated on Fri May 07 12:38:44 -0400 2010</p>	
+=======
 <p>Generated on Thu Apr 29 20:54:48 -0400 2010</p>	
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
     </div>
   </body>

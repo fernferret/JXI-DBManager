@@ -1,0 +1,17 @@
+-- START Column --
+<<<<<<< HEAD
+Type:Class Name:Column Complexity:10 Lines:45
+Type:Def Name:destroy_column Complexity:2 Lines:6
+Type:Def Name:edit_column Complexity:2 Lines:6
+Type:Def Name:view_column Complexity:2 Lines:6
+Type:Def Name:add_dbsql Complexity:1 Lines:2
+Type:Def Name:alter_dbsql Complexity:1 Lines:2
+Type:Def Name:rename_column Complexity:1 Lines:2
+Type:Def Name:drop_dbsql Complexity:1 Lines:2
+=======
+Type:Class Name:Column Complexity:6 Lines:29
+Type:Def Name:destroy_column Complexity:2 Lines:6
+Type:Def Name:edit_column Complexity:2 Lines:6
+Type:Def Name:view_column Complexity:2 Lines:6
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+-- END Column --

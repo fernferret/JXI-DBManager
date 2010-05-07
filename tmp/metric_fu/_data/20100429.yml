@@ -810,229 +810,6 @@
     :code_smells: []
 
 :saikuro: 
-  :classes: 
-  - :complexity: 30
-    :lines: 94
-    :defs: 
-    - :complexity: 4
-      :lines: 17
-      :name: DatabasesController#index
-    - :complexity: 5
-      :lines: 12
-      :name: DatabasesController#show
-    - :complexity: 2
-      :lines: 5
-      :name: DatabasesController#edit
-    - :complexity: 5
-      :lines: 11
-      :name: DatabasesController#update
-    - :complexity: 2
-      :lines: 5
-      :name: DatabasesController#new
-    - :complexity: 5
-      :lines: 11
-      :name: DatabasesController#create
-    - :complexity: 3
-      :lines: 6
-      :name: DatabasesController#destroy
-    - :complexity: 4
-      :lines: 9
-      :name: DatabasesController#destroy_database
-    :name: DatabasesController
-  - :complexity: 17
-    :lines: 62
-    :defs: 
-    - :complexity: 2
-      :lines: 7
-      :name: TablesController#index
-    - :complexity: 1
-      :lines: 3
-      :name: TablesController#show
-    - :complexity: 2
-      :lines: 5
-      :name: TablesController#edit
-    - :complexity: 5
-      :lines: 10
-      :name: TablesController#update
-    - :complexity: 2
-      :lines: 6
-      :name: TablesController#new
-    - :complexity: 2
-      :lines: 8
-      :name: TablesController#create
-    - :complexity: 3
-      :lines: 8
-      :name: TablesController#destroy
-    :name: TablesController
-  - :complexity: 16
-    :lines: 60
-    :defs: 
-    - :complexity: 1
-      :lines: 3
-      :name: ColumnsController#index
-    - :complexity: 1
-      :lines: 2
-      :name: ColumnsController#show
-    - :complexity: 2
-      :lines: 5
-      :name: ColumnsController#edit
-    - :complexity: 5
-      :lines: 10
-      :name: ColumnsController#update
-    - :complexity: 2
-      :lines: 6
-      :name: ColumnsController#new
-    - :complexity: 2
-      :lines: 9
-      :name: ColumnsController#create
-    - :complexity: 3
-      :lines: 11
-      :name: ColumnsController#destroy
-    :name: ColumnsController
-  - :complexity: 11
-    :lines: 50
-    :defs: 
-    - :complexity: 1
-      :lines: 2
-      :name: Database#exists_with_title
-    - :complexity: 2
-      :lines: 6
-      :name: Database#destroy_database
-    - :complexity: 2
-      :lines: 6
-      :name: Database#edit_database
-    - :complexity: 2
-      :lines: 6
-      :name: Database#view_database
-    - :complexity: 1
-      :lines: 2
-      :name: Database#create_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Database#rename_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Database#drop_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Database#use_dbsql
-    :name: Database
-  - :complexity: 10
-    :lines: 45
-    :defs: 
-    - :complexity: 2
-      :lines: 6
-      :name: Table#destroy_table
-    - :complexity: 2
-      :lines: 6
-      :name: Table#edit_table
-    - :complexity: 2
-      :lines: 6
-      :name: Table#view_table
-    - :complexity: 1
-      :lines: 2
-      :name: Table#create_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Table#alter_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Table#rename_table
-    - :complexity: 1
-      :lines: 2
-      :name: Table#drop_dbsql
-    :name: Table
-  - :complexity: 10
-    :lines: 45
-    :defs: 
-    - :complexity: 2
-      :lines: 6
-      :name: Column#destroy_column
-    - :complexity: 2
-      :lines: 6
-      :name: Column#edit_column
-    - :complexity: 2
-      :lines: 6
-      :name: Column#view_column
-    - :complexity: 1
-      :lines: 2
-      :name: Column#add_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Column#alter_dbsql
-    - :complexity: 1
-      :lines: 2
-      :name: Column#rename_column
-    - :complexity: 1
-      :lines: 2
-      :name: Column#drop_dbsql
-    :name: Column
-  - :complexity: 6
-    :lines: 28
-    :defs: 
-    - :complexity: 1
-      :lines: 2
-      :name: UsersController#new
-    - :complexity: 2
-      :lines: 8
-      :name: UsersController#create
-    - :complexity: 1
-      :lines: 2
-      :name: UsersController#edit
-    - :complexity: 2
-      :lines: 8
-      :name: UsersController#update
-    :name: UsersController
-  - :complexity: 4
-    :lines: 19
-    :defs: 
-    - :complexity: 2
-      :lines: 3
-      :name: ApplicationController#current_user_session
-    - :complexity: 2
-      :lines: 3
-      :name: ApplicationController#current_user
-    :name: ApplicationController
-  - :complexity: 4
-    :lines: 22
-    :defs: 
-    - :complexity: 1
-      :lines: 2
-      :name: UserSessionsController#new
-    - :complexity: 2
-      :lines: 9
-      :name: UserSessionsController#create
-    - :complexity: 1
-      :lines: 5
-      :name: UserSessionsController#destroy
-    :name: UserSessionsController
-  - :complexity: 0
-    :lines: 1
-    :name: ""
-  - :complexity: 0
-    :lines: 1
-    :name: TableControllerHelper
-  - :complexity: 0
-    :lines: 1
-    :name: ColumnControllerHelper
-  - :complexity: 0
-    :lines: 1
-    :name: ""
-  - :complexity: 0
-    :lines: 1
-    :name: ApplicationHelper
-  - :complexity: 0
-    :lines: 1
-    :name: UserSessionsHelper
-  - :complexity: 0
-    :lines: 1
-    :name: UsersHelper
-  - :complexity: 0
-    :lines: 7
-    :name: User
-  - :complexity: 0
-    :lines: 2
-    :name: UserSession
   :methods: 
   - :lines: 11
     :complexity: 5
@@ -1046,8 +823,8 @@
   - :lines: 10
     :complexity: 5
     :name: ColumnsController#update
-  - :complexity: 5
-    :lines: 11
+  - :lines: 11
+    :complexity: 5
     :name: DatabasesController#create
   - :lines: 9
     :complexity: 4
@@ -1055,8 +832,8 @@
   - :lines: 8
     :complexity: 3
     :name: TablesController#destroy
-  - :complexity: 3
-    :lines: 11
+  - :lines: 11
+    :complexity: 3
     :name: ColumnsController#destroy
   - :lines: 6
     :complexity: 3
@@ -1154,21 +931,15 @@
   - :lines: 2
     :complexity: 1
     :name: UserSessionsController#new
-  - :complexity: 1
-    :lines: 2
-    :name: Table#rename_table
-  - :complexity: 1
-    :lines: 2
-    :name: Table#drop_dbsql
-  - :complexity: 1
-    :lines: 5
+  - :lines: 5
+    :complexity: 1
     :name: UserSessionsController#destroy
   :files: 
-  - :classes: 
-    - :complexity: 30
-      :methods: 
-      - :complexity: 5
-        :lines: 11
+  - :filename: databases_controller.rb
+    :classes: 
+    - :methods: 
+      - :lines: 11
+        :complexity: 5
         :name: DatabasesController#update
       - :lines: 12
         :complexity: 5
@@ -1182,11 +953,8 @@
       - :lines: 6
         :complexity: 3
         :name: DatabasesController#destroy
-      - :complexity: 2
-        :lines: 5
-        :name: DatabasesController#edit
-      - :complexity: 2
-        :lines: 5
+      - :lines: 5
+        :complexity: 2
         :name: DatabasesController#new
       - :lines: 5
         :complexity: 2
@@ -1197,59 +965,59 @@
       :lines: 85
       :complexity: 28
       :class_name: DatabasesController
-    :filename: databases_controller.rb
-  - :classes: 
-    - :complexity: 17
-      :methods: 
-      - :complexity: 5
-        :lines: 10
+  - :filename: tables_controller.rb
+    :classes: 
+    - :methods: 
+      - :lines: 10
+        :complexity: 5
         :name: TablesController#update
-      - :complexity: 3
-        :lines: 8
+      - :lines: 8
+        :complexity: 3
         :name: TablesController#destroy
-      - :complexity: 2
-        :lines: 6
+      - :lines: 6
+        :complexity: 2
         :name: TablesController#new
-      - :complexity: 2
-        :lines: 8
+      - :lines: 8
+        :complexity: 2
         :name: TablesController#create
-      - :complexity: 2
-        :lines: 7
+      - :lines: 7
+        :complexity: 2
         :name: TablesController#index
-      - :complexity: 2
-        :lines: 5
+      - :lines: 5
+        :complexity: 2
         :name: TablesController#edit
-      - :complexity: 1
-        :lines: 3
+      - :lines: 3
+        :complexity: 1
         :name: TablesController#show
       :lines: 62
+      :complexity: 17
       :class_name: TablesController
-    :filename: tables_controller.rb
-  - :classes: 
-    - :complexity: 16
-      :methods: 
-      - :complexity: 5
-        :lines: 10
+  - :filename: columns_controller.rb
+    :classes: 
+    - :methods: 
+      - :lines: 10
+        :complexity: 5
         :name: ColumnsController#update
-      - :complexity: 3
-        :lines: 11
+      - :lines: 11
+        :complexity: 3
         :name: ColumnsController#destroy
-      - :complexity: 2
-        :lines: 6
+      - :lines: 6
+        :complexity: 2
         :name: ColumnsController#new
-      - :complexity: 2
-        :lines: 9
+      - :lines: 9
+        :complexity: 2
         :name: ColumnsController#create
-      - :complexity: 2
-        :lines: 5
+      - :lines: 5
+        :complexity: 2
         :name: ColumnsController#edit
-      - :complexity: 1
-        :lines: 2
+      - :lines: 2
+        :complexity: 1
         :name: ColumnsController#show
-      - :complexity: 1
-        :lines: 3
+      - :lines: 3
+        :complexity: 1
         :name: ColumnsController#index
       :lines: 60
+      :complexity: 16
       :class_name: ColumnsController
   - :filename: database.rb
     :classes: 
@@ -1275,16 +1043,17 @@
       - :lines: 8
         :complexity: 2
         :name: UsersController#update
-      - :complexity: 2
-        :lines: 8
+      - :lines: 8
+        :complexity: 2
         :name: UsersController#create
-      - :complexity: 1
-        :lines: 2
+      - :lines: 2
+        :complexity: 1
         :name: UsersController#edit
-      - :complexity: 1
-        :lines: 2
+      - :lines: 2
+        :complexity: 1
         :name: UsersController#new
       :lines: 28
+      :complexity: 6
       :class_name: UsersController
   - :filename: column.rb
     :classes: 
@@ -1321,16 +1090,17 @@
     - :methods: []
 
       :lines: 1
+      :complexity: 0
       :class_name: ""
-    - :complexity: 4
-      :methods: 
-      - :complexity: 2
-        :lines: 3
+    - :methods: 
+      - :lines: 3
+        :complexity: 2
         :name: ApplicationController#current_user
-      - :complexity: 2
-        :lines: 3
+      - :lines: 3
+        :complexity: 2
         :name: ApplicationController#current_user_session
       :lines: 19
+      :complexity: 4
       :class_name: ApplicationController
   - :filename: user_sessions_controller.rb
     :classes: 
@@ -1373,6 +1143,7 @@
     - :methods: []
 
       :lines: 1
+      :complexity: 0
       :class_name: UsersHelper
   - :filename: application_helper.rb
     :classes: 

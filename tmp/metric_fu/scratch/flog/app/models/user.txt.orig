@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+     6.6: flog total
+     6.6: flog/method average
+
+     6.6: User#none
+     1.1: has_many
+     1.1: acts_as_authentic
+     1.1: validates_presence_of
+     1.1: validates_uniqueness_of
+     1.1: attr_accessible
+     1.1: validates_format_of
+=======
+     5.5: flog total
+     5.5: flog/method average
+
+     5.5: User#none
+     1.1: acts_as_authentic
+     1.1: validates_presence_of
+     1.1: attr_accessible
+     1.1: validates_uniqueness_of
+     1.1: has_many
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25

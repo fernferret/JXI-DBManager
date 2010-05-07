@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+    44.7: flog total
+     5.6: flog/method average
+=======
     30.9: flog total
      7.7: flog/method average
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
     11.1: Table#view_table
      4.1: ==
@@ -19,8 +24,26 @@
      1.7: database
      1.5: permissions
      1.5: user
+<<<<<<< HEAD
+     6.0: Table#rename_table
+     4.2: +
+     1.8: name
+=======
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
      4.4: Table#none
      1.1: validates_presence_of
      1.1: validates_uniqueness_of
      1.1: has_many
+<<<<<<< HEAD
+     2.6: Table#create_dbsql
+     1.4: name
+     1.2: +
+     2.6: Table#drop_dbsql
+     1.4: name
+     1.2: +
+     2.6: Table#alter_dbsql
+     1.4: name
+     1.2: +
+=======
      1.1: belongs_to
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25

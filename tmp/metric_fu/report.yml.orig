@@ -1,5 +1,477 @@
 --- 
 :flog: 
+<<<<<<< HEAD
+  :average: 8.5
+  :pages: 
+  - :path: /app/controllers/databases_controller.rb
+    :highest_score: 25.0
+    :average_score: 15.4
+    :scanned_methods: 
+    - :score: 25.0
+      :name: DatabasesController#index
+      :operators: 
+      - :score: 11.7
+        :operator: assignment
+      - :score: 7.6
+        :operator: branch
+      - :score: 6.6
+        :operator: find
+      - :score: 4.3
+        :operator: ==
+      - :score: 3.4
+        :operator: permissions
+      - :score: 1.5
+        :operator: record
+      - :score: 1.3
+        :operator: id
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: all
+    - :score: 20.7
+      :name: DatabasesController#destroy_database
+      :operators: 
+      - :score: 5.1
+        :operator: branch
+      - :score: 3.1
+        :operator: format
+      - :score: 2.7
+        :operator: html
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.6
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.5
+        :operator: redirect_to
+      - :score: 1.5
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+      - :score: 1.4
+        :operator: destroy
+      - :score: 1.4
+        :operator: flash
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.2
+        :operator: find
+    - :score: 20.1
+      :name: DatabasesController#update
+      :operators: 
+      - :score: 5.4
+        :operator: branch
+      - :score: 5.2
+        :operator: assignment
+      - :score: 3.3
+        :operator: params
+      - :score: 2.9
+        :operator: html
+      - :score: 2.9
+        :operator: "[]"
+      - :score: 1.6
+        :operator: redirect_to
+      - :score: 1.5
+        :operator: flash
+      - :score: 1.5
+        :operator: render
+      - :score: 1.3
+        :operator: update_attributes
+      - :score: 1.2
+        :operator: current_user
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: respond_to
+    - :score: 17.2
+      :name: DatabasesController#show
+      :operators: 
+      - :score: 5.5
+        :operator: assignment
+      - :score: 5.3
+        :operator: branch
+      - :score: 2.9
+        :operator: html
+      - :score: 2.6
+        :operator: respond_to
+      - :score: 1.6
+        :operator: redirect_to
+      - :score: 1.6
+        :operator: params
+      - :score: 1.5
+        :operator: flash
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.4
+        :operator: current_user
+      - :score: 1.2
+        :operator: view_database
+      - :score: 1.2
+        :operator: find
+    - :score: 17.1
+      :name: DatabasesController#create
+      :operators: 
+      - :score: 5.4
+        :operator: branch
+      - :score: 5.2
+        :operator: assignment
+      - :score: 2.9
+        :operator: html
+      - :score: 1.6
+        :operator: redirect_to
+      - :score: 1.6
+        :operator: params
+      - :score: 1.5
+        :operator: render
+      - :score: 1.5
+        :operator: flash
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: save
+      - :score: 1.2
+        :operator: current_user
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: respond_to
+    - :score: 11.5
+      :name: DatabasesController#destroy
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 2.5
+        :operator: branch
+      - :score: 1.6
+        :operator: databases_url
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: redirect_to
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: destroy
+      - :score: 1.2
+        :operator: find
+    - :score: 7.3
+      :name: DatabasesController#edit
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: find
+    - :score: 4.6
+      :name: DatabasesController#new
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: respond_to
+    :score: 123.5
+  - :path: /app/controllers/columns_controller.rb
+    :highest_score: 20.3
+    :average_score: 10.5
+    :scanned_methods: 
+    - :score: 20.3
+      :name: ColumnsController#update
+      :operators: 
+      - :score: 5.4
+        :operator: branch
+      - :score: 4.0
+        :operator: assignment
+      - :score: 3.3
+        :operator: params
+      - :score: 2.9
+        :operator: html
+      - :score: 2.9
+        :operator: "[]"
+      - :score: 1.8
+        :operator: root_url
+      - :score: 1.6
+        :operator: redirect_to
+      - :score: 1.5
+        :operator: render
+      - :score: 1.5
+        :operator: flash
+      - :score: 1.3
+        :operator: update_attributes
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: find
+    - :score: 15.6
+      :name: ColumnsController#create
+      :operators: 
+      - :score: 4.4
+        :operator: "[]"
+      - :score: 3.4
+        :operator: params
+      - :score: 2.4
+        :operator: assignment
+      - :score: 1.4
+        :operator: columns
+      - :score: 1.3
+        :operator: redirect_to
+      - :score: 1.3
+        :operator: render
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: save
+      - :score: 1.2
+        :operator: build
+    - :score: 10.1
+      :name: ColumnsController#new
+      :operators: 
+      - :score: 3.7
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: columns
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: build
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: find
+    - :score: 9.9
+      :name: ColumnsController#destroy
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 2.5
+        :operator: branch
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: redirect_to
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: destroy
+    - :score: 7.3
+      :name: ColumnsController#edit
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: branch
+    - :score: 5.9
+      :name: ColumnsController#index
+      :operators: 
+      - :score: 2.4
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: columns
+    - :score: 4.4
+      :name: ColumnsController#show
+      :operators: 
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: assignment
+    :score: 73.5
+  - :path: /app/controllers/tables_controller.rb
+    :highest_score: 18.7
+    :average_score: 10.9
+    :scanned_methods: 
+    - :score: 18.7
+      :name: TablesController#update
+      :operators: 
+      - :score: 5.4
+        :operator: branch
+      - :score: 4.0
+        :operator: assignment
+      - :score: 3.3
+        :operator: params
+      - :score: 2.9
+        :operator: html
+      - :score: 2.9
+        :operator: "[]"
+      - :score: 1.6
+        :operator: redirect_to
+      - :score: 1.5
+        :operator: render
+      - :score: 1.5
+        :operator: flash
+      - :score: 1.3
+        :operator: update_attributes
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: find
+    - :score: 15.6
+      :name: TablesController#create
+      :operators: 
+      - :score: 4.4
+        :operator: "[]"
+      - :score: 3.4
+        :operator: params
+      - :score: 2.4
+        :operator: assignment
+      - :score: 1.4
+        :operator: tables
+      - :score: 1.3
+        :operator: redirect_to
+      - :score: 1.3
+        :operator: render
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: save
+      - :score: 1.2
+        :operator: build
+    - :score: 11.4
+      :name: TablesController#destroy
+      :operators: 
+      - :score: 3.7
+        :operator: assignment
+      - :score: 2.5
+        :operator: branch
+      - :score: 2.4
+        :operator: find
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: database_id
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: destroy
+    - :score: 10.1
+      :name: TablesController#new
+      :operators: 
+      - :score: 3.7
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: tables
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: respond_to
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: build
+      - :score: 1.2
+        :operator: find
+    - :score: 8.8
+      :name: TablesController#index
+      :operators: 
+      - :score: 3.7
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: tables
+      - :score: 1.2
+        :operator: respond_to
+    - :score: 7.3
+      :name: TablesController#edit
+      :operators: 
+      - :score: 2.5
+        :operator: assignment
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: html
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: respond_to
+    - :score: 4.4
+      :name: TablesController#show
+      :operators: 
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: assignment
+=======
   :average: 9.3
   :total: 418.7
   :pages: 
@@ -467,10 +939,608 @@
       :name: TablesController#show
       :score: 4.4
     :path: /app/controllers/tables_controller.rb
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     :score: 76.2
   - :highest_score: 14.5
     :average_score: 7.6
     :scanned_methods: 
+<<<<<<< HEAD
+    - :score: 14.5
+      :name: UserSessionsController#create
+      :operators: 
+      - :score: 4.0
+        :operator: assignment
+      - :score: 2.8
+        :operator: flash
+      - :score: 1.6
+        :operator: root_url
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: redirect_to
+      - :score: 1.4
+        :operator: username
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: render
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: save
+    - :score: 6.6
+      :name: UserSessionsController#destroy
+      :operators: 
+      - :score: 2.4
+        :operator: assignment
+      - :score: 1.4
+        :operator: root_url
+      - :score: 1.2
+        :operator: flash
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: destroy
+      - :score: 1.2
+        :operator: redirect_to
+    - :score: 1.7
+      :name: UserSessionsController#new
+      :operators: 
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: assignment
+    :score: 22.9
+  - :path: /app/models/column.rb
+    :highest_score: 12.9
+    :average_score: 7.2
+    :scanned_methods: 
+    - :score: 12.9
+      :name: Column#view_column
+      :operators: 
+      - :score: 4.1
+        :operator: ==
+      - :score: 3.7
+        :operator: branch
+      - :score: 3.2
+        :operator: permissions
+      - :score: 1.9
+        :operator: table
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: user
+    - :score: 9.5
+      :name: Column#edit_column
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.9
+        :operator: table
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+    - :score: 9.5
+      :name: Column#destroy_column
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.9
+        :operator: table
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+    - :score: 7.4
+      :name: Column#add_dbsql
+      :operators: 
+      - :score: 4.2
+        :operator: +
+      - :score: 1.8
+        :operator: name
+      - :score: 1.4
+        :operator: column_type
+    - :score: 6.0
+      :name: Column#alter_dbsql
+      :operators: 
+      - :score: 4.2
+        :operator: +
+      - :score: 1.8
+        :operator: name
+    - :score: 6.0
+      :name: Column#rename_column
+      :operators: 
+      - :score: 4.2
+        :operator: +
+      - :score: 1.8
+        :operator: name
+    - :score: 3.3
+      :name: Column#none
+      :operators: 
+      - :score: 1.1
+        :operator: validates_presence_of
+      - :score: 1.1
+        :operator: validates_uniqueness_of
+      - :score: 1.1
+        :operator: belongs_to
+    - :score: 2.6
+      :name: Column#drop_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    :score: 57.3
+  - :path: /app/controllers/users_controller.rb
+    :highest_score: 11.5
+    :average_score: 6.6
+    :scanned_methods: 
+    - :score: 11.5
+      :name: UsersController#update
+      :operators: 
+      - :score: 2.6
+        :operator: assignment
+      - :score: 1.6
+        :operator: root_url
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: redirect_to
+      - :score: 1.4
+        :operator: flash
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: render
+      - :score: 1.2
+        :operator: current_user
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: update_attributes
+    - :score: 11.5
+      :name: UsersController#create
+      :operators: 
+      - :score: 2.6
+        :operator: assignment
+      - :score: 1.6
+        :operator: root_url
+      - :score: 1.6
+        :operator: params
+      - :score: 1.4
+        :operator: flash
+      - :score: 1.4
+        :operator: redirect_to
+      - :score: 1.4
+        :operator: "[]"
+      - :score: 1.3
+        :operator: render
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: save
+      - :score: 1.2
+        :operator: branch
+    - :score: 1.7
+      :name: UsersController#new
+      :operators: 
+      - :score: 1.2
+        :operator: new
+      - :score: 1.2
+        :operator: assignment
+    - :score: 1.7
+      :name: UsersController#edit
+      :operators: 
+      - :score: 1.2
+        :operator: current_user
+      - :score: 1.2
+        :operator: assignment
+    :score: 26.3
+  - :path: /app/models/table.rb
+    :highest_score: 11.1
+    :average_score: 5.6
+    :scanned_methods: 
+    - :score: 11.1
+      :name: Table#view_table
+      :operators: 
+      - :score: 4.1
+        :operator: ==
+      - :score: 3.7
+        :operator: branch
+      - :score: 3.2
+        :operator: permissions
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: user
+    - :score: 7.7
+      :name: Table#destroy_table
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+    - :score: 7.7
+      :name: Table#edit_table
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.7
+        :operator: database
+      - :score: 1.5
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+    - :score: 6.0
+      :name: Table#rename_table
+      :operators: 
+      - :score: 4.2
+        :operator: +
+      - :score: 1.8
+        :operator: name
+    - :score: 4.4
+      :name: Table#none
+      :operators: 
+      - :score: 1.1
+        :operator: belongs_to
+      - :score: 1.1
+        :operator: validates_presence_of
+      - :score: 1.1
+        :operator: validates_uniqueness_of
+      - :score: 1.1
+        :operator: has_many
+    - :score: 2.6
+      :name: Table#create_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    - :score: 2.6
+      :name: Table#drop_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    - :score: 2.6
+      :name: Table#alter_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    :score: 44.7
+  - :path: /app/models/database.rb
+    :highest_score: 9.5
+    :average_score: 5.0
+    :scanned_methods: 
+    - :score: 9.5
+      :name: Database#view_database
+      :operators: 
+      - :score: 4.1
+        :operator: ==
+      - :score: 3.7
+        :operator: branch
+      - :score: 3.2
+        :operator: permissions
+      - :score: 1.5
+        :operator: user
+    - :score: 6.1
+      :name: Database#edit_database
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.5
+        :operator: user
+      - :score: 1.5
+        :operator: permissions
+    - :score: 6.1
+      :name: Database#destroy_database
+      :operators: 
+      - :score: 2.6
+        :operator: ==
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.5
+        :operator: user
+      - :score: 1.5
+        :operator: permissions
+    - :score: 6.0
+      :name: Database#rename_dbsql
+      :operators: 
+      - :score: 4.2
+        :operator: +
+      - :score: 1.8
+        :operator: name
+    - :score: 4.4
+      :name: Database#none
+      :operators: 
+      - :score: 1.1
+        :operator: belongs_to
+      - :score: 1.1
+        :operator: validates_presence_of
+      - :score: 1.1
+        :operator: validates_uniqueness_of
+      - :score: 1.1
+        :operator: has_many
+    - :score: 2.6
+      :name: Database#drop_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    - :score: 2.6
+      :name: Database#use_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    - :score: 2.6
+      :name: Database#create_dbsql
+      :operators: 
+      - :score: 1.4
+        :operator: name
+      - :score: 1.2
+        :operator: +
+    :score: 39.9
+  - :path: /app/models/user.rb
+    :highest_score: 6.6
+    :average_score: 6.6
+    :scanned_methods: 
+    - :score: 6.6
+      :name: User#none
+      :operators: 
+      - :score: 1.1
+        :operator: has_many
+      - :score: 1.1
+        :operator: acts_as_authentic
+      - :score: 1.1
+        :operator: validates_presence_of
+      - :score: 1.1
+        :operator: validates_uniqueness_of
+      - :score: 1.1
+        :operator: attr_accessible
+      - :score: 1.1
+        :operator: validates_format_of
+    :score: 6.6
+  - :path: /app/controllers/application_controller.rb
+    :highest_score: 5.5
+    :average_score: 4.2
+    :scanned_methods: 
+    - :score: 5.5
+      :name: ApplicationController#none
+      :operators: 
+      - :score: 1.1
+        :operator: protect_from_forgery
+      - :score: 1.1
+        :operator: filter_parameter_logging
+      - :score: 1.1
+        :operator: helper_method
+      - :score: 1.1
+        :operator: private
+      - :score: 1.1
+        :operator: helper
+    - :score: 4.9
+      :name: ApplicationController#current_user
+      :operators: 
+      - :score: 2.8
+        :operator: current_user_session
+      - :score: 2.4
+        :operator: branch
+      - :score: 1.3
+        :operator: record
+      - :score: 1.2
+        :operator: assignment
+    - :score: 2.1
+      :name: ApplicationController#current_user_session
+      :operators: 
+      - :score: 1.2
+        :operator: branch
+      - :score: 1.2
+        :operator: find
+      - :score: 1.2
+        :operator: assignment
+    :score: 12.5
+  :total: 483.4
+:reek: 
+  :matches: 
+  - :code_smells: 
+    - :type: Duplication
+      :message: calls current_user_session twice
+      :method: ApplicationController#current_user
+    :file_path: app/controllers/application_controller.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: ColumnsController
+    - :type: Duplication
+      :message: calls params twice
+      :method: ColumnsController#create
+    - :type: Duplication
+      :message: calls params[:column] twice
+      :method: ColumnsController#create
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: ColumnsController#destroy
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: ColumnsController#update
+    - :type: Duplication
+      :message: calls params twice
+      :method: ColumnsController#update
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: ColumnsController#update
+    :file_path: app/controllers/columns_controller.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: DatabasesController
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: DatabasesController#create
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: DatabasesController#create
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: DatabasesController#destroy
+    - :type: Duplication
+      :message: calls format twice
+      :method: DatabasesController#destroy_database
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: DatabasesController#destroy_database
+    - :type: Duplication
+      :message: calls @current_user.permissions twice
+      :method: DatabasesController#index
+    - :type: Duplication
+      :message: calls UserSession.find twice
+      :method: DatabasesController#index
+    - :type: LongMethod
+      :message: has approx 9 statements
+      :method: DatabasesController#index
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: DatabasesController#show
+    - :type: Duplication
+      :message: calls respond_to twice
+      :method: DatabasesController#show
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: DatabasesController#show
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: DatabasesController#update
+    - :type: Duplication
+      :message: calls params twice
+      :method: DatabasesController#update
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: DatabasesController#update
+    :file_path: app/controllers/databases_controller.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: TablesController
+    - :type: Duplication
+      :message: calls params twice
+      :method: TablesController#create
+    - :type: Duplication
+      :message: calls params[:table] twice
+      :method: TablesController#create
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: TablesController#destroy
+    - :type: Duplication
+      :message: calls format.html twice
+      :method: TablesController#update
+    - :type: Duplication
+      :message: calls params twice
+      :method: TablesController#update
+    - :type: NestedIterators
+      :message: contains iterators nested 2 deep
+      :method: TablesController#update
+    :file_path: app/controllers/tables_controller.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: UserSessionsController
+    - :type: Duplication
+      :message: calls flash twice
+      :method: UserSessionsController#create
+    :file_path: app/controllers/user_sessions_controller.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: UsersController
+    :file_path: app/controllers/users_controller.rb
+  - :code_smells: []
+
+    :file_path: app/helpers/application_helper.rb
+  - :code_smells: []
+
+    :file_path: app/helpers/column_controller_helper.rb
+  - :code_smells: []
+
+    :file_path: app/helpers/table_controller_helper.rb
+  - :code_smells: []
+
+    :file_path: app/helpers/user_sessions_helper.rb
+  - :code_smells: []
+
+    :file_path: app/helpers/users_helper.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: Column
+    - :type: UncommunicativeName
+      :message: has the parameter name 'aColumnType'
+      :method: Column#alter_dbsql
+    - :type: UncommunicativeName
+      :message: has the parameter name 'aColumnName'
+      :method: Column#rename_column
+    - :type: Duplication
+      :message: calls user.permissions twice
+      :method: Column#view_column
+    :file_path: app/models/column.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: Database
+    - :type: UncommunicativeName
+      :message: has the parameter name 'dbName'
+      :method: Database#rename_dbsql
+    - :type: Duplication
+      :message: calls user.permissions twice
+      :method: Database#view_database
+    :file_path: app/models/database.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: Table
+    - :type: UncommunicativeName
+      :message: has the parameter name 'newTableName'
+      :method: Table#rename_table
+    - :type: Duplication
+      :message: calls user.permissions twice
+      :method: Table#view_table
+    :file_path: app/models/table.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: User
+    :file_path: app/models/user.rb
+  - :code_smells: 
+    - :type: IrresponsibleModule
+      :message: has no descriptive comment
+      :method: UserSession
+    :file_path: app/models/user_session.rb
+=======
     - :operators: 
       - :operator: assignment
         :score: 4.0
@@ -809,6 +1879,7 @@
   - :file_path: app/controllers/application_controller.rb
     :code_smells: []
 
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 :saikuro: 
   :classes: 
   - :complexity: 30
@@ -1034,6 +2105,19 @@
     :lines: 2
     :name: UserSession
   :methods: 
+<<<<<<< HEAD
+  - :complexity: 5
+    :lines: 10
+    :name: TablesController#update
+  - :complexity: 5
+    :lines: 12
+    :name: DatabasesController#show
+  - :complexity: 5
+    :lines: 11
+    :name: DatabasesController#update
+  - :complexity: 5
+    :lines: 10
+=======
   - :lines: 11
     :complexity: 5
     :name: DatabasesController#update
@@ -1045,19 +2129,131 @@
     :name: DatabasesController#show
   - :lines: 10
     :complexity: 5
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     :name: ColumnsController#update
   - :complexity: 5
     :lines: 11
     :name: DatabasesController#create
+<<<<<<< HEAD
+  - :complexity: 4
+    :lines: 9
+    :name: DatabasesController#destroy_database
+  - :complexity: 4
+    :lines: 17
+    :name: DatabasesController#index
+  - :complexity: 3
+    :lines: 6
+    :name: DatabasesController#destroy
+  - :complexity: 3
+    :lines: 8
+=======
   - :lines: 9
     :complexity: 4
     :name: DatabasesController#destroy_database
   - :lines: 8
     :complexity: 3
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     :name: TablesController#destroy
   - :complexity: 3
     :lines: 11
     :name: ColumnsController#destroy
+<<<<<<< HEAD
+  - :complexity: 2
+    :lines: 3
+    :name: ApplicationController#current_user
+  - :complexity: 2
+    :lines: 3
+    :name: ApplicationController#current_user_session
+  - :complexity: 2
+    :lines: 5
+    :name: DatabasesController#edit
+  - :complexity: 2
+    :lines: 6
+    :name: Column#view_column
+  - :complexity: 2
+    :lines: 6
+    :name: Column#edit_column
+  - :complexity: 2
+    :lines: 6
+    :name: Column#destroy_column
+  - :complexity: 2
+    :lines: 5
+    :name: DatabasesController#new
+  - :complexity: 2
+    :lines: 9
+    :name: UserSessionsController#create
+  - :complexity: 2
+    :lines: 8
+    :name: UsersController#update
+  - :complexity: 2
+    :lines: 7
+    :name: TablesController#index
+  - :complexity: 2
+    :lines: 6
+    :name: Table#view_table
+  - :complexity: 2
+    :lines: 6
+    :name: Table#edit_table
+  - :complexity: 2
+    :lines: 6
+    :name: Table#destroy_table
+  - :complexity: 2
+    :lines: 5
+    :name: TablesController#edit
+  - :complexity: 2
+    :lines: 6
+    :name: TablesController#new
+  - :complexity: 2
+    :lines: 8
+    :name: TablesController#create
+  - :complexity: 2
+    :lines: 8
+    :name: UsersController#create
+  - :complexity: 2
+    :lines: 6
+    :name: Database#view_database
+  - :complexity: 2
+    :lines: 6
+    :name: Database#edit_database
+  - :complexity: 2
+    :lines: 6
+    :name: Database#destroy_database
+  - :complexity: 2
+    :lines: 5
+    :name: ColumnsController#edit
+  - :complexity: 2
+    :lines: 6
+    :name: ColumnsController#new
+  - :complexity: 2
+    :lines: 9
+    :name: ColumnsController#create
+  - :complexity: 1
+    :lines: 2
+    :name: Column#drop_dbsql
+  - :complexity: 1
+    :lines: 2
+    :name: UsersController#new
+  - :complexity: 1
+    :lines: 2
+    :name: Database#exists_with_title
+  - :complexity: 1
+    :lines: 2
+    :name: ColumnsController#show
+  - :complexity: 1
+    :lines: 3
+    :name: ColumnsController#index
+  - :complexity: 1
+    :lines: 2
+    :name: Column#rename_column
+  - :complexity: 1
+    :lines: 2
+    :name: Database#rename_dbsql
+  - :complexity: 1
+    :lines: 2
+    :name: Database#drop_dbsql
+  - :complexity: 1
+    :lines: 2
+=======
   - :lines: 6
     :complexity: 3
     :name: DatabasesController#destroy
@@ -1150,9 +2346,22 @@
     :name: UsersController#new
   - :lines: 2
     :complexity: 1
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
     :name: UsersController#edit
-  - :lines: 2
-    :complexity: 1
+  - :complexity: 1
+    :lines: 2
+    :name: Database#use_dbsql
+  - :complexity: 1
+    :lines: 3
+    :name: TablesController#show
+  - :complexity: 1
+    :lines: 2
+    :name: Table#create_dbsql
+  - :complexity: 1
+    :lines: 2
+    :name: Table#alter_dbsql
+  - :complexity: 1
+    :lines: 2
     :name: UserSessionsController#new
   - :complexity: 1
     :lines: 2
@@ -1163,6 +2372,18 @@
   - :complexity: 1
     :lines: 5
     :name: UserSessionsController#destroy
+<<<<<<< HEAD
+  - :complexity: 1
+    :lines: 2
+    :name: Column#add_dbsql
+  - :complexity: 1
+    :lines: 2
+    :name: Column#alter_dbsql
+  - :complexity: 1
+    :lines: 2
+    :name: Database#create_dbsql
+=======
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
   :files: 
   - :classes: 
     - :complexity: 30
@@ -1170,6 +2391,30 @@
       - :complexity: 5
         :lines: 11
         :name: DatabasesController#update
+<<<<<<< HEAD
+      - :complexity: 5
+        :lines: 11
+        :name: DatabasesController#create
+      - :complexity: 5
+        :lines: 12
+        :name: DatabasesController#show
+      - :complexity: 4
+        :lines: 9
+        :name: DatabasesController#destroy_database
+      - :complexity: 4
+        :lines: 17
+        :name: DatabasesController#index
+      - :complexity: 3
+        :lines: 6
+        :name: DatabasesController#destroy
+      - :complexity: 2
+        :lines: 5
+        :name: DatabasesController#edit
+      - :complexity: 2
+        :lines: 5
+        :name: DatabasesController#new
+      :lines: 94
+=======
       - :lines: 12
         :complexity: 5
         :name: DatabasesController#show
@@ -1182,11 +2427,8 @@
       - :lines: 6
         :complexity: 3
         :name: DatabasesController#destroy
-      - :complexity: 2
-        :lines: 5
-        :name: DatabasesController#edit
-      - :complexity: 2
-        :lines: 5
+      - :lines: 5
+        :complexity: 2
         :name: DatabasesController#new
       - :lines: 5
         :complexity: 2
@@ -1196,6 +2438,7 @@
         :name: DatabasesController#index
       :lines: 85
       :complexity: 28
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
       :class_name: DatabasesController
     :filename: databases_controller.rb
   - :classes: 
@@ -1251,6 +2494,98 @@
         :name: ColumnsController#index
       :lines: 60
       :class_name: ColumnsController
+<<<<<<< HEAD
+    :filename: columns_controller.rb
+  - :classes: 
+    - :complexity: 11
+      :methods: 
+      - :complexity: 2
+        :lines: 6
+        :name: Database#destroy_database
+      - :complexity: 2
+        :lines: 6
+        :name: Database#edit_database
+      - :complexity: 2
+        :lines: 6
+        :name: Database#view_database
+      - :complexity: 1
+        :lines: 2
+        :name: Database#create_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Database#rename_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Database#drop_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Database#use_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Database#exists_with_title
+      :lines: 50
+      :class_name: Database
+    :filename: database.rb
+  - :classes: 
+    - :complexity: 10
+      :methods: 
+      - :complexity: 2
+        :lines: 6
+        :name: Table#destroy_table
+      - :complexity: 2
+        :lines: 6
+        :name: Table#edit_table
+      - :complexity: 2
+        :lines: 6
+        :name: Table#view_table
+      - :complexity: 1
+        :lines: 2
+        :name: Table#create_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Table#alter_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Table#rename_table
+      - :complexity: 1
+        :lines: 2
+        :name: Table#drop_dbsql
+      :lines: 45
+      :class_name: Table
+    :filename: table.rb
+  - :classes: 
+    - :complexity: 10
+      :methods: 
+      - :complexity: 2
+        :lines: 6
+        :name: Column#destroy_column
+      - :complexity: 2
+        :lines: 6
+        :name: Column#edit_column
+      - :complexity: 2
+        :lines: 6
+        :name: Column#view_column
+      - :complexity: 1
+        :lines: 2
+        :name: Column#add_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Column#alter_dbsql
+      - :complexity: 1
+        :lines: 2
+        :name: Column#rename_column
+      - :complexity: 1
+        :lines: 2
+        :name: Column#drop_dbsql
+      :lines: 45
+      :class_name: Column
+    :filename: column.rb
+  - :classes: 
+    - :complexity: 6
+      :methods: 
+      - :complexity: 2
+        :lines: 8
+=======
   - :filename: database.rb
     :classes: 
     - :methods: 
@@ -1274,6 +2609,7 @@
     - :methods: 
       - :lines: 8
         :complexity: 2
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
         :name: UsersController#update
       - :complexity: 2
         :lines: 8
@@ -1286,6 +2622,27 @@
         :name: UsersController#new
       :lines: 28
       :class_name: UsersController
+<<<<<<< HEAD
+    :filename: users_controller.rb
+  - :classes: 
+    - :complexity: 4
+      :methods: 
+      - :complexity: 2
+        :lines: 9
+        :name: UserSessionsController#create
+      - :complexity: 1
+        :lines: 5
+        :name: UserSessionsController#destroy
+      - :complexity: 1
+        :lines: 2
+        :name: UserSessionsController#new
+      :lines: 22
+      :class_name: UserSessionsController
+    :filename: user_sessions_controller.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+=======
   - :filename: column.rb
     :classes: 
     - :methods: 
@@ -1319,6 +2676,7 @@
   - :filename: application_controller.rb
     :classes: 
     - :methods: []
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
       :lines: 1
       :class_name: ""
@@ -1332,6 +2690,45 @@
         :name: ApplicationController#current_user_session
       :lines: 19
       :class_name: ApplicationController
+<<<<<<< HEAD
+    :filename: application_controller.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 1
+      :class_name: TableControllerHelper
+    :filename: table_controller_helper.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 1
+      :class_name: ColumnControllerHelper
+    :filename: column_controller_helper.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 1
+      :class_name: ""
+    - :complexity: 0
+      :methods: []
+
+      :lines: 1
+      :class_name: ApplicationHelper
+    :filename: application_helper.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 1
+      :class_name: UserSessionsHelper
+    :filename: user_sessions_helper.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+=======
   - :filename: user_sessions_controller.rb
     :classes: 
     - :methods: 
@@ -1371,9 +2768,81 @@
   - :filename: users_helper.rb
     :classes: 
     - :methods: []
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
       :lines: 1
       :class_name: UsersHelper
+<<<<<<< HEAD
+    :filename: users_helper.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 7
+      :class_name: User
+    :filename: user.rb
+  - :classes: 
+    - :complexity: 0
+      :methods: []
+
+      :lines: 2
+      :class_name: UserSession
+    :filename: user_session.rb
+:stats: 
+  :code_to_test_ratio: 1.0
+  :lines: 
+  - :classes: 6
+    :methods: 31
+    :lines: 294
+    :loc: 252
+    :methods_per_class: 5
+    :loc_per_method: 6
+    :name: Controllers
+  - :classes: 0
+    :methods: 0
+    :lines: 11
+    :loc: 10
+    :methods_per_class: 0
+    :loc_per_method: 0
+    :name: Helpers
+  - :classes: 5
+    :methods: 22
+    :lines: 154
+    :loc: 129
+    :methods_per_class: 4
+    :loc_per_method: 3
+    :name: Models
+  - :classes: 0
+    :methods: 0
+    :lines: 0
+    :loc: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+    :name: Libraries
+  - :classes: 2
+    :methods: 0
+    :lines: 16
+    :loc: 12
+    :methods_per_class: 0
+    :loc_per_method: 0
+    :name: Functional tests
+  - :classes: 6
+    :methods: 81
+    :lines: 663
+    :loc: 395
+    :methods_per_class: 13
+    :loc_per_method: 2
+    :name: Unit tests
+  - :classes: 19
+    :methods: 134
+    :lines: 1138
+    :loc: 798
+    :methods_per_class: 7
+    :loc_per_method: 3
+    :name: Total
+  :codeLOC: 391
+  :testLOC: 407
+=======
   - :filename: application_helper.rb
     :classes: 
     - :methods: []
@@ -1641,3 +3110,4 @@
     :classes: 19
   :testLOC: 304
   :code_to_test_ratio: 0.9
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25

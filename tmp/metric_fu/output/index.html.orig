@@ -519,26 +519,30 @@ table td.score {
       </address>
     </div>
     <div id='content'>
-      <h3>Reek Results</h3>
+      <h3>Metric Fu Results</h3>
+<ul id='projects'>
 
-<p><a href="http://reek.rubyforge.org/">Reek</a> detects common code smells in ruby code.</p>
 
-<img src="reek.png?Thu Apr 29 20:54:48 -0400 2010">
 
-<table>
-  <tr>
-    <th>File Path</th>
-    <th>Method</th>
-    <th>Description</th>
-    <th>Type</th>
-  </tr>
-  
-  
-    
-  
+  <li class='even failure'><a href="flog.html">Flog</a></li>
 
-</table>
-<p>Generated on Thu Apr 29 20:54:48 -0400 2010</p>
+
+
+  <li class='even failure'><a href="reek.html">Reek</a></li>
+
+
+
+  <li class='even failure'><a href="saikuro.html">Saikuro</a></li>
+
+
+  <li class='even failure'><a href="stats.html">Stats</a></li>
+
+</ul>
+<<<<<<< HEAD
+<p>Generated on Fri May 07 12:38:44 -0400 2010</p>	
+=======
+<p>Generated on Thu Apr 29 20:54:48 -0400 2010</p>	
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
     </div>
   </body>

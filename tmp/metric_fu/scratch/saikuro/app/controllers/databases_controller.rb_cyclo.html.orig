@@ -1,6 +1,11 @@
 -- START DatabasesController --
+<<<<<<< HEAD
+Type:Class Name:DatabasesController Complexity:30 Lines:94
+Type:Def Name:index Complexity:4 Lines:17
+=======
 Type:Class Name:DatabasesController Complexity:28 Lines:85
 Type:Def Name:index Complexity:2 Lines:8
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 Type:Def Name:show Complexity:5 Lines:12
 Type:Def Name:edit Complexity:2 Lines:5
 Type:Def Name:update Complexity:5 Lines:11

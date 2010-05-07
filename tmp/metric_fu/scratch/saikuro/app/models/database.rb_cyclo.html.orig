@@ -1,0 +1,18 @@
+-- START Database --
+<<<<<<< HEAD
+Type:Class Name:Database Complexity:11 Lines:50
+=======
+Type:Class Name:Database Complexity:7 Lines:34
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+Type:Def Name:exists_with_title Complexity:1 Lines:2
+Type:Def Name:destroy_database Complexity:2 Lines:6
+Type:Def Name:edit_database Complexity:2 Lines:6
+Type:Def Name:view_database Complexity:2 Lines:6
+<<<<<<< HEAD
+Type:Def Name:create_dbsql Complexity:1 Lines:2
+Type:Def Name:rename_dbsql Complexity:1 Lines:2
+Type:Def Name:drop_dbsql Complexity:1 Lines:2
+Type:Def Name:use_dbsql Complexity:1 Lines:2
+=======
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
+-- END Database --
