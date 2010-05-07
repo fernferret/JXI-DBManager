@@ -1,6 +1,31 @@
-    78.8: flog total
-    11.3: flog/method average
+   123.5: flog total
+    15.4: flog/method average
 
+    25.0: DatabasesController#index
+    11.7: assignment
+     7.6: branch
+     6.6: find
+     4.3: ==
+     3.4: permissions
+     1.5: record
+     1.3: id
+     1.3: html
+     1.2: respond_to
+     1.2: all
+    20.7: DatabasesController#destroy_database
+     5.1: branch
+     3.1: format
+     2.7: html
+     2.6: ==
+     2.6: assignment
+     1.6: params
+     1.5: redirect_to
+     1.5: permissions
+     1.5: user
+     1.4: destroy
+     1.4: flash
+     1.4: []
+     1.2: find
     20.1: DatabasesController#update
      5.4: branch
      5.2: assignment
@@ -8,12 +33,24 @@
      2.9: html
      2.9: []
      1.6: redirect_to
-     1.5: render
      1.5: flash
+     1.5: render
      1.3: update_attributes
+     1.2: current_user
      1.2: find
      1.2: respond_to
-     1.2: current_user
+    17.2: DatabasesController#show
+     5.5: assignment
+     5.3: branch
+     2.9: html
+     2.6: respond_to
+     1.6: redirect_to
+     1.6: params
+     1.5: flash
+     1.4: []
+     1.4: current_user
+     1.2: view_database
+     1.2: find
     17.1: DatabasesController#create
      5.4: branch
      5.2: assignment
@@ -24,9 +61,9 @@
      1.5: flash
      1.4: []
      1.3: save
-     1.2: respond_to
-     1.2: new
      1.2: current_user
+     1.2: new
+     1.2: respond_to
     11.5: DatabasesController#destroy
      2.5: assignment
      2.5: branch
@@ -35,34 +72,17 @@
      1.4: redirect_to
      1.4: []
      1.3: html
+     1.2: respond_to
      1.2: destroy
-     1.2: respond_to
      1.2: find
-    11.1: DatabasesController#index
-     6.1: assignment
-     2.4: find
-     2.4: branch
-     1.5: record
-     1.3: html
-     1.3: id
-     1.2: all
-     1.2: respond_to
-     7.3: DatabasesController#show
-     2.5: assignment
-     1.6: params
-     1.4: []
-     1.3: html
-     1.2: find
-     1.2: branch
-     1.2: respond_to
      7.3: DatabasesController#edit
      2.5: assignment
      1.6: params
      1.4: []
      1.3: html
-     1.2: find
-     1.2: branch
      1.2: respond_to
+     1.2: branch
+     1.2: find
      4.6: DatabasesController#new
      2.5: assignment
      1.3: html

@@ -545,7 +545,7 @@ table td.score {
 
 
 <canvas id="graph"></canvas>
-<script language="javascript" src="reek.js?1272480345" type="text/javascript"></script>
+<script language="javascript" src="reek.js?1273250324" type="text/javascript"></script>
 
 
 <table>
@@ -720,6 +720,118 @@ table td.score {
         <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
         <td>
           DatabasesController#destroy
+        </td>
+        <td>
+          contains iterators nested 2 deep
+        </td>
+        <td>
+          NestedIterators
+        </td>
+      </tr>
+      
+    
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#destroy_database
+        </td>
+        <td>
+          calls format twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#destroy_database
+        </td>
+        <td>
+          calls format.html twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#index
+        </td>
+        <td>
+          calls @current_user.permissions twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#index
+        </td>
+        <td>
+          calls UserSession.find twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#index
+        </td>
+        <td>
+          has approx 9 statements
+        </td>
+        <td>
+          LongMethod
+        </td>
+      </tr>
+      
+    
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#show
+        </td>
+        <td>
+          calls format.html twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#show
+        </td>
+        <td>
+          calls respond_to twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/controllers/databases_controller.rb'>app/controllers/databases_controller.rb</a></td>
+        <td>
+          DatabasesController#show
         </td>
         <td>
           contains iterators nested 2 deep
@@ -944,9 +1056,51 @@ table td.score {
       </tr>
       
     
-  
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/column.rb'>app/models/column.rb</a></td>
+        <td>
+          Column#alter_dbsql
+        </td>
+        <td>
+          has the parameter name 'aColumnType'
+        </td>
+        <td>
+          UncommunicativeName
+        </td>
+      </tr>
+      
+    
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/column.rb'>app/models/column.rb</a></td>
+        <td>
+          Column#rename_column
+        </td>
+        <td>
+          has the parameter name 'aColumnName'
+        </td>
+        <td>
+          UncommunicativeName
+        </td>
+      </tr>
+      
     
       <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/column.rb'>app/models/column.rb</a></td>
+        <td>
+          Column#view_column
+        </td>
+        <td>
+          calls user.permissions twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+  
+    
+      <tr class='dark'>
         <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/database.rb'>app/models/database.rb</a></td>
         <td>
           Database
@@ -960,9 +1114,37 @@ table td.score {
       </tr>
       
     
-  
+      <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/database.rb'>app/models/database.rb</a></td>
+        <td>
+          Database#rename_dbsql
+        </td>
+        <td>
+          has the parameter name 'dbName'
+        </td>
+        <td>
+          UncommunicativeName
+        </td>
+      </tr>
+      
     
       <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/database.rb'>app/models/database.rb</a></td>
+        <td>
+          Database#view_database
+        </td>
+        <td>
+          calls user.permissions twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+  
+    
+      <tr class='light'>
         <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/table.rb'>app/models/table.rb</a></td>
         <td>
           Table
@@ -976,9 +1158,37 @@ table td.score {
       </tr>
       
     
-  
+      <tr class='dark'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/table.rb'>app/models/table.rb</a></td>
+        <td>
+          Table#rename_table
+        </td>
+        <td>
+          has the parameter name 'newTableName'
+        </td>
+        <td>
+          UncommunicativeName
+        </td>
+      </tr>
+      
     
       <tr class='light'>
+        <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/table.rb'>app/models/table.rb</a></td>
+        <td>
+          Table#view_table
+        </td>
+        <td>
+          calls user.permissions twice
+        </td>
+        <td>
+          Duplication
+        </td>
+      </tr>
+      
+    
+  
+    
+      <tr class='dark'>
         <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/user.rb'>app/models/user.rb</a></td>
         <td>
           User
@@ -994,7 +1204,7 @@ table td.score {
     
   
     
-      <tr class='dark'>
+      <tr class='light'>
         <td><a href='txmt://open/?url=file:///Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager/app/models/user_session.rb'>app/models/user_session.rb</a></td>
         <td>
           UserSession
@@ -1011,7 +1221,7 @@ table td.score {
   
 
 </table>
-<p>Generated on Wed Apr 28 14:45:45 -0400 2010</p>
+<p>Generated on Fri May 07 12:38:44 -0400 2010</p>
 
     </div>
   </body>
