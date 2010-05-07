@@ -519,113 +519,30 @@ table td.score {
       </address>
     </div>
     <div id='content'>
-      <h3>Rake Stats  Results</h3>
-<p>Rails rake stats results.</p>
-<table>
-  <tr>
-    <th>Lines of Code</th>
-    <th>Lines of Test</th>
-    <th>Code to test ratio</th>
-  </tr>
-  <tr>
-    <td>345</td>
-    <td>304</td>
-    <td>1:0.9</td>
-  </tr>
-</table>
+      <h3>Metric Fu Results</h3>
+<ul id='projects'>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Lines</th>
-    <th>LOC</th>
-    <th>Classes</th>
-    <th>Methods</th>
-    <th>Methods per class</th>
-    <th>LOC per method</th>
-  </tr>
-  
-  
-    <tr>
-      <td>Controllers</td>
-      <td>285</td>
-      <td>243</td>
-      <td>6</td>
-      <td>31</td>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Helpers</td>
-      <td>11</td>
-      <td>10</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Models</td>
-      <td>105</td>
-      <td>92</td>
-      <td>5</td>
-      <td>10</td>
-      <td>2</td>
-      <td>7</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Libraries</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Functional tests</td>
-      <td>16</td>
-      <td>12</td>
-      <td>2</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Unit tests</td>
-      <td>462</td>
-      <td>292</td>
-      <td>6</td>
-      <td>66</td>
-      <td>11</td>
-      <td>2</td>
-    </tr>
-    
-  
-    <tr>
-      <td>Total</td>
-      <td>879</td>
-      <td>649</td>
-      <td>19</td>
-      <td>107</td>
-      <td>5</td>
-      <td>4</td>
-    </tr>
-    
-  
-</table>
 
+
+  <li class='even failure'><a href="flog.html">Flog</a></li>
+
+
+
+  <li class='even failure'><a href="reek.html">Reek</a></li>
+
+
+
+  <li class='even failure'><a href="saikuro.html">Saikuro</a></li>
+
+
+  <li class='even failure'><a href="stats.html">Stats</a></li>
+
+</ul>
+<<<<<<< HEAD
+<p>Generated on Fri May 07 12:38:44 -0400 2010</p>	
+=======
 <p>Generated on Thu Apr 29 20:54:48 -0400 2010</p>	
+>>>>>>> 1138461a52e5d7107f89f717ddfcc2e4e13a7b25
 
     </div>
   </body>
