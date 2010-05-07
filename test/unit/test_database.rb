@@ -104,14 +104,12 @@ class DatabaseTest < ActiveSupport::TestCase
 
   # Test that a general user cannot edit anyone's databases but their own.
   def test_user_edit_someone_elses_database_with_permissions
-    flunk("Not a test case for the current release")
-    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :shared => @userB)
     assert database.edit_database(@userB), 'User could edit someone else\'s database'
   end
   
   # Test that the user cannot edit someone else's database with it being shared.
   def test_user_edit_someone_elses_database_without_permissions
-    flunk("Not a test case for the current release")
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
     assert !database.edit_database(@userB), 'User could edit someone else\'s database'
   end
