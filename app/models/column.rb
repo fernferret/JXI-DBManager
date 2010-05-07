@@ -35,9 +35,12 @@ class Column < ActiveRecord::Base
     return "ALTER COLUMN " + self.name + " " + aColumnType
   end
   
+  def rename_column(aColumnName)
+    return "EXEC sp_rename " + self.name + " " + aColumnName
+  end
+  
   def drop_dbsql
     return "DROP COLUMN " + self.name
   end
-       
     
 end
