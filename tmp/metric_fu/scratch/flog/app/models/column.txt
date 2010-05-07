@@ -1,7 +1,28 @@
-     3.3: flog total
-     3.3: flog/method average
+    35.3: flog total
+     8.8: flog/method average
 
+    12.9: Column#view_column
+     4.1: ==
+     3.7: branch
+     3.2: permissions
+     1.9: table
+     1.7: database
+     1.5: user
+     9.5: Column#destroy_column
+     2.6: ==
+     2.4: branch
+     1.9: table
+     1.7: database
+     1.5: user
+     1.5: permissions
+     9.5: Column#edit_column
+     2.6: ==
+     2.4: branch
+     1.9: table
+     1.7: database
+     1.5: user
+     1.5: permissions
      3.3: Column#none
-     1.1: validates_presence_of
      1.1: validates_uniqueness_of
      1.1: belongs_to
+     1.1: validates_presence_of

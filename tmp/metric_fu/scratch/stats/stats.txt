@@ -1,15 +1,15 @@
-(in /Users/cssembp01/Documents/SQA (376)/JXI/JXI-DBManager)
+(in /home/david/Documents/JXI-DBManager)
 +----------------------+-------+-------+---------+---------+-----+-------+
 | Name                 | Lines |   LOC | Classes | Methods | M/C | LOC/M |
 +----------------------+-------+-------+---------+---------+-----+-------+
-| Controllers          |   267 |   226 |       6 |      30 |   5 |     5 |
+| Controllers          |   285 |   243 |       6 |      31 |   5 |     5 |
 | Helpers              |    11 |    10 |       0 |       0 |   0 |     0 |
-| Models               |    31 |    28 |       5 |       1 |   0 |    26 |
+| Models               |   105 |    92 |       5 |      10 |   2 |     7 |
 | Libraries            |     0 |     0 |       0 |       0 |   0 |     0 |
 | Functional tests     |    16 |    12 |       2 |       0 |   0 |     0 |
-| Unit tests           |   281 |   164 |       6 |      31 |   5 |     3 |
+| Unit tests           |   462 |   292 |       6 |      66 |  11 |     2 |
 +----------------------+-------+-------+---------+---------+-----+-------+
-| Total                |   606 |   440 |      19 |      62 |   3 |     5 |
+| Total                |   879 |   649 |      19 |     107 |   5 |     4 |
 +----------------------+-------+-------+---------+---------+-----+-------+
-  Code LOC: 264     Test LOC: 176     Code to Test Ratio: 1:0.7
+  Code LOC: 345     Test LOC: 304     Code to Test Ratio: 1:0.9
 
