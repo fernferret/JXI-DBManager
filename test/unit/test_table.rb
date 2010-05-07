@@ -124,16 +124,27 @@ class TableTest < ActiveSupport::TestCase
     table = Factory.create(:table, :database => database)
     assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
-    assert_equal "CREATE TABLE " + tablename, table.create_dbsql, 'Did not generate valid SQL'
+    assert_equal "CREATE TABLE " + table.name, table.create_dbsql, 'Did not generate valid SQL'
   end
 
+  def test_rename_sql_table
+    database = Factory.create(:database)
+    table = Factory.create(:table, :database => database)
+    column = Factory.create(:column, :table => table)
+    newTableName = 'my new table'
+    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+
+    assert_equal "ALTER TABLE " + table.name + " MODIFY NAME = " + newTableName, table.rename_table(newTableName), 'Did not generate valid SQL'
+  end
+  
   def test_alter_sql_table
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
+    newTableName = 'my new table'
     assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
-    assert_equal "ALTER TABLE " + tablename, table.alter_dbsql, 'Did not generate valid SQL'
+    assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
   end
 
   def test_drop_sql_table
@@ -142,6 +153,6 @@ class TableTest < ActiveSupport::TestCase
     column = Factory.create(:column, :table => table)
     assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
-    assert_equal "DROP TABLE " + tablename, table.drop_dbsql, 'Did not generate valid SQL'
+    assert_equal "DROP TABLE " + table.name, table.drop_dbsql, 'Did not generate valid SQL'
   end
 end

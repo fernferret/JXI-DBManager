@@ -32,4 +32,20 @@ class Database < ActiveRecord::Base
       return false
     end
   end
+  
+  def create_dbsql
+    return "CREATE DATABASE " + self.name
+  end
+  
+  def rename_dbsql(dbName)
+    return "ALTER DATABASE " + self.name + " MODIFY NAME = " + dbName
+  end
+  
+  def drop_dbsql
+    return "DROP DATABASE " + self.name
+  end
+  
+  def use_dbsql
+    return "USE dbo." + self.name
+  end
 end

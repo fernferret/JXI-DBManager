@@ -27,4 +27,20 @@ class Table < ActiveRecord::Base
       return false
     end
   end
+  
+  def create_dbsql
+    return "CREATE TABLE " + self.name
+  end
+  
+  def alter_dbsql
+    return "ALTER TABLE " + self.name
+  end
+  
+  def rename_table(newTableName)
+    return "ALTER TABLE " + self.name + " MODIFY NAME = " + newTableName
+  end
+  
+  def drop_dbsql
+    return "DROP TABLE " + self.name
+  end
 end

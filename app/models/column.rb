@@ -26,5 +26,18 @@ class Column < ActiveRecord::Base
       return false
     end
   end
-
+  
+  def add_dbsql
+    return "ADD " + self.name + " " + self.column_type
+  end
+  
+  def alter_dbsql(aColumnType)
+    return "ALTER COLUMN " + self.name + " " + aColumnType
+  end
+  
+  def drop_dbsql
+    return "DROP COLUMN " + self.name
+  end
+       
+    
 end

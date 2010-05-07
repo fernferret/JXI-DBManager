@@ -169,7 +169,7 @@ class DatabaseTest < ActiveSupport::TestCase
     assert !database.view_database(@userB), 'User could view someone else\'s database'
   end
 
-  # TESTING SQL COMMANDS
+  # TESTING SQL COMMANDS  
   def test_add_sql_database
     dbname = "My first database"
     database = Factory.create(:database, :name => dbname, :user => @userA)
