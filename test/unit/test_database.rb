@@ -51,7 +51,7 @@ class DatabaseTest < ActiveSupport::TestCase
   def test_should_not_save_database_with_same_name_per_user
     database_old = Factory.create(:database, :name => 'My First Database', :user => @userA)
     database_new = Factory.build(:database, :name => 'My First Database', :user => @userA)
-    http://www.intellicast.com/National/Radar/Current.aspx?location=USOH0124&animate=truehttp://www.intellicast.com/National/Radar/Current.aspx?location=USOH0124&animate=truehttp://www.intellicast.com/National/Radar/Current.aspx?location=USOH0124&animate=trueassert !database_new.valid?, 'Saved a database with a duplicate name!'
+    assert !database_new.valid?, 'Saved a database with a duplicate name!'
   end
 
   #Destroy
@@ -108,7 +108,7 @@ class DatabaseTest < ActiveSupport::TestCase
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
     assert database.edit_database(@userB), 'User could edit someone else\'s database'
   end
-  http://www.intellicast.com/National/Radar/Current.aspx?location=USOH0124&animate=truehttp://www.intellicast.com/National/Radar/Current.aspx?location=USOH0124&animate=true
+  
   # Test that the user cannot edit someone else's database with it being shared.
   def test_user_edit_someone_elses_database_without_permissions
     flunk("Not a test case for the current release")
@@ -126,13 +126,15 @@ class DatabaseTest < ActiveSupport::TestCase
 
   # Test that a user can view  database.
   def test_view_database
-    database = Factory.create(:database, :user => @userA)     def test_alter_sql_database
+    database = Factory.create(:database, :user => @userA)     
+    assert database.view_database(@userA), 'Unable to view database'
+  end
+  
+  def test_alter_sql_database
     dbname = "My first database"
     newname = "My newer database"
     database = Factory.create(:database, :name => dbname, :user => @userA)
     assert_equal "ALTER DATABASE " + dbname + " MODIFY NAME = " + newname,database.rename_dbsql(newname), 'Could not change name'
-  end
-    assert database.view_database(@userA), 'Unable to view database'
   end
 
   # Test that an admin can view any database.
@@ -148,12 +150,14 @@ class DatabaseTest < ActiveSupport::TestCase
     assert database.view_database(@taUser), 'TA could not view database'
   end
 
-  # Test that a general user can view anyone else's database with permiss    def test_alter_sql_database
+  # Test that a general user can view anyone else's database with permission
+  def test_alter_sql_database
     dbname = "My first database"
     newname = "My newer database"
     database = Factory.create(:database, :name => dbname, :user => @userA)
     assert_equal "ALTER DATABASE " + dbname + " MODIFY NAME = " + newname,database.rename_dbsql(newname), 'Could not change name'
-  endion
+  end
+  
   def test_user_view_someone_elses_database_with_permissions
     database = Factory.create(:database, :name => 'My First Database', :user => @userA)
     assert !database.view_database(@userB), 'User could view someone else\'s database'
