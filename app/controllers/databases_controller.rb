@@ -13,6 +13,7 @@ class DatabasesController < ApplicationController
 
   def show
     @database = Database.find(params[:id])
+    @sharedwith = User.find(:all, :conditions)
     if @database.view_database(current_user);
       respond_to do |format|
         format.html
