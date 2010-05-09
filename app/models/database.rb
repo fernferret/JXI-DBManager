@@ -49,4 +49,18 @@ class Database < ActiveRecord::Base
   def use_dbsql
     return "USE dbo." + self.name
   end
+
+  def share_with_user(user)
+
+  end
+
+  def unshare_with_user(user)
+    
+  end
+
+  def issue_query(user, query)
+    if edit_database(user)
+      # Issue the query here
+    end
+  end
 end
