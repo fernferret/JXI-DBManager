@@ -1,3 +1,5 @@
+require 'mysql'
+
 class Database < ActiveRecord::Base
   has_many :tables
   belongs_to :user
@@ -60,7 +62,8 @@ class Database < ActiveRecord::Base
 
   def issue_query(user, query)
     if edit_database(user)
-      # Issue the query here
+			db = Mysql.connect('localhost', 'root', 'root', 'test_db')
+			db.query(query)
     end
   end
 end

@@ -35,7 +35,7 @@ class DatabasesController < ApplicationController
 
   def update
     @database = Database.find(params[:id])
-    @database.user = current_user 
+		@database.issue_query(@database.user, @database.rename_dbsql(params[:database]["name"]))
     respond_to do |format|
       if @database.update_attributes(params[:database])
         flash[:notice] = 'Updated Database successfully'
@@ -64,10 +64,12 @@ class DatabasesController < ApplicationController
         format.html {render :action => "new"}
       end
     end
+		@database.issue_query(current_user, @database.create_dbsql)
   end
 
   def destroy
     @database = Database.find(params[:id])
+		@database.issue_query(@database.user, @database.drop_dbsql)
     @database.destroy
     respond_to do |format|
       format.html { redirect_to(databases_url) }
