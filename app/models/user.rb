@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :username
   validates_format_of :email, :with => /^[A-Za-z_0-9!$%&'*+\/=?^`{|}~.-][^.]+@[^.][A-Za-z_0-9!$%&'*+\/=?^`{|}~-]+\.[a-zA-Z.]+[^.]$/, :on => :create
   has_many :databases
+  has_and_belongs_to_many :databases
 end
