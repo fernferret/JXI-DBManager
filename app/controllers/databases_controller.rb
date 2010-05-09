@@ -27,6 +27,7 @@ class DatabasesController < ApplicationController
 
   def edit
     @database = Database.find(params[:id])
+    @users = User.find(:all)
     respond_to do |format|
       format.html
     end

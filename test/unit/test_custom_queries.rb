@@ -13,4 +13,8 @@ class DatabaseTest < ActiveSupport::TestCase
     query = ""
     assert_equal false, @database.issue_query(@userA, query)
   end
+  def test_user_sharing
+    db2 = Factory.create(:database, :user => @userA)
+
+  end
 end

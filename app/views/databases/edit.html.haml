@@ -4,4 +4,10 @@
   %p
     = db.label :name
     %br= db.text_field :name
+    = db.label :users
+    %select{:name => 'database[user_id]', :id => 'database_user_id'}
+      - @users.each do |user|
+        %option{:value => user.id}
+          = user.name
+
   %p= submit_tag('Edit Database')
