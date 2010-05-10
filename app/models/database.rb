@@ -60,9 +60,8 @@ class Database < ActiveRecord::Base
     
   end
 
-  def issue_query(user, query)
+  def issue_query(user, query, db)
     if edit_database(user)
-			db = Mysql.connect('localhost', 'root', 'root', 'asdf')
 			db.query(query)
     end
   end

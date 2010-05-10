@@ -36,7 +36,7 @@ class Column < ActiveRecord::Base
   end
   
   def rename_column(aColumnName)
-    return "EXEC sp_rename " + self.name + " " + aColumnName
+    return "CHANGE " + self.name + " " + aColumnName + " " + self.column_type
   end
   
   def drop_dbsql

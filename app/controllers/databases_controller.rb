@@ -59,7 +59,8 @@ class DatabasesController < ApplicationController
     @database.user = current_user 
     respond_to do |format|
       if @database.save
-				@database.issue_query(current_user, @database.create_dbsql)
+				db = Mysql.connect('localhost', 'root', 'root', 'test_db')
+				@database.issue_query(current_user, @database.create_dbsql, db)
         flash[:notice] = 'Created new Database successfully'
         format.html {redirect_to(@database)}
       else
@@ -70,7 +71,8 @@ class DatabasesController < ApplicationController
 
   def destroy
     @database = Database.find(params[:id])
-		@database.issue_query(@database.user, @database.drop_dbsql)
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
+		@database.issue_query(@database.user, @database.drop_dbsql, db)
     @database.destroy
     respond_to do |format|
       format.html { redirect_to(databases_url) }

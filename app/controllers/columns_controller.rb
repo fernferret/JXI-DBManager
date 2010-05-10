@@ -17,10 +17,16 @@ class ColumnsController < ApplicationController
 
   def update
     @column = Column.find(params[:id])
+		@table = @column.table
+		@database = @table.database
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
+		@database.issue_query(@database.user, @database.use_dbsql, db)
+		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.rename_column(@column.name), db)
+
     respond_to do |format|
       if @column.update_attributes(params[:column])
         flash[:notice] = 'Updated Database successfully'
-        format.html {redirect_to(root_url)}
+				format.html {redirect_to(root_url)}
       else
         format.html {render :action => "edit"}
       end
@@ -38,18 +44,25 @@ class ColumnsController < ApplicationController
   def create
     @table = Table.find(params[:column][:table_id])
     @column = @table.columns.build(params[:column])
-
-	if @column.save
-      redirect_to(@table)
-	else
+		@database = @table.database
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
+		@database.issue_query(@database.user, @database.use_dbsql, db)
+		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.add_dbsql, db)
+		
+		if @column.save
+			redirect_to(@table)
+		else
       render :action => "new"
     end
   end
 
   def destroy
-    #@database = Database.find(params[:database_id])
-    #@table = @database.tables.find(params[:table_id])
-    @column = Column.find(params[:id]) 
+    @column = Column.find(params[:id])
+		@table = @column.table
+		@database = @table.database
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
+		@database.issue_query(@database.user, @database.use_dbsql, db)
+		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.drop_dbsql, db)
     @column.destroy
 
     respond_to do |format|
