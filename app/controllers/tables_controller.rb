@@ -44,6 +44,10 @@ class TablesController < ApplicationController
 		@database = Database.find(params[:table][:database_id])
 		@table = @database.tables.build(params[:table])
 		if @table.save
+			@database.issue_query(@database.user, @database.use_dbsql)
+			@database.issue_query(@database.user, @table.create_dbsql)# + '; ' + @table.create_dbsql)
+			#db = Mysql.connect('localhost', 'root', 'root', @database.name)
+			#db.query(@table.drop_dbsql)
 			redirect_to(@table)
 		else
 			render :action => "new"
@@ -52,7 +56,8 @@ class TablesController < ApplicationController
 
   def destroy
 		@table = Table.find(params[:id])
-		database = Database.find(@table.database_id)
+		@database = Database.find(@table.database_id)
+		@database.issue_query(@database.user, @database.use_dbsql + '; ' + @table.drop_dbsql)
 		@table.destroy
 
 		respond_to do |format|

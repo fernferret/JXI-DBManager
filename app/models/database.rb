@@ -49,7 +49,7 @@ class Database < ActiveRecord::Base
   end
   
   def use_dbsql
-    return "USE dbo." + self.name
+    return "USE " + self.name
   end
 
   def share_with_user(user)
@@ -62,7 +62,7 @@ class Database < ActiveRecord::Base
 
   def issue_query(user, query)
     if edit_database(user)
-			db = Mysql.connect('localhost', 'root', 'root', 'test_db')
+			db = Mysql.connect('localhost', 'root', 'root', 'asdf')
 			db.query(query)
     end
   end

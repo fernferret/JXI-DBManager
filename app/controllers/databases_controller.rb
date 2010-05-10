@@ -36,7 +36,7 @@ class DatabasesController < ApplicationController
 
   def update
     @database = Database.find(params[:id])
-		@database.issue_query(@database.user, @database.rename_dbsql(params[:database]["name"]))
+		#We can't rename a database in mysql
     respond_to do |format|
       if @database.update_attributes(params[:database])
         flash[:notice] = 'Updated Database successfully'
@@ -59,13 +59,13 @@ class DatabasesController < ApplicationController
     @database.user = current_user 
     respond_to do |format|
       if @database.save
+				@database.issue_query(current_user, @database.create_dbsql)
         flash[:notice] = 'Created new Database successfully'
         format.html {redirect_to(@database)}
       else
         format.html {render :action => "new"}
       end
     end
-		@database.issue_query(current_user, @database.create_dbsql)
   end
 
   def destroy

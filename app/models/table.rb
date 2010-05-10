@@ -29,7 +29,7 @@ class Table < ActiveRecord::Base
   end
   
   def create_dbsql
-    return "CREATE TABLE " + self.name
+    return "CREATE TABLE " + self.name + ' (required int)'
   end
   
   def alter_dbsql
