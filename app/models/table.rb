@@ -37,7 +37,7 @@ class Table < ActiveRecord::Base
   end
   
   def rename_table(newTableName)
-    return "ALTER TABLE " + self.name + " MODIFY NAME = " + newTableName
+    return "RENAME TABLE " + self.name + " TO " + newTableName
   end
   
   def drop_dbsql

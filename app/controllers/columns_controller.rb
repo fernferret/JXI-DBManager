@@ -21,7 +21,7 @@ class ColumnsController < ApplicationController
 		@database = @table.database
 		db = Mysql.connect('localhost', 'root', 'root', @database.name)
 		@database.issue_query(@database.user, @database.use_dbsql, db)
-		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.rename_column(@column.name), db)
+		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.rename_column(params[:column]['name']), db)
 
     respond_to do |format|
       if @column.update_attributes(params[:column])
