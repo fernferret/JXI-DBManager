@@ -149,7 +149,7 @@ class ColumnTest < ActiveSupport::TestCase
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
-    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+    assert_equal "USE " + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
     assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
 
@@ -160,7 +160,7 @@ class ColumnTest < ActiveSupport::TestCase
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
-    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+    assert_equal "USE " + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
     assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
 
@@ -171,7 +171,7 @@ class ColumnTest < ActiveSupport::TestCase
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
-    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+    assert_equal "USE " + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
     assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
 
@@ -182,11 +182,11 @@ class ColumnTest < ActiveSupport::TestCase
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
-    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+    assert_equal "USE " + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
     assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
 
-    assert_equal "EXEC sp_rename " + column.name + " " + "newColumnName", column.rename_column("newColumnName"), 'Did not generate valid SQL'
+    assert_equal "CHANGE " + column.name + " " + "newColumnName " + column.column_type, column.rename_column("newColumnName"), 'Did not generate valid SQL'
   end
   
 
@@ -194,7 +194,7 @@ class ColumnTest < ActiveSupport::TestCase
     database = Factory.create(:database)
     table = Factory.create(:table, :database => database)
     column = Factory.create(:column, :table => table)
-    assert_equal "USE dbo." + database.name, database.use_dbsql, 'Did not generate valid SQL'
+    assert_equal "USE " + database.name, database.use_dbsql, 'Did not generate valid SQL'
 
     assert_equal "ALTER TABLE " + table.name, table.alter_dbsql, 'Did not generate valid SQL'
 
