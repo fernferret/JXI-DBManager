@@ -19,7 +19,7 @@ class ColumnsController < ApplicationController
     @column = Column.find(params[:id])
 		@table = @column.table
 		@database = @table.database
-		db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
 		@database.issue_query(@database.user, @database.use_dbsql, db)
 		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.rename_column(params[:column]['name']), db)
 
@@ -45,11 +45,12 @@ class ColumnsController < ApplicationController
     @table = Table.find(params[:column][:table_id])
     @column = @table.columns.build(params[:column])
 		@database = @table.database
-		db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
-		@database.issue_query(@database.user, @database.use_dbsql, db)
-		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.add_dbsql, db)
-		
+				
 		if @column.save
+			db = Mysql.connect('localhost', 'root', 'root', @database.name)
+			@database.issue_query(@database.user, @database.use_dbsql, db)
+			@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.add_dbsql, db)
+
 			redirect_to(@table)
 		else
       render :action => "new"
@@ -60,7 +61,7 @@ class ColumnsController < ApplicationController
     @column = Column.find(params[:id])
 		@table = @column.table
 		@database = @table.database
-		db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
 		@database.issue_query(@database.user, @database.use_dbsql, db)
 		@database.issue_query(@database.user, @table.alter_dbsql + ' ' + @column.drop_dbsql, db)
     @column.destroy

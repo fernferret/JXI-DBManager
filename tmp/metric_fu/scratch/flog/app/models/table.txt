@@ -1,5 +1,5 @@
-    30.9: flog total
-     7.7: flog/method average
+    46.3: flog total
+     5.8: flog/method average
 
     11.1: Table#view_table
      4.1: ==
@@ -19,8 +19,20 @@
      1.7: database
      1.5: permissions
      1.5: user
+     6.0: Table#rename_table
+     4.2: +
+     1.8: name
      4.4: Table#none
      1.1: validates_presence_of
      1.1: validates_uniqueness_of
      1.1: has_many
      1.1: belongs_to
+     4.2: Table#create_dbsql
+     2.6: +
+     1.6: name
+     2.6: Table#drop_dbsql
+     1.4: name
+     1.2: +
+     2.6: Table#alter_dbsql
+     1.4: name
+     1.2: +

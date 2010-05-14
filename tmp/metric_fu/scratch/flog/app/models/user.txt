@@ -1,9 +1,11 @@
-     5.5: flog total
-     5.5: flog/method average
+     7.7: flog total
+     7.7: flog/method average
 
-     5.5: User#none
+     7.7: User#none
      1.1: acts_as_authentic
+     1.1: has_and_belongs_to_many
      1.1: validates_presence_of
      1.1: attr_accessible
      1.1: validates_uniqueness_of
+     1.1: validates_format_of
      1.1: has_many

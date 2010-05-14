@@ -23,7 +23,7 @@ class TablesController < ApplicationController
   def update
     @table = Table.find(params[:id])
 		@database = @table.database
-		db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
 		@database.issue_query(@database.user, @database.use_dbsql, db)
 		@database.issue_query(@database.user, @table.rename_table(params[:table]['name']), db)
 
@@ -49,7 +49,7 @@ class TablesController < ApplicationController
 		@database = Database.find(params[:table][:database_id])
 		@table = @database.tables.build(params[:table])
 		if @table.save
-			db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
+			db = Mysql.connect('localhost', 'root', 'root', @database.name)
 			@database.issue_query(@database.user, @database.use_dbsql, db)
 			@database.issue_query(@database.user, @table.create_dbsql, db)
 			redirect_to(@table)
@@ -61,7 +61,7 @@ class TablesController < ApplicationController
   def destroy
 		@table = Table.find(params[:id])
 		@database = Database.find(@table.database_id)
-		db = Mysql.connect('137.112.150.54', 'root', 'root', @database.name)
+		db = Mysql.connect('localhost', 'root', 'root', @database.name)
 		@database.issue_query(@database.user, @database.use_dbsql, db)
 		@database.issue_query(@database.user, @table.drop_dbsql, db)
 		@table.destroy
