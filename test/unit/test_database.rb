@@ -187,4 +187,36 @@ class DatabaseTest < ActiveSupport::TestCase
     database = Factory.create(:database, :name => dbname, :user => @userA)
     assert_equal "DROP DATABASE " + dbname,database.drop_dbsql, 'Could not drop database in SQL'
   end
+
+	# Test User Sharing
+	def user_cant_share_db_with_themselves
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert !database.share_with_user(@userA), 'User could share database with themselves'
+	end	
+
+	def user_can_share_db_with_ta
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert database.share_with_user(@taUser), 'User cannot share database with ta'
+	end	
+
+	def user_can_share_db_with_user
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert database.share_with_user(@userB), 'User cannot share	database with other user'
+	end	
+
+	def user_can_share_db_with_admin
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert database.share_with_user(@adminUser), 'User cannot share	database with admin'
+	end	
+
+	def user_cant_share_db_with_nonexistent_user
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert !database.share_with_user(nil), 'User cannot share database with nonexistant user'
+	end
+	
+	def user_can_share_with_multiple_other_users
+		database = Factory.create(:database, :name => 'db name', :user => @userA)
+		assert database.share_with_user(@userB), 'User could not share db'
+		assert database.share_with_user(@taUser), 'User could not share with multiple other users'
+	end
 end
