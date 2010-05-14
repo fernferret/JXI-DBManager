@@ -81,6 +81,13 @@ class DatabaseTest < ActiveSupport::TestCase
 
     assert !database.destroy_database(@userB), 'User could delete someone else\'s database'
   end
+  
+  # Test that a general user that has access to a shared database cannot delete it
+  def test_shared_user_delete_someone_elses_database
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :users => [@userB])
+
+    assert !database.destroy_database(@userB), 'User could delete someone else\'s database'
+  end
 
   #Edit
 
@@ -104,7 +111,7 @@ class DatabaseTest < ActiveSupport::TestCase
 
   # Test that a general user cannot edit anyone's databases but their own.
   def test_user_edit_someone_elses_database_with_permissions
-    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :users => @userB)
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :users => [@userB])
     assert database.edit_database(@userB), 'User could edit someone else\'s database'
   end
   
@@ -157,8 +164,8 @@ class DatabaseTest < ActiveSupport::TestCase
   end
   
   def test_user_view_someone_elses_database_with_permissions
-    database = Factory.create(:database, :name => 'My First Database', :user => @userA)
-    assert !database.view_database(@userB), 'User could view someone else\'s database'
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :users => [@userB])
+    assert database.view_database(@userB), 'User could view someone else\'s database'
   end
 
   # Test that a general user cannot view anyone else's databases without permission

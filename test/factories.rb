@@ -3,6 +3,7 @@
 Factory.define :database, :class => Database do |d|
   d.sequence(:name) { |n| "My DB#{n}" }
   d.user { |user| user.association(:user) }
+  d.users Array.new
 end
 
 Factory.define :table, :class => Table do |f|

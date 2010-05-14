@@ -21,7 +21,7 @@ class Database < ActiveRecord::Base
   end
 
   def edit_database(user)
-    if self.user == user || user.permissions == "admin"
+    if self.user == user || user.permissions == "admin" || @users.include?(user)
       return true
     else
       return false
@@ -29,7 +29,7 @@ class Database < ActiveRecord::Base
   end
 
   def view_database(user)
-    if self.user == user || user.permissions == "ta" || user.permissions == "admin"
+    if @user == user || user.permissions == "ta" || user.permissions == "admin" || @users.include?(user)
       return true
     else
       return false
@@ -53,11 +53,12 @@ class Database < ActiveRecord::Base
   end
 
   def share_with_user(user)
-
+    if (user != nil)
+      @users << user
+    end
   end
 
   def unshare_with_user(user)
-    
   end
 
   def issue_query(user, query, db)

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20100509192541) do
     t.string  "name"
   end
 
-  create_table "databases_users", :force => true do |t|
+  create_table "databases_users", :id => false, :force => true do |t|
     t.integer "database_id"
     t.integer "user_id"
   end
