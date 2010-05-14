@@ -104,7 +104,7 @@ class DatabaseTest < ActiveSupport::TestCase
 
   # Test that a general user cannot edit anyone's databases but their own.
   def test_user_edit_someone_elses_database_with_permissions
-    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :shared => @userB)
+    database = Factory.create(:database, :name => 'My First Database', :user => @userA, :users => @userB)
     assert database.edit_database(@userB), 'User could edit someone else\'s database'
   end
   
