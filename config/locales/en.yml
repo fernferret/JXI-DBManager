@@ -2,4 +2,25 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  add: "Add"
+  drop: "Drop"
+  edit: "Edit"
+  back: "Back"
+  forward: "Forward"
+  database: "Database"
+  table: "Table"
+  column: "Column"
+  username: "Username"
+  password: "Password"
+  name: "Name"
+  type: "Type"
+  null: "Null"
+  new: "New"
+  login: "Login"
+  logout: "Logout"
+  profile: "Profile"
+  register: "Register"
+  email: "Email"
+  password_confirmation: "Confirm Password"
+  user: "User"
+  all: "All

@@ -57,6 +57,7 @@ class DatabasesController < ApplicationController
   def create
     @database = Database.new(params[:database])
     @database.user = current_user 
+		@database.users = []
     respond_to do |format|
       if @database.save
 				db = Mysql.connect('localhost', 'root', 'root', 'test_db')

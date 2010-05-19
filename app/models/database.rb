@@ -21,7 +21,7 @@ class Database < ActiveRecord::Base
   end
 
   def edit_database(user)
-    if self.user == user || user.permissions == "admin" || @users.include?(user)
+    if self.user == user || user.permissions == "admin" || @users != nil && @users.include?(user)
       return true
     else
       return false
@@ -29,7 +29,7 @@ class Database < ActiveRecord::Base
   end
 
   def view_database(user)
-    if @user == user || user.permissions == "ta" || user.permissions == "admin" || @users.include?(user)
+    if @user == user || user.permissions == "ta" || user.permissions == "admin" || (@users != nil && @users.include?(user)) 
       return true
     else
       return false

@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
   helper_method :current_user
+	before_filter :set_locale
   
   private
   
@@ -20,4 +21,8 @@ class ApplicationController < ActionController::Base
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
   end
+
+	def set_locale
+		I18n.locale = params[:locale]
+	end
 end
