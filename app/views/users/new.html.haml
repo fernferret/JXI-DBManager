@@ -1,5 +1,5 @@
 %p
-	='New User'
-
+	-# ='New User'
+	= (I18n.t :new) + ' ' + (I18n.t :user)
 = render :partial => 'form'
 
