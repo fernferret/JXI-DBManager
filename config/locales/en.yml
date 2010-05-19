@@ -14,7 +14,7 @@ en:
   password: "Password"
   name: "Name"
   type: "Type"
-  null: "Null"
+  null_column: "Null"
   new: "New"
   login: "Login"
   logout: "Logout"

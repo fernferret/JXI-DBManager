@@ -14,7 +14,7 @@ ja:
   password: "パスワード"
   name: "名"
   type: "タイプ"
-  null: "ヌル"
+  null_column: "ヌル"
   new: "新しい"
   login: "ログイン"
   logout: "ログアウト"

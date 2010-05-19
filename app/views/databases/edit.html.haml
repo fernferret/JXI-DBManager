@@ -1,13 +1,13 @@
-%h1= 'Edit a database'
+%h1= I18n.t(:editadatabase)
 - form_for @database do |db|
-  = db.error_messages
+  = I18n.t(db.error_messages)
   %p
-    = db.label :name
+    = db.label I18n.t(:name)
     %br= db.text_field :name
-    = db.label :users
+    = db.label I18n.t(:users)
     %select{:name => 'database[user_id]', :id => 'database_user_id'}
       - @users.each do |user|
         %option{:value => user.id}
           = user.name
 
-  %p= submit_tag('Edit Database')
+  %p= submit_tag(I18n.t(:edit) + ' ' + I18n.t(:database))

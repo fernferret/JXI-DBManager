@@ -6,7 +6,7 @@
     %br= f.text_field :name
     = f.label I18n.t(:type)
     %br= f.text_field :column_type
-    = f.label I18n.t(:null)
+    = f.label I18n.t(:null_column)
     %br= f.text_field :null
     = f.hidden_field :table_id
   %p= submit_tag(I18n.t(:edit) + I18n.t(:column))

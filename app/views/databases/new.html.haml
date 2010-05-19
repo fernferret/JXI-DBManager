@@ -1,7 +1,7 @@
-%h1= 'Add a database'
+%h1= I18n.t(:addadatabase)
 - form_for @database do |db|
-  = db.error_messages
+  = I18n.t(db.error_messages)
   %p
-    = db.label :name
+    = db.label I18n.t(:name)
     %br= db.text_field :name
-  %p= submit_tag('Add Database')
+  %p= submit_tag(I18n.t(:add) + ' ' + I18n.t(:database))

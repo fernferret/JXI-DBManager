@@ -1,29 +1,29 @@
-%h1= 'JXI Database Manager'
+%h1= I18n.t(:dbmgrname)
 - if @alldatabases != nil
-  %h1= 'All Databases'
+  %h1= I18n.t(:all) + ' ' + I18n.t(:databases)
   %table
     %tr
-      %th= 'Name'
+      %th= I18n.t(:name)
     - if @current_user != nil and @current_user.permissions == "admin"
       - @alldatabases.each do |database|
         %tr
           %td= link_to(database.name, database)
-          %td= link_to('Delete', database, :confirm => "Are you sure?", :method => :delete )
-          %td= link_to('Edit', edit_database_path(database))
+          %td= link_to(I18n.t(:delete), database, :confirm => I18n.t(:areyousure), :method => :delete )
+          %td= link_to(I18n.t(:edit), edit_database_path(database))
     - else
       - @alldatabases.each do |database|
         %tr
           %td= link_to(database.name, database)
 - if current_user
-  %h1= 'My Databases'
-  %p= link_to('Add Database', new_database_path())
+  %h1= I18n.t(:my) + ' ' + I18n.t(:databases)
+  %p= link_to(I18n.t(:add) + ' ' + I18n.t(:database), new_database_path())
   %table
     %tr
-      %th= 'Name'
+      %th= I18n.t(:name)
     - @mydatabases.each do |database|
       %tr
         %td= link_to(database.name, database)
-        %td= link_to('Delete', database, :confirm => "Are you sure?", :method => :delete )
-        %td= link_to('Edit', edit_database_path(database))
-%h4= 'Please login above'
+        %td= link_to(I18n.t(:delete), database, :confirm => I18n.t(:areyousure), :method => :delete )
+        %td= link_to(I18n.t(:edit), edit_database_path(database))
+%h4= I18n.t(:pleaseloginabove)
 
