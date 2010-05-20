@@ -22,7 +22,5 @@
 			- else
 				= link_to((I18n.t 'register'), new_user_path)
 				= link_to((I18n.t 'login'), login_path)
-			- form_tag '' do
-				= select_tag("locale", options_for_select(['en', 'ja'], I18n.locale), { :index => nil, :onchange => 'this.form.submit()'}) 
 		= yield
 

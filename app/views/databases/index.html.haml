@@ -26,4 +26,6 @@
         %td= link_to(I18n.t(:delete), database, :confirm => I18n.t(:areyousure), :method => :delete )
         %td= link_to(I18n.t(:edit), edit_database_path(database))
 %h4= I18n.t(:pleaseloginabove)
+- form_tag '' do
+  = select_tag("locale", options_for_select(['en', 'ja'], I18n.locale), { :index => nil, :onchange => 'this.form.submit()'}) 
 
