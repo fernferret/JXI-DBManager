@@ -1,10 +1,10 @@
-%h1= I18n.t(:newtable)
+%h1= I18n.t(:addatable)
 - form_for(@table) do |f|
   = f.error_messages
   %p
     = f.label I18n.t :name
     %br= f.text_field :name
     = f.hidden_field :database_id
-  %p= submit_tag(I18n.t(:add) + ' ' + I18n.t(:new) + ' ' + I18n.t(:database))
+  %p= submit_tag(I18n.t(:add) + ' ' + I18n.t(:new) + ' ' + I18n.t(:table))
 
 
