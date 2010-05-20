@@ -1,5 +1,5 @@
-   132.5: flog total
-    18.9: flog/method average
+   134.8: flog total
+    19.3: flog/method average
 
     44.2: ColumnsController#update
      7.6: assignment
@@ -14,36 +14,36 @@
      1.8: alter_dbsql
      1.6: redirect_to
      1.6: rename_column
-     1.5: flash
      1.5: render
+     1.5: flash
      1.4: use_dbsql
      1.4: name
      1.3: update_attributes
-     1.2: find
-     1.2: connect
+     1.2: database
      1.2: respond_to
-     1.2: database
-     1.2: table
-    32.6: ColumnsController#create
-     4.8: assignment
-     4.4: []
-     3.4: params
-     3.0: +
-     2.8: user
-     2.4: issue_query
-     1.8: alter_dbsql
-     1.6: add_dbsql
-     1.4: use_dbsql
-     1.4: columns
-     1.4: name
-     1.3: render
-     1.3: redirect_to
-     1.2: database
-     1.2: find
-     1.2: branch
      1.2: connect
-     1.2: save
+     1.2: table
+     1.2: find
+    34.9: ColumnsController#create
+     5.0: assignment
+     4.4: []
+     3.4: +
+     3.4: params
+     3.2: user
+     2.8: issue_query
+     2.0: alter_dbsql
+     1.8: add_dbsql
+     1.6: name
+     1.6: use_dbsql
+     1.4: redirect_to
+     1.4: connect
+     1.4: columns
+     1.3: render
      1.2: build
+     1.2: branch
+     1.2: database
+     1.2: save
+     1.2: find
     28.1: ColumnsController#destroy
      6.1: assignment
      3.0: +
@@ -51,37 +51,37 @@
      2.5: branch
      2.4: issue_query
      1.8: alter_dbsql
-     1.6: params
      1.6: drop_dbsql
+     1.6: params
      1.4: redirect_to
      1.4: use_dbsql
      1.4: []
      1.4: name
      1.3: html
-     1.2: find
      1.2: respond_to
      1.2: destroy
+     1.2: table
      1.2: connect
      1.2: database
-     1.2: table
+     1.2: find
     10.1: ColumnsController#new
      3.7: assignment
      1.6: params
      1.4: columns
      1.4: []
      1.3: html
-     1.2: find
+     1.2: build
      1.2: respond_to
      1.2: branch
-     1.2: build
+     1.2: find
      7.3: ColumnsController#edit
      2.5: assignment
      1.6: params
      1.4: []
      1.3: html
+     1.2: find
      1.2: respond_to
      1.2: branch
-     1.2: find
      5.9: ColumnsController#index
      2.4: assignment
      1.6: params

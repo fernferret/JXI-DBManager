@@ -13,7 +13,7 @@ class Table < ActiveRecord::Base
 	end
 
 	def edit_table(user)
-		if self.database.user == user || user.permissions == "admin"
+		if self.database.user == user || user.permissions == "admin" || self.database.users != nil && self.database.users.include?(user)
 			return true
 		else
 			return false
@@ -21,7 +21,7 @@ class Table < ActiveRecord::Base
 	end
 
   def view_table(user)
-    if self.database.user == user || user.permissions == "ta" || user.permissions == "admin"
+    if self.database.user == user || user.permissions == "ta" || user.permissions == "admin" || self.database.users != nil && self.database.users.include?(user)
       return true
     else
       return false

@@ -23,10 +23,10 @@
      4.2: +
      1.8: name
      4.4: Table#none
+     1.1: belongs_to
      1.1: validates_presence_of
      1.1: validates_uniqueness_of
      1.1: has_many
-     1.1: belongs_to
      4.2: Table#create_dbsql
      2.6: +
      1.6: name

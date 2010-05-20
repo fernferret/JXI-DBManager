@@ -105,6 +105,18 @@ class ColumnTest < ActiveSupport::TestCase
 		assert !@columnA.edit_column(@userTA), 'TA could edit someone else\'s column'
 	end
 	
+	#Test that a user can edit a database with permission
+	def test_user_edit_someone_elses_column_with_permissions
+    @databaseA.users = [@userB];
+    assert @columnA.edit_column(@userB), 'User could edit someone else\'s column'
+  end
+  
+  # Test that the user cannot edit someone else's database with it being shared.
+  def test_user_edit_someone_elses_column_without_permissions
+    @databaseA.users = [];
+    assert !@columnA.edit_column(@userB), 'User could edit someone else\'s database'
+  end
+	
 	# Test that a user can edit their own column name
 	def test_edit_own_column_name
 	  @columnA.name = 'column name'
@@ -144,6 +156,19 @@ class ColumnTest < ActiveSupport::TestCase
 	def ta_cant_view_someone_elses_column
 		assert !@columnA.view_column(@userTA), 'TA could view someone else\'s column'
 	end
+	
+	#Test that a general user can view someone else's column with permission.
+	def test_user_view_someone_elses_column_with_permissions
+    @databaseA.users = [@userB];
+    assert @columnA.view_column(@userB), 'User could view someone else\'s database'
+  end
+
+  # Test that a general user cannot view anyone else's databases without permission
+  def test_user_view_someone_elses_database_without_permissions
+    @databaseA.users = [];
+    assert !@columnA.view_column(@userB), 'User could view someone else\'s database'
+  end
+  
   # TESTING SQL COMMANDS
   def test_add_sql_column
     database = Factory.create(:database)

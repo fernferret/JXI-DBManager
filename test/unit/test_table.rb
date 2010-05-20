@@ -96,6 +96,18 @@ class TableTest < ActiveSupport::TestCase
 	def test_edit_own_table
 		assert @tableA.update_attributes(:name => "new table"), 'Could not update table'
 	end
+	
+	# Test that a general user cannot edit anyone's tables but their own.
+  def test_user_edit_someone_elses_database_with_permissions
+    @databaseA.users = [@userB];
+    assert @tableA.edit_table(@userB), 'User could edit someone else\'s table'
+  end
+  
+  # Test that the user cannot edit someone else's table with it being shared.
+  def test_user_edit_someone_elses_database_without_permissions
+    @databaseA.users = [];
+    assert !@tableA.edit_table(@userB), 'User could edit someone else\'s table'
+  end
 
 #view
   # Test that a user can view their own table
@@ -117,6 +129,18 @@ class TableTest < ActiveSupport::TestCase
 	def ta_can_view_someone_elses_table
 		assert @tableA.view_table(@userTA), 'TA could view someone else\'s table'
 	end
+	
+	#test viewing a table with permissions
+	def test_user_view_someone_elses_database_with_permissions
+    @databaseA.users = [@userB];
+    assert @tableA.view_table(@userB), 'User could view someone else\'s table'
+  end
+
+  # Test that a general user cannot view anyone else's tables without permission
+  def test_user_view_someone_elses_database_without_permissions
+    @databaseA.users = [];
+    assert !@tableA.view_table(@userB), 'User could view someone else\'s table'
+  end
 
   # TESTING SQL COMMANDS
   def test_add_sql_table

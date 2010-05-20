@@ -89,7 +89,7 @@ class DatabaseTest < ActiveSupport::TestCase
     assert !database.destroy_database(@userB), 'User could delete someone else\'s database'
   end
 
-  #Edit
+#Edit
 
   # Test that a database can be edited successfully
   def test_edit_database

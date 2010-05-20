@@ -507,8 +507,27 @@ table td.score {
   font-size: 50%;
 }
 
+.bluff-tooltip {
+	background: #fff;
+	border: 1px solid #d1edf5;
+	padding: 8px 8px 6px;
+}
+.bluff-tooltip .color {
+	display: block;
+	height: 4px;
+	width: 30px;
+	margin: 0 0 4px;
+	overflow: hidden;
+}
+.bluff-tooltip .data {
+	font-weight: bold;
+}
+
     </style>
     <link REL="SHORTCUT ICON" HREF="/favicon.ico">
+    <script language="javascript" src="js-class.js" type="text/javascript"></script>
+    <script language="javascript" src="bluff-min.js" type="text/javascript"></script>
+    <script language="javascript" src="excanvas.js" type="text/javascript"></script>
   </head>
   <body>
     <div id='header'>
@@ -531,9 +550,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>DatabasesController#update</td>
+      <td>DatabasesController#create</td>
       <td>5</td>
-      <td>11</td>
+      <td>14</td>
     </tr>
     
     <tr>
@@ -549,9 +568,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>DatabasesController#create</td>
+      <td>DatabasesController#update</td>
       <td>5</td>
-      <td>13</td>
+      <td>11</td>
     </tr>
     
     <tr>
@@ -585,9 +604,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>TablesController#index</td>
+      <td>TablesController#edit</td>
       <td>2</td>
-      <td>7</td>
+      <td>5</td>
     </tr>
     
     <tr>
@@ -597,45 +616,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>DatabasesController#edit</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    
-    <tr>
       <td>UsersController#update</td>
       <td>2</td>
       <td>8</td>
-    </tr>
-    
-    <tr>
-      <td>Table#view_table</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    
-    <tr>
-      <td>Table#edit_table</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    
-    <tr>
-      <td>Table#destroy_table</td>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    
-    <tr>
-      <td>DatabasesController#new</td>
-      <td>2</td>
-      <td>5</td>
-    </tr>
-    
-    <tr>
-      <td>TablesController#edit</td>
-      <td>2</td>
-      <td>5</td>
     </tr>
     
     <tr>
@@ -645,9 +628,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>TablesController#new</td>
+      <td>TablesController#index</td>
       <td>2</td>
-      <td>6</td>
+      <td>7</td>
     </tr>
     
     <tr>
@@ -669,9 +652,21 @@ table td.score {
     </tr>
     
     <tr>
-      <td>Database#issue_query</td>
+      <td>DatabasesController#new</td>
       <td>2</td>
-      <td>4</td>
+      <td>5</td>
+    </tr>
+    
+    <tr>
+      <td>ApplicationController#current_user</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    
+    <tr>
+      <td>TablesController#new</td>
+      <td>2</td>
+      <td>6</td>
     </tr>
     
     <tr>
@@ -681,9 +676,39 @@ table td.score {
     </tr>
     
     <tr>
-      <td>ApplicationController#current_user</td>
+      <td>Table#view_table</td>
       <td>2</td>
-      <td>3</td>
+      <td>6</td>
+    </tr>
+    
+    <tr>
+      <td>Table#edit_table</td>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    
+    <tr>
+      <td>Table#destroy_table</td>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    
+    <tr>
+      <td>Database#issue_query</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    
+    <tr>
+      <td>DatabasesController#edit</td>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    
+    <tr>
+      <td>Database#share_with_user</td>
+      <td>2</td>
+      <td>4</td>
     </tr>
     
     <tr>
@@ -707,7 +732,7 @@ table td.score {
     <tr>
       <td>ColumnsController#create</td>
       <td>2</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     
     <tr>
@@ -777,45 +802,9 @@ table td.score {
     </tr>
     
     <tr>
-      <td>Database#share_with_user</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
       <td>Database#unshare_with_user</td>
       <td>1</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
-      <td>Column#add_dbsql</td>
       <td>1</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
-      <td>Column#alter_dbsql</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
-      <td>Column#rename_column</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
-      <td>TablesController#show</td>
-      <td>1</td>
-      <td>3</td>
-    </tr>
-    
-    <tr>
-      <td>Column#drop_dbsql</td>
-      <td>1</td>
-      <td>2</td>
     </tr>
     
     <tr>
@@ -843,6 +832,36 @@ table td.score {
     </tr>
     
     <tr>
+      <td>TablesController#show</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    
+    <tr>
+      <td>Column#add_dbsql</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    
+    <tr>
+      <td>Column#alter_dbsql</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    
+    <tr>
+      <td>Column#rename_column</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    
+    <tr>
+      <td>Column#drop_dbsql</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    
+    <tr>
       <td>UsersController#new</td>
       <td>1</td>
       <td>2</td>
@@ -850,6 +869,12 @@ table td.score {
     
     <tr>
       <td>UsersController#edit</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    
+    <tr>
+      <td>ApplicationController#set_locale</td>
       <td>1</td>
       <td>2</td>
     </tr>
@@ -881,7 +906,7 @@ table td.score {
     <tr>
       <td>DatabasesController</td>
       <td>28</td>
-      <td>91</td>
+      <td>92</td>
     </tr>
     
     <tr>
@@ -891,15 +916,15 @@ table td.score {
     </tr>
     
     <tr>
-      <td>ColumnsController</td>
+      <td>Database</td>
       <td>16</td>
-      <td>73</td>
+      <td>66</td>
     </tr>
     
     <tr>
-      <td>Database</td>
-      <td>15</td>
-      <td>65</td>
+      <td>ColumnsController</td>
+      <td>16</td>
+      <td>74</td>
     </tr>
     
     <tr>
@@ -921,21 +946,21 @@ table td.score {
     </tr>
     
     <tr>
+      <td>ApplicationController</td>
+      <td>5</td>
+      <td>24</td>
+    </tr>
+    
+    <tr>
       <td>UserSessionsController</td>
       <td>4</td>
       <td>22</td>
     </tr>
     
     <tr>
-      <td>ApplicationController</td>
-      <td>4</td>
-      <td>19</td>
-    </tr>
-    
-    <tr>
-      <td>User</td>
+      <td>TableControllerHelper</td>
       <td>0</td>
-      <td>8</td>
+      <td>1</td>
     </tr>
     
     <tr>
@@ -945,19 +970,7 @@ table td.score {
     </tr>
     
     <tr>
-      <td>UserSession</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    
-    <tr>
-      <td>UserSessionsHelper</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    
-    <tr>
-      <td>UsersHelper</td>
+      <td>ColumnControllerHelper</td>
       <td>0</td>
       <td>1</td>
     </tr>
@@ -975,15 +988,27 @@ table td.score {
     </tr>
     
     <tr>
-      <td>ColumnControllerHelper</td>
+      <td>UserSessionsHelper</td>
       <td>0</td>
       <td>1</td>
     </tr>
     
     <tr>
-      <td>TableControllerHelper</td>
+      <td>UsersHelper</td>
       <td>0</td>
       <td>1</td>
+    </tr>
+    
+    <tr>
+      <td>User</td>
+      <td>0</td>
+      <td>8</td>
+    </tr>
+    
+    <tr>
+      <td>UserSession</td>
+      <td>0</td>
+      <td>2</td>
     </tr>
     
   </table>
@@ -996,7 +1021,7 @@ table td.score {
         <h3>databases_controller.rb</h3>
         <h4>Class : DatabasesController</h4>
         <h5>Total complexity : 28</h5>
-        <h5>Total lines : 91</h5>
+        <h5>Total lines : 92</h5>
         <table>
             <tr>
               <th>Method</th>
@@ -1036,7 +1061,7 @@ table td.score {
                 5 
               </td>
               <td>
-                13
+                14
               </td>
             </tr>
           
@@ -1210,7 +1235,7 @@ table td.score {
         <h3>columns_controller.rb</h3>
         <h4>Class : ColumnsController</h4>
         <h5>Total complexity : 16</h5>
-        <h5>Total lines : 73</h5>
+        <h5>Total lines : 74</h5>
         <table>
             <tr>
               <th>Method</th>
@@ -1262,7 +1287,7 @@ table td.score {
                 2 
               </td>
               <td>
-                13
+                14
               </td>
             </tr>
           
@@ -1310,8 +1335,8 @@ table td.score {
       
         <h3>database.rb</h3>
         <h4>Class : Database</h4>
-        <h5>Total complexity : 15</h5>
-        <h5>Total lines : 65</h5>
+        <h5>Total complexity : 16</h5>
+        <h5>Total lines : 66</h5>
         <table>
             <tr>
               <th>Method</th>
@@ -1340,6 +1365,18 @@ table td.score {
               </td>
               <td>
                 6
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Database#share_with_user
+              </td>
+              <td>
+                2 
+              </td>
+              <td>
+                4
               </td>
             </tr>
           
@@ -1381,7 +1418,7 @@ table td.score {
           
             <tr>
               <td>
-                Database#drop_dbsql
+                Database#create_dbsql
               </td>
               <td>
                 1 
@@ -1393,7 +1430,7 @@ table td.score {
           
             <tr>
               <td>
-                Database#create_dbsql
+                Database#drop_dbsql
               </td>
               <td>
                 1 
@@ -1417,132 +1454,19 @@ table td.score {
           
             <tr>
               <td>
-                Database#share_with_user
-              </td>
-              <td>
-                1 
-              </td>
-              <td>
-                2
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
                 Database#unshare_with_user
               </td>
               <td>
                 1 
               </td>
               <td>
-                2
+                1
               </td>
             </tr>
           
             <tr>
               <td>
                 Database#exists_with_title
-              </td>
-              <td>
-                1 
-              </td>
-              <td>
-                2
-              </td>
-            </tr>
-          
-        </table> 
-      
-  
-
-  
-      
-        <h3>column.rb</h3>
-        <h4>Class : Column</h4>
-        <h5>Total complexity : 10</h5>
-        <h5>Total lines : 45</h5>
-        <table>
-            <tr>
-              <th>Method</th>
-              <th>Complexity</th>
-              <th># Lines</th>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#destroy_column
-              </td>
-              <td>
-                2 
-              </td>
-              <td>
-                6
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#edit_column
-              </td>
-              <td>
-                2 
-              </td>
-              <td>
-                6
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#view_column
-              </td>
-              <td>
-                2 
-              </td>
-              <td>
-                6
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#add_dbsql
-              </td>
-              <td>
-                1 
-              </td>
-              <td>
-                2
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#alter_dbsql
-              </td>
-              <td>
-                1 
-              </td>
-              <td>
-                2
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#rename_column
-              </td>
-              <td>
-                1 
-              </td>
-              <td>
-                2
-              </td>
-            </tr>
-          
-            <tr>
-              <td>
-                Column#drop_dbsql
               </td>
               <td>
                 1 
@@ -1659,6 +1583,107 @@ table td.score {
 
   
       
+        <h3>column.rb</h3>
+        <h4>Class : Column</h4>
+        <h5>Total complexity : 10</h5>
+        <h5>Total lines : 45</h5>
+        <table>
+            <tr>
+              <th>Method</th>
+              <th>Complexity</th>
+              <th># Lines</th>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#destroy_column
+              </td>
+              <td>
+                2 
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#edit_column
+              </td>
+              <td>
+                2 
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#view_column
+              </td>
+              <td>
+                2 
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#add_dbsql
+              </td>
+              <td>
+                1 
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#alter_dbsql
+              </td>
+              <td>
+                1 
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#rename_column
+              </td>
+              <td>
+                1 
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
+                Column#drop_dbsql
+              </td>
+              <td>
+                1 
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+          
+        </table> 
+      
+  
+
+  
+      
         <h3>users_controller.rb</h3>
         <h4>Class : UsersController</h4>
         <h5>Total complexity : 6</h5>
@@ -1728,13 +1753,25 @@ table td.score {
       
         <h3>application_controller.rb</h3>
         <h4>Class : ApplicationController</h4>
-        <h5>Total complexity : 4</h5>
-        <h5>Total lines : 19</h5>
+        <h5>Total complexity : 5</h5>
+        <h5>Total lines : 24</h5>
         <table>
             <tr>
               <th>Method</th>
               <th>Complexity</th>
               <th># Lines</th>
+            </tr>
+          
+            <tr>
+              <td>
+                ApplicationController#current_user_session
+              </td>
+              <td>
+                2 
+              </td>
+              <td>
+                3
+              </td>
             </tr>
           
             <tr>
@@ -1751,13 +1788,13 @@ table td.score {
           
             <tr>
               <td>
-                ApplicationController#current_user_session
+                ApplicationController#set_locale
               </td>
               <td>
-                2 
+                1 
               </td>
               <td>
-                3
+                2
               </td>
             </tr>
           
@@ -1829,14 +1866,6 @@ table td.score {
   
       
   
-
-  
-      
-  
-
-  
-      
-  
       
   
 
@@ -1848,8 +1877,16 @@ table td.score {
       
   
 
+  
+      
+  
 
-<p>Generated on Mon May 10 13:30:43 -0400 2010</p>	
+  
+      
+  
+
+
+<p>Generated on Thu May 20 16:44:49 -0400 2010</p>	
 
     </div>
   </body>

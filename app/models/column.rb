@@ -12,7 +12,7 @@ class Column < ActiveRecord::Base
 	end
 
 	def edit_column(user)
-		if self.table.database.user == user || user.permissions == "admin"
+		if self.table.database.user == user || user.permissions == "admin" || (self.table.database.users != nil && self.table.database.users.include?(user))
 			return true
 		else
 			return false
@@ -20,7 +20,7 @@ class Column < ActiveRecord::Base
 	end
 
   def view_column(user)
-    if self.table.database.user == user || user.permissions == "ta" || user.permissions == "admin"
+    if self.table.database.user == user || user.permissions == "ta" || user.permissions == "admin" || (self.table.database.users != nil && self.table.database.users.include?(user))
       return true
     else
       return false
