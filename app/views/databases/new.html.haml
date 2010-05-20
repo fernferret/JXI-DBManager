@@ -1,6 +1,5 @@
 %h1= I18n.t(:addadatabase)
 - form_for @database do |db|
-  = I18n.t(db.error_messages)
   %p
     = db.label I18n.t(:name)
     %br= db.text_field :name
