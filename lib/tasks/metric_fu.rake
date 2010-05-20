@@ -2,7 +2,7 @@ begin
 	require 'metric_fu'
 
 	MetricFu::Configuration.run do |config|
-		config.graphs = []
+		config.graphs = [:flog, :reek]
 		config.metrics = [:flog,:reek,:stats, :saikuro]
 		config.flog = { :dirs_to_flog => ['app'] }
 		config.reek = { :dirs_to_reek => ['app', 'lib'] }

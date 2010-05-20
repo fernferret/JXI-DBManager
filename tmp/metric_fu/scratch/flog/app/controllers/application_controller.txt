@@ -1,23 +1,26 @@
-    16.4: flog total
-     4.1: flog/method average
+    24.9: flog total
+     6.2: flog/method average
 
+    11.3: ApplicationController#set_locale
+     3.8: []
+     2.9: params
+     2.8: session
+     2.5: assignment
+     2.4: branch
+     1.3: default_locale
      6.6: ApplicationController#none
-     1.1: protect_from_forgery
-     1.1: filter_parameter_logging
      1.1: helper_method
-     1.1: private
-     1.1: before_filter
      1.1: helper
+     1.1: before_filter
+     1.1: protect_from_forgery
+     1.1: private
+     1.1: filter_parameter_logging
      4.9: ApplicationController#current_user
      2.8: current_user_session
      2.4: branch
      1.3: record
      1.2: assignment
-     2.9: ApplicationController#set_locale
-     1.4: params
-     1.2: []
-     1.2: assignment
      2.1: ApplicationController#current_user_session
-     1.2: branch
-     1.2: find
      1.2: assignment
+     1.2: find
+     1.2: branch
