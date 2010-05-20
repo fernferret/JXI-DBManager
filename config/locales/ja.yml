@@ -35,3 +35,5 @@ ja:
   pleaseloginabove: "ログインしてください"
   addacolumn: "列を追加する"
   locale: "ロケール: "
+  tables: "テーブル"
+  addadatabase: "新しいデータベースを追加する"
