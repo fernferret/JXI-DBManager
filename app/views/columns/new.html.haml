@@ -1,14 +1,16 @@
-%h1= 'New Column'
+%h1= I18n.t(:new) + I18n.t(:column)
 - form_for(@column) do |f|
-  = f.error_messages
+  = I18n.t(f.error_messages)
   %p
     = f.label I18n.t :name
     %br= f.text_field :name
-    = f.label I18n.t :column_type
+    %br
+    %br= f.label I18n.t :column_type
     %br= f.text_field :column_type
-    = f.label I18n.t :null_column
+    %br
+    %br= f.label I18n.t :null_column
     %br= f.text_field :null
     = f.hidden_field :table_id
-  %p= submit_tag('Add New Column')
+  %p= submit_tag(I18n.t(:addnewcolumn))
 
 
