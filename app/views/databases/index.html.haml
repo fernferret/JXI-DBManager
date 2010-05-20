@@ -25,5 +25,5 @@
         %td= link_to(database.name, database)
         %td= link_to(I18n.t(:delete), database, :confirm => I18n.t(:areyousure), :method => :delete )
         %td= link_to(I18n.t(:edit), edit_database_path(database))
-%h4= I18n.t(:pleaseloginabove)
+%h4= I18n.t(:locale) + I18n.t(:pleaseloginabove)
 
