@@ -23,4 +23,5 @@ en:
   email: "Email"
   password_confirmation: "Confirm Password"
   user: "User"
-  all: "All
+  all: "All"
+  tables: "Tables"

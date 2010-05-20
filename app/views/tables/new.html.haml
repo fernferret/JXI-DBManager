@@ -2,9 +2,9 @@
 - form_for(@table) do |f|
   = f.error_messages
   %p
-    = f.label :name
+    = f.label I18n.t :name
     %br= f.text_field :name
     = f.hidden_field :database_id
-  %p= submit_tag('Add New Table')
+  %p= submit_tag(I18n.t(:add) + ' ' + I18n.t(:new) + ' ' + I18n.t(:database))
 
 

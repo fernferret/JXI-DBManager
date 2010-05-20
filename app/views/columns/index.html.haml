@@ -2,15 +2,15 @@
 -# =link_to('Add a Row', :controller => 'columns', :action => 'new', :table_id => @table.id)
 %table
   %tr
-    %th= 'Name'
-    %th= 'Type'
-    %th= 'Null'
-    %th= 'View'
-    %th= 'Edit'
+    %th= I18n.t 'name'
+    %th= I18n.t 'type'
+    %th= I18n.t :null_column
+    %th= I18n.t 'view'
+    %th= I18n.t 'edit'
   - @table.columns.each do |column|
     %tr
       %td= column.name
       %td= column.column_type
       %td= column.null
-      %td= link_to('View',:controller => 'columns', :action => 'show',:column => 'id')
-      %td= link_to('Edit',:controller => 'columns', :action => 'edit'+column.id.to_s)
+      %td= link_to(I18n.t 'view',:controller => 'columns', :action => 'show',:column => 'id')
+      %td= link_to(I18n.t 'edit',:controller => 'columns', :action => 'edit'+column.id.to_s)

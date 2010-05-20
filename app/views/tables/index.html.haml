@@ -1,9 +1,9 @@
 %h1= 'All user tables'
 - if current_user
-  %h1= 'My Tables'
+  %h1= I18n.t 'tables'
   %table
     %tr
-      %th= 'Name'
+      %th= I18n.t 'name'
     - @tables.each do |table|
       %tr
         %td= link_to(table.name, table)

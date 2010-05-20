@@ -2,7 +2,7 @@
 - form_for @table do |table|
   = table.error_messages
   %p
-    = table.label :name
+    = table.label I18n.t :name
     %br= table.text_field :name
-  %p= submit_tag('Edit Database')
+  %p= submit_tag(I18n.t (:edit) + I18n.t (:database))
 

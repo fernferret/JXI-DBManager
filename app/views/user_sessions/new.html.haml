@@ -1,10 +1,10 @@
 %title= 'Login'
 - form_for @user_session do |f|
   %p
-    = f.label :username
+    = f.label I18n.t :username
     %br= f.text_field :username
   %p
-    = f.label :password
+    = f.label I18n.t :password
     %br= f.password_field :password
   %p
-    = submit_tag('Login')
+    = submit_tag(I18n.t 'login')
