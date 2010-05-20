@@ -1,6 +1,6 @@
 %h1= I18n.t(:editatable)
 - form_for @table do |table|
-  = I18n.t(table.error_messages)
+  = table.error_messages
   %p
     = table.label I18n.t :name
     %br= table.text_field :name
