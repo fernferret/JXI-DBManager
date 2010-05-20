@@ -1,5 +1,5 @@
-%h1= "Table: #{@table.name}"
-=link_to('Add a Column', :controller => 'columns', :action => 'new', :table_id => @table.id)
+%h1= I18n.t(:table) + ": #{@table.name}"
+=link_to(I18n.t(:addacolumn), :controller => 'columns', :action => 'new', :table_id => @table.id)
 %table
   %tr
     %th= I18n.t 'name'
@@ -14,4 +14,4 @@
       %td= column.null
       %td= link_to(I18n.t 'view',:controller => 'columns', :action => 'show',:column => 'id')
       %td= link_to(I18n.t 'edit',edit_column_path(column))
-      %td= link_to(I18n.t 'delete', column, :confirm => "Are you sure?", :method => :delete)
+      %td= link_to(I18n.t 'delete', column, :confirm => I18n.t(:areyousure), :method => :delete)

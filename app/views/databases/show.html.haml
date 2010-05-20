@@ -1,14 +1,14 @@
 %h1= "Database: #{@database.name}"
-=link_to('Add a Table', :controller => 'tables', :action => 'new', :database_id => @database.id)
+=link_to(I18n.t(:addatable), :controller => 'tables', :action => 'new', :database_id => @database.id)
 %table
   %tr
-    %th= 'Name'
-    %th= 'View'
-    %th= 'Edit'
+    %th= I18n.t(:name)
+    %th= I18n.t(:view)
+    %th= I18n.t(:edit)
   - @database.tables.each do |table|
     %tr
       %td= table.name
-      %td= link_to('View',:controller => 'tables', :action => table.id.to_s)
-      %td= link_to('Edit',edit_table_path(table))
-      %td= link_to('Delete', table, :confirm => "Are you sure?", :method => :delete)
+      %td= link_to(I18n.t(:view),:controller => 'tables', :action => table.id.to_s)
+      %td= link_to(I18n.t(:edit),edit_table_path(table))
+      %td= link_to(I18n.t(:delete), table, :confirm => I18n.t(:areyousure), :method => :delete)
 
