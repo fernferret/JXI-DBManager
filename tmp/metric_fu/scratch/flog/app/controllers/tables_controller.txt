@@ -1,5 +1,5 @@
-   122.9: flog total
-    17.6: flog/method average
+   124.5: flog total
+    17.8: flog/method average
 
     42.6: TablesController#update
      9.9: []
@@ -80,8 +80,9 @@
      1.2: respond_to
      1.2: find
      1.2: branch
-     4.4: TablesController#show
+     5.9: TablesController#show
+     2.4: assignment
      1.6: params
      1.4: []
      1.2: find
-     1.2: assignment
+     1.2: database

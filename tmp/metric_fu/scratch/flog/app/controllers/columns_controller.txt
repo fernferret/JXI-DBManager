@@ -1,7 +1,7 @@
-   134.8: flog total
-    19.3: flog/method average
+   136.2: flog total
+    19.5: flog/method average
 
-    44.2: ColumnsController#update
+    45.7: ColumnsController#update
      7.6: assignment
      6.7: []
      5.5: params
@@ -14,15 +14,16 @@
      1.8: alter_dbsql
      1.6: redirect_to
      1.6: rename_column
+     1.5: t
      1.5: flash
      1.5: render
      1.4: use_dbsql
      1.4: name
      1.3: update_attributes
-     1.2: find
+     1.2: database
      1.2: connect
      1.2: respond_to
-     1.2: database
+     1.2: find
      1.2: table
     34.9: ColumnsController#create
      5.0: assignment
@@ -33,16 +34,16 @@
      2.8: issue_query
      2.0: alter_dbsql
      1.8: add_dbsql
-     1.6: name
      1.6: use_dbsql
+     1.6: name
      1.4: redirect_to
      1.4: connect
      1.4: columns
      1.3: render
-     1.2: database
-     1.2: find
      1.2: branch
+     1.2: find
      1.2: save
+     1.2: database
      1.2: build
     28.1: ColumnsController#destroy
      6.1: assignment
@@ -54,12 +55,12 @@
      1.6: drop_dbsql
      1.6: params
      1.4: redirect_to
+     1.4: []
      1.4: use_dbsql
      1.4: name
-     1.4: []
      1.3: html
-     1.2: destroy
      1.2: respond_to
+     1.2: destroy
      1.2: find
      1.2: connect
      1.2: database

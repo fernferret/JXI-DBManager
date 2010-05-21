@@ -1,7 +1,7 @@
-   125.5: flog total
-    15.7: flog/method average
+   141.4: flog total
+    17.7: flog/method average
 
-    24.9: DatabasesController#create
+    26.3: DatabasesController#create
      7.9: assignment
      5.4: branch
      4.1: current_user
@@ -9,29 +9,57 @@
      1.7: create_dbsql
      1.6: redirect_to
      1.6: params
-     1.5: flash
-     1.5: render
      1.5: connect
+     1.5: flash
+     1.5: t
      1.5: issue_query
+     1.5: render
      1.4: []
      1.3: save
      1.2: respond_to
      1.2: new
-    20.7: DatabasesController#destroy_database
+    23.4: DatabasesController#destroy_database
      5.1: branch
      3.1: format
+     2.8: t
      2.7: html
-     2.6: assignment
      2.6: ==
+     2.6: assignment
      1.6: params
      1.5: redirect_to
-     1.5: user
      1.5: permissions
-     1.4: flash
+     1.5: user
      1.4: destroy
+     1.4: flash
      1.4: []
      1.2: find
-    18.7: DatabasesController#show
+    20.1: DatabasesController#index
+     9.8: assignment
+     4.9: branch
+     3.6: find
+     2.6: all
+     1.5: users
+     1.5: record
+     1.4: <<
+     1.3: include?
+     1.3: html
+     1.3: id
+     1.2: respond_to
+     1.2: each
+    20.1: DatabasesController#update
+     5.4: branch
+     4.0: assignment
+     3.3: params
+     2.9: html
+     2.9: []
+     1.6: redirect_to
+     1.5: flash
+     1.5: render
+     1.5: t
+     1.3: update_attributes
+     1.2: respond_to
+     1.2: find
+    20.0: DatabasesController#show
      6.7: assignment
      5.3: branch
      2.9: html
@@ -39,22 +67,11 @@
      2.4: find
      1.6: redirect_to
      1.6: params
+     1.5: t
      1.5: flash
      1.4: current_user
      1.4: []
      1.2: view_database
-    18.7: DatabasesController#update
-     5.4: branch
-     4.0: assignment
-     3.3: params
-     2.9: html
-     2.9: []
-     1.6: redirect_to
-     1.5: render
-     1.5: flash
-     1.3: update_attributes
-     1.2: respond_to
-     1.2: find
     18.1: DatabasesController#destroy
      3.7: assignment
      2.5: branch
@@ -66,20 +83,11 @@
      1.4: user
      1.4: []
      1.3: html
-     1.2: connect
      1.2: issue_query
      1.2: respond_to
      1.2: find
+     1.2: connect
      1.2: destroy
-    11.1: DatabasesController#index
-     6.1: assignment
-     2.4: branch
-     2.4: find
-     1.5: record
-     1.3: html
-     1.3: id
-     1.2: all
-     1.2: respond_to
      8.8: DatabasesController#edit
      3.7: assignment
      2.4: find
@@ -91,6 +99,6 @@
      4.6: DatabasesController#new
      2.5: assignment
      1.3: html
-     1.2: respond_to
      1.2: branch
+     1.2: respond_to
      1.2: new
