@@ -2,7 +2,7 @@ Feature: Manage databases
   In order to manage our databases
   As a user
   I want to be able to perform the DAVE functions
-  
+
 
   Scenario: Delete database
     Given the following databases:
@@ -54,3 +54,13 @@ Feature: Manage databases
       |New Second Database|stokesej|
       |New Third Database|rhodeska|
 
+  Scenario: Share database
+    Given the following databases:
+      |Name|Owner|
+      |My New Database|administrator|
+      |New Second Database|stokesej|
+      |New Third Database|rhodeska|
+    And I am logged in as "stokesej"
+    And I am on the Edit Database 1 Page
+    When I have filled in "user_id" with 2
+    Then I should see "Database Successfully Edited"

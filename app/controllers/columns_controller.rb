@@ -25,7 +25,7 @@ class ColumnsController < ApplicationController
 
     respond_to do |format|
       if @column.update_attributes(params[:column])
-        flash[:notice] = 'Updated Database successfully'
+        flash[:notice] = I18n.t(:updatedbsucc)
 				format.html {redirect_to(root_url)}
       else
         format.html {render :action => "edit"}

@@ -20,7 +20,7 @@ class DatabasesController < ApplicationController
       end
     else
       respond_to do |format|
-        flash[:notice] = 'You do not have permission to view this database'
+        flash[:notice] = I18n.t(:permdenied)
         format.html { redirect_to(:controller => "databases", :action => "index") }
       end
     end
@@ -39,7 +39,7 @@ class DatabasesController < ApplicationController
 		#We can't rename a database in mysql
     respond_to do |format|
       if @database.update_attributes(params[:database])
-        flash[:notice] = 'Updated Database successfully'
+        flash[:notice] = I18n.t(:updatedbsucc)
         format.html {redirect_to(@database)}
       else
         format.html {render :action => "edit"}
@@ -62,7 +62,7 @@ class DatabasesController < ApplicationController
       if @database.save
 				db = Mysql.connect('localhost', 'root', 'root', 'test_db')
 				@database.issue_query(current_user, @database.create_dbsql, db)
-        flash[:notice] = 'Created new Database successfully'
+        flash[:notice] = I18n.t(:createdbsucc)
         format.html {redirect_to(@database)}
       else
         format.html {render :action => "new"}
@@ -84,10 +84,10 @@ class DatabasesController < ApplicationController
     @database = Database.find(params[:id])
     if @database.user == user || user.permissions == "admin"
       @database.destroy
-      flash[:notice] = 'Sucessfully removed database'
+      flash[:notice] = I18n.t(:removesuccess)
       format.html { redirect_to(@database) }	
     else
-      format.html { "You don't have permissions to destroy this database" }
+      format.html { I18n.t(:permdenieddestroy) }
     end
   end
 end
