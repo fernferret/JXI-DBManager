@@ -1,5 +1,6 @@
 %h1= I18n.t(:database) + ": #{@database.name}"
 =link_to(I18n.t(:addatable), :controller => 'tables', :action => 'new', :database_id => @database.id)
+=link_to(I18n.t(:back), :controller => 'databases', :action => 'index')
 %table
   %tr
     %th= I18n.t(:name)
