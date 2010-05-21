@@ -5,7 +5,14 @@ class DatabasesController < ApplicationController
     @databases = Database.all
     current_user = UserSession.find
     user_id = current_user && current_user.record.id
+		@user = User.find(:first, :conditions => {:id => user_id})
     @mydatabases = Database.find(:all, :conditions => {:user_id => user_id})
+		@sdatabases = []
+	  Database.all.each do |db|
+			if db.users.include?(@user)
+				@sdatabases << db
+			end
+		end	
     respond_to do |format|
       format.html
     end

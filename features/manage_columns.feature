@@ -10,7 +10,7 @@ Feature: Manage columns
       |Color|string|null|
       |Name|string|notnull|
       |Added|date|notnull|
-    And I am logged in as "administrator"
+    And I am logged in as an Admin
     And I am on the View Table 1 Page
     When I press "Delete Color Column"
     Then I should see "Column Successfully Deleted"
@@ -20,7 +20,7 @@ Feature: Manage columns
       |Added|date|notnull|
 
   Scenario: Add column
-    Given I am logged in as "administrator"
+    Given I am logged in as an Admin
     And I am on the new column page
     When I fill in "Name" with "Brand"
     And I fill in "Type" with "string"
@@ -33,11 +33,11 @@ Feature: Manage columns
 
   Scenario: Edit column
     Given the following tables:
-      |Name|Type|Null|
+      |Name|Column_Type|Null|
       |Color|string|null|
       |Name|string|notnull|
       |Added|date|notnull|
-    And I am logged in as "administrator"
+    And I am logged in as an Admin
     And I am on the View Table 1 Page
     When I press "Edit Color Column"
     Then I should see "Editing the Color Column"    
@@ -45,7 +45,7 @@ Feature: Manage columns
     And I press "Save Column"
     Then I should see "Column Successfully Edited"
     And I should see the following tables:
-      |Name|Type|Null|
+      |Name|Column_Type|Null|
       |Smell|string|null|
       |Name|string|notnull|
       |Added|date|notnull|
