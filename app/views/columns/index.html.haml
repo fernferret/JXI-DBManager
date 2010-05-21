@@ -1,4 +1,5 @@
 %h1= @column.name
+= link_to(I18n.t(:back), @table)
 -# =link_to('Add a Row', :controller => 'columns', :action => 'new', :table_id => @table.id)
 %table
   %tr

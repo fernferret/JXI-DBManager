@@ -1,4 +1,5 @@
 %h1= I18n.t(:new) + I18n.t(:column)
+= link_to(I18n.t(:back), @table)
 - form_for(@column) do |f|
   %p
     = f.label I18n.t :name
