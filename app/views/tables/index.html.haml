@@ -1,6 +1,7 @@
 %h1= I18n.t(:allusertables)
 - if current_user
   %h1= I18n.t 'tables'
+  = link_to(I18n.t(:back, @database))
   %table
     %tr
       %th= I18n.t 'name'

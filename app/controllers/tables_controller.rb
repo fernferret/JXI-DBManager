@@ -11,6 +11,7 @@ class TablesController < ApplicationController
   def show
 		# @database = Database.find(params[:database_id])
 		@table = Table.find(params[:id])
+        @database = @table.database
   end
 
   def edit

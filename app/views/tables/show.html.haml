@@ -1,14 +1,15 @@
 %h1= I18n.t(:table) + ": #{@table.name}"
-=link_to(I18n.t(:addacolumn), :controller => 'columns', :action => 'new', :table_id => @table.id)
+= link_to(I18n.t(:back), @database)
+= link_to(I18n.t(:addacolumn), :controller => 'columns', :action => 'new', :table_id => @table.id)
 %table
   %tr
     %th= I18n.t 'name'
     %th= I18n.t 'type'
-    %th= I18n.t 'null_column'
+    %th= I18n.t 'null'
   - @table.columns.each do |column|
     %tr
       %td= "#{column.name}"
       %td= column.column_type
       %td= column.null
-      %td= link_to(I18n.t('edit'), edit_column_path(column))
-      %td= link_to(I18n.t('delete'), column, :confirm => I18n.t(:areyousure), :method => :delete)
+      %td= link_to(I18n.t 'edit',edit_column_path(column))
+      %td= link_to(I18n.t 'delete', column, :confirm => I18n.t(:areyousure), :method => :delete)
